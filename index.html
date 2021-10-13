@@ -240,9 +240,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
               
               
             </a>
@@ -251,9 +251,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
+              ABOUT
               
               
             </a>
@@ -468,23 +468,23 @@
   
   <!-- top start (article top hot config) -->
   
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
   <!-- top end -->
   
 
-  <a href="/2021/10/13/cn-RandomAccess/">
+  <a href="/2021/10/13/cn-缓存行伪共享/">
     <h2 class="post-title">
-      Untitled
+      缓存行伪共享
     </h2>
     <h3 class="post-subtitle">
-      
+      缓存行伪共享
     </h3>
     <div class="post-content-preview">
-      RandomAccess
-RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
-那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
-所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
-
-ArrayList基于数组实现，天然带下标......
+      缓存行伪共享
+简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加上......
     </div>
   </a>
   
@@ -493,6 +493,8 @@ ArrayList基于数组实现，天然带下标......
     2021-10-13
   </p>
   <div class="tags">
+    
+    <a href="/tags/#缓存行伪共享" title="缓存行伪共享">缓存行伪共享</a>
     
   </div>
   
@@ -504,19 +506,23 @@ ArrayList基于数组实现，天然带下标......
   
   <!-- top start (article top hot config) -->
   
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
   <!-- top end -->
   
 
-  <a href="/2021/10/13/cn-缓存行伪共享/">
+  <a href="/2021/10/13/en-缓存行伪共享/">
     <h2 class="post-title">
-      Untitled
+      缓存行伪共享
     </h2>
     <h3 class="post-subtitle">
-      
+      缓存行伪共享
     </h3>
     <div class="post-content-preview">
-      
-简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加上了缓存(CP......
+      缓存行伪共享
+简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加上......
     </div>
   </a>
   
@@ -525,6 +531,90 @@ ArrayList基于数组实现，天然带下标......
     2021-10-13
   </p>
   <div class="tags">
+    
+    <a href="/tags/#缓存行伪共享" title="缓存行伪共享">缓存行伪共享</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/10/13/cn-RandomAccess/">
+    <h2 class="post-title">
+      RandomAccess
+    </h2>
+    <h3 class="post-subtitle">
+      RandomAccess
+    </h3>
+    <div class="post-content-preview">
+      RandomAccessRandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
+那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
+所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
+
+ArrayList基于数组实现，天然带下标，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2021-10-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#RandomAccess" title="RandomAccess">RandomAccess</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/2021/10/13/en-RandomAccess/">
+    <h2 class="post-title">
+      RandomAccess
+    </h2>
+    <h3 class="post-subtitle">
+      RandomAccess
+    </h3>
+    <div class="post-content-preview">
+      RandomAccessRandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
+那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
+所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
+
+ArrayList基于数组实现，天然带下标，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2021-10-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#RandomAccess" title="RandomAccess">RandomAccess</a>
     
   </div>
   
@@ -574,6 +664,14 @@ ArrayList基于数组实现，天然带下标......
 <section>
   <h5><a href="/tags/">FEATURED TAGS</a></h5>
   <div class="tags">
+    
+    
+    <a href="/tags/#RandomAccess" title="RandomAccess" rel="2">RandomAccess</a>
+    
+    
+    
+    <a href="/tags/#缓存行伪共享" title="缓存行伪共享" rel="2">缓存行伪共享</a>
+    
     
   </div>
 </section>
@@ -680,12 +778,20 @@ ArrayList基于数组实现，天然带下标......
 <div class="widget">
   <ul>
     
-    <a href="2021/10/13/cn-RandomAccess/">
-      <li>(no title)</li>
+    <a href="2021/10/13/cn-%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/">
+      <li>缓存行伪共享</li>
     </a>
     
-    <a href="2021/10/13/cn-%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/">
-      <li>(no title)</li>
+    <a href="2021/10/13/en-%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/">
+      <li>缓存行伪共享</li>
+    </a>
+    
+    <a href="2021/10/13/cn-RandomAccess/">
+      <li>RandomAccess</li>
+    </a>
+    
+    <a href="2021/10/13/en-RandomAccess/">
+      <li>RandomAccess</li>
     </a>
     
   </ul>
@@ -716,13 +822,28 @@ ArrayList基于数组实现，天然带下标......
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/10/">October 2021</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li></ul>
 </div>
 
 
         <hr>
     
         <!-- Categories -->
+
+<h5><a href="/categories/">categories</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="/categories/#RandomAccess">
+      <li>RandomAccess</li>
+    </a>
+    
+    <a href="/categories/#缓存行伪共享">
+      <li>缓存行伪共享</li>
+    </a>
+    
+  </ul>
+</div>
 
 
         <hr>

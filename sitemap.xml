@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhangqinzhong.com/2021/10/13/cn-%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/</loc>
+    
+    <lastmod>2021-10-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zhangqinzhong.com/2021/10/13/en-%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/</loc>
+    
+    <lastmod>2021-10-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhangqinzhong.com/2021/10/13/cn-RandomAccess/</loc>
     
     <lastmod>2021-10-13</lastmod>
@@ -9,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://zhangqinzhong.com/2021/10/13/cn-%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/</loc>
+    <loc>https://zhangqinzhong.com/2021/10/13/en-RandomAccess/</loc>
     
     <lastmod>2021-10-13</lastmod>
     
@@ -59,6 +73,34 @@
   </url>
 
   
+  <url>
+    <loc>https://zhangqinzhong.com/tags/RandomAccess/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangqinzhong.com/tags/%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://zhangqinzhong.com/categories/RandomAccess/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangqinzhong.com/categories/%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/</loc>
+    <lastmod>2021-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
