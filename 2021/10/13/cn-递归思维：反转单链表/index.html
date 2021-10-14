@@ -262,9 +262,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/tags/">
               
-              分类
+              标签
               
               
             </a>
@@ -273,9 +273,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/categories/">
               
-              标签
+              分类
               
               
             </a>
@@ -401,7 +401,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">746</span> In Total
+              Words <span class="post-count">769</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -488,6 +488,9 @@
 <p>如果 <code>m != 1</code> 怎么办？如果我们把 <code>head</code> 的索引视为 1，那么我们是想从第 <code>m</code> 个元素开始反转对吧；如果把 <code>head.next</code> 的索引视为 1 呢？那么相对于 <code>head.next</code>，反转的区间应该是从第 <code>m - 1</code> 个元素开始的；那么对于 <code>head.next.next</code> 呢……</p>
 <p>区别于迭代思想，这就是递归思想，所以我们可以完成代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ListNode <span class="title">reverseBetween</span><span class="params">(ListNode head, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// base case</span></span><br><span class="line">    <span class="keyword">if</span> (m == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> reverseN(head, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 前进到反转的起点触发 base case</span></span><br><span class="line">    head.next = reverseBetween(head.next, m - <span class="number">1</span>, n - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ListNode successor = <span class="keyword">null</span>; <span class="comment">// 后驱节点</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 反转以 head 为起点的 n 个节点，返回新的头结点</span></span><br><span class="line"><span class="function">ListNode <span class="title">reverseN</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>) &#123; </span><br><span class="line">        <span class="comment">// 记录第 n + 1 个节点</span></span><br><span class="line">        successor = head.next;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 以 head.next 为起点，需要反转前 n - 1 个节点</span></span><br><span class="line">    ListNode last = reverseN(head.next, n - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    head.next.next = head;</span><br><span class="line">    <span class="comment">// 让反转之后的 head 节点和后面的节点连起来</span></span><br><span class="line">    head.next = successor;</span><br><span class="line">    <span class="keyword">return</span> last;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>部分图片资源来自截屏，侵权删，请联系首页电话或邮件。</p>
+</blockquote>
 
 
         <hr>
