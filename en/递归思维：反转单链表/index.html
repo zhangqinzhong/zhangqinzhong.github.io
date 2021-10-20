@@ -238,6 +238,8 @@
 
           
           
+          
+          
           <li>
             <a href="/about/">
               
@@ -246,8 +248,6 @@
               
             </a>
           </li>
-          
-          
           
           
           
@@ -403,7 +403,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">769</span> In Total
+              Words <span class="post-count">744</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -465,25 +465,21 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>递归思维：反转单链表</h1>
-<h3 id="基础：反转一个单链表">基础：反转一个单链表</h3>
-<p>![递归思维：k 个一组反转链表](递归思维：k 个一组反转链表.png)</p>
-<p><img src="%E5%8D%95%E9%93%BE%E8%A1%A8.png" alt="递归思维：k 个一组反转链表"></p>
-<p><img src="%E8%BF%AD%E4%BB%A3%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8.png" alt="递归思维：k 个一组反转链表"></p>
+        <h1 id="递归思维：反转单链表"><a href="#递归思维：反转单链表" class="headerlink" title="递归思维：反转单链表"></a>递归思维：反转单链表</h1><h3 id="基础：反转一个单链表"><a href="#基础：反转一个单链表" class="headerlink" title="基础：反转一个单链表"></a>基础：反转一个单链表</h3><p><img src="递归思维：k 个一组反转链表.png" alt="递归思维：k 个一组反转链表"></p>
+<p><img src="单链表.png" alt="递归思维：k 个一组反转链表"></p>
+<p><img src="迭代反转单链表.png" alt="递归思维：k 个一组反转链表"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//初始化两个指针</span></span><br><span class="line">    ListNode prev = <span class="keyword">null</span>;</span><br><span class="line">    ListNode curr = head;</span><br><span class="line">    <span class="keyword">while</span> (curr != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="comment">//定义临时变量用于临时记住当前节点的下一个节点是什么</span></span><br><span class="line">        ListNode next = curr.next;</span><br><span class="line">        curr.next = prev;</span><br><span class="line">        prev = curr;</span><br><span class="line">        curr = next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> prev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="%E9%80%92%E5%BD%92%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8.png" alt="递归思维：k 个一组反转链表"></p>
+<p><img src="递归反转单链表.png" alt="递归思维：k 个一组反转链表"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1. 递归终止条件</span></span><br><span class="line">    <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    ListNode p = reverseList(head.next);</span><br><span class="line">    head.next.next = head;</span><br><span class="line">    head.next = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="进阶：反转单链表的一部分">进阶：反转单链表的一部分</h3>
-<p><img src="%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86.png" alt="递归思维：k 个一组反转链表"></p>
-<p><img src="%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%E5%8E%9F%E7%90%86.jpg" alt="递归思维：k 个一组反转链表"></p>
+<h3 id="进阶：反转单链表的一部分"><a href="#进阶：反转单链表的一部分" class="headerlink" title="进阶：反转单链表的一部分"></a>进阶：反转单链表的一部分</h3><p><img src="反转单链表的一部分.png" alt="递归思维：k 个一组反转链表"></p>
+<p><img src="反转单链表的一部分原理.jpg" alt="递归思维：k 个一组反转链表"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ListNode successor = <span class="keyword">null</span>; <span class="comment">// 后驱节点</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 反转以 head 为起点的 n 个节点，返回新的头结点</span></span><br><span class="line"><span class="function">ListNode <span class="title">reverseN</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>) &#123; </span><br><span class="line">        <span class="comment">// 记录第 n + 1 个节点</span></span><br><span class="line">        successor = head.next;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 以 head.next 为起点，需要反转前 n - 1 个节点</span></span><br><span class="line">    ListNode last = reverseN(head.next, n - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    head.next.next = head;</span><br><span class="line">    <span class="comment">// 让反转之后的 head 节点和后面的节点连起来</span></span><br><span class="line">    head.next = successor;</span><br><span class="line">    <span class="keyword">return</span> last;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ol>
 <li>base case 变为 <code>n == 1</code>，反转一个元素，就是它本身，同时<strong>要记录后驱节点</strong>。</li>
 <li>刚才我们直接把 <code>head.next</code> 设置为 null，因为整个链表反转后原来的 <code>head</code> 变成了整个链表的最后一个节点。但现在 <code>head</code> 节点在递归反转之后不一定是最后一个节点了，所以要记录后驱 <code>successor</code>（第 n + 1 个节点），反转之后将 <code>head</code> 连接上。</li>
 </ol>
-<p><img src="%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%E5%8E%9F%E7%90%86-1.jpg" alt="递归思维：k 个一组反转链表"></p>
-<h3 id="进阶：反转链表的一部分">进阶：反转链表的一部分</h3>
-<p>现在解决我们最开始提出的问题，给一个索引区间 <code>[m,n]</code>（索引从 1 开始），仅仅反转区间中的链表元素。</p>
+<p><img src="反转单链表的一部分原理-1.jpg" alt="递归思维：k 个一组反转链表"></p>
+<h3 id="进阶：反转链表的一部分"><a href="#进阶：反转链表的一部分" class="headerlink" title="进阶：反转链表的一部分"></a>进阶：反转链表的一部分</h3><p>现在解决我们最开始提出的问题，给一个索引区间 <code>[m,n]</code>（索引从 1 开始），仅仅反转区间中的链表元素。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ListNode <span class="title">reverseBetween</span><span class="params">(ListNode head, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span></span></span><br></pre></td></tr></table></figure>
 <p>首先，如果 <code>m == 1</code>，就相当于反转链表开头的 <code>n</code> 个元素嘛，也就是我们刚才实现的功能：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ListNode <span class="title">reverseBetween</span><span class="params">(ListNode head, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// base case</span></span><br><span class="line">    <span class="keyword">if</span> (m == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="comment">// 相当于反转前 n 个元素</span></span><br><span class="line">        <span class="keyword">return</span> reverseN(head, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -637,7 +633,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">递归思维：反转单链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E7%A1%80%EF%BC%9A%E5%8F%8D%E8%BD%AC%E4%B8%80%E4%B8%AA%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">基础：反转一个单链表</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E9%98%B6%EF%BC%9A%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">进阶：反转单链表的一部分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E9%98%B6%EF%BC%9A%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">进阶：反转链表的一部分</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E9%80%92%E5%BD%92%E6%80%9D%E7%BB%B4%EF%BC%9A%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">递归思维：反转单链表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E7%A1%80%EF%BC%9A%E5%8F%8D%E8%BD%AC%E4%B8%80%E4%B8%AA%E5%8D%95%E9%93%BE%E8%A1%A8"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">基础：反转一个单链表</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E9%98%B6%EF%BC%9A%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">进阶：反转单链表的一部分</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9B%E9%98%B6%EF%BC%9A%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86"><span class="toc-nav-number">1.0.3.</span> <span class="toc-nav-text">进阶：反转链表的一部分</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
