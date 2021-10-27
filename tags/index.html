@@ -144,7 +144,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--light">
+	<body ontouchstart="" class="body--light body--dark">
 
 
 		<!-- ThemeColor -->
@@ -178,7 +178,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'light';
+  let themeMode = 'dark';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -238,15 +238,6 @@
 
           
           
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -261,9 +252,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -271,12 +262,21 @@
           
           
           
-          
-          
           <li>
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
               
               
             </a>
@@ -472,9 +472,11 @@
         </span>
         
         <div class="post-preview">
-          <a href="/en/RandomAccess/">
+          <a href="/cn/RandomAccess/">
             <h2 class="post-title">
               RandomAccess
+              
+              -- cn
               
             </h2>
             
@@ -487,11 +489,9 @@
         <hr>
         
         <div class="post-preview">
-          <a href="/cn/RandomAccess/">
+          <a href="/en/RandomAccess/">
             <h2 class="post-title">
               RandomAccess
-              
-              -- cn
               
             </h2>
             

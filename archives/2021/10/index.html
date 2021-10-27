@@ -144,7 +144,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--light">
+	<body ontouchstart="" class="body--light body--dark">
 
 
 		<!-- ThemeColor -->
@@ -178,7 +178,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'light';
+  let themeMode = 'dark';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -238,15 +238,6 @@
 
           
           
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
-              
-              
-            </a>
-          </li>
-          
           
           
           <li>
@@ -261,9 +252,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -271,12 +262,21 @@
           
           
           
-          
-          
           <li>
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
               
               
             </a>
@@ -503,11 +503,9 @@
           <li>
             10-13
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/RandomAccess/" style="color: #0085a1">
+            <a href="/en/RandomAccess/" style="color: #0085a1">
               <span>
                 RandomAccess
-                
-                -- cn
                 
               </span>
             </a>
@@ -516,9 +514,11 @@
           <li>
             10-13
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/en/RandomAccess/" style="color: #0085a1">
+            <a href="/cn/RandomAccess/" style="color: #0085a1">
               <span>
                 RandomAccess
+                
+                -- cn
                 
               </span>
             </a>
@@ -692,11 +692,11 @@
       <li>缓存行伪共享</li>
     </a>
     
-    <a href="../../../en/RandomAccess/">
+    <a href="../../../cn/RandomAccess/">
       <li>RandomAccess</li>
     </a>
     
-    <a href="../../../cn/RandomAccess/">
+    <a href="../../../en/RandomAccess/">
       <li>RandomAccess</li>
     </a>
     
