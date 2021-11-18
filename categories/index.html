@@ -241,17 +241,6 @@
           
           
           <li>
-            <a href="/archive/">
-              
-              ARCHIVES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               ABOUT
@@ -263,9 +252,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/archive/">
               
-              TAGS
+              ARCHIVES
               
               
             </a>
@@ -277,6 +266,17 @@
             <a href="/categories/">
               
               CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              TAGS
               
               
             </a>
@@ -458,13 +458,11 @@
       <!-- 标签云 -->
       <div id='tag_cloud' class="tags">
         
-        <a href="#JavaCollection" title="JavaCollection" rel="2">JavaCollection</a>
+        <a href="#JavaCollection" title="JavaCollection" rel="3">JavaCollection</a>
         
         <a href="#ConcurrentProgramming" title="ConcurrentProgramming" rel="1">ConcurrentProgramming</a>
         
         <a href="#DataStructure" title="DataStructure" rel="1">DataStructure</a>
-        
-        <a href="#RandomAccess" title="RandomAccess" rel="1">RandomAccess</a>
         
       </div>
 
@@ -483,6 +481,28 @@
           <a href="/en/RandomAccess/">
             <h2 class="post-title">
               RandomAccess
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              RandomAccess
+            </h3>
+            
+          </a>
+          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
+        <hr>
+        
+        <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+        <div class="post-preview">
+          <a href="/cn/RandomAccess/">
+            <h2 class="post-title">
+              RandomAccess
+              
+              -- cn
               
             </h2>
             
@@ -562,35 +582,6 @@
             
             <h3 class="post-subtitle">
               递归思维：反转单链表
-            </h3>
-            
-          </a>
-          <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </div>
-        <hr>
-        
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-tag listing-seperator" id="RandomAccess">
-          <span class="tag-text">RandomAccess</span>
-        </span>
-        
-        <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-        <div class="post-preview">
-          <a href="/cn/RandomAccess/">
-            <h2 class="post-title">
-              RandomAccess
-              
-              -- cn
-              
-            </h2>
-            
-            <h3 class="post-subtitle">
-              RandomAccess
             </h3>
             
           </a>
@@ -1158,5 +1149,21 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
 </html>
