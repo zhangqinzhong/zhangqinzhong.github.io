@@ -399,11 +399,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">60</span> Minutes
+              Estimated Reading Time <span class="post-count">61</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">15.1k</span> In Total
+              Words <span class="post-count">15.3k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -490,9 +490,12 @@
 <h3 id="2-2HashMap底层的数据结构存储数据的过程">2.2HashMap底层的数据结构存储数据的过程</h3>
 <p>存储过程如下所示：</p>
 <p>使用的代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;String, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">&quot;张勤忠1&quot;</span>, <span class="number">53</span>);</span><br><span class="line">        map.put(<span class="string">&quot;1&quot;</span>, <span class="number">35</span>);</span><br><span class="line">        map.put(<span class="string">&quot;2&quot;</span>, <span class="number">55</span>);</span><br><span class="line">        map.put(<span class="string">&quot;3&quot;</span>, <span class="number">52</span>);</span><br><span class="line">        map.put(<span class="string">&quot;4&quot;</span>, <span class="number">51</span>);</span><br><span class="line">        map.put(<span class="string">&quot;5&quot;</span>, <span class="number">55</span>);</span><br><span class="line">        map.put(<span class="string">&quot;张勤忠2&quot;</span>, <span class="number">50</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B.png" alt="哈希表存储过程"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;String, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">&quot;key1&quot;</span>, <span class="number">1</span>);</span><br><span class="line">        map.put(<span class="string">&quot;key1&quot;</span>, <span class="number">2</span>);</span><br><span class="line">        map.put(<span class="string">&quot;key2&quot;</span>, <span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>说明：</p>
+<blockquote>
+<p>初始化一个HashMap，向map中存放元素时，代码实现是创建了一个默认长度为16的一维数组，（jdk1.8之前）。jdk1.8时，并没有在new HashMap就开辟空间，而是在首次调用put方法时才创建Node [] table 数组。<br>
+假设添加一个key1，value 1 ，首先调用key1的hashCode()方法，计算出key1的哈希吗，再经过一系列的算法计算后，得到在Node数组中存放的位置，也就是数组下标。如果此下标对应的数组是空的，则添加进去。如果不为空说明出现了hash碰撞，此时比较数组中已经存在的元素和当前添加的元素equals是否相等，相等则覆盖添加。不相等则划出一个节点为链表存储。</p>
+</blockquote>
 <p>1.面试题：HashMap中hash函数是怎么实现的？还有哪些hash函数的实现方式？</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对于key的hashCode做<span class="built_in">hash</span>操作，无符号右移16位然后做异或运算。</span><br><span class="line">还有平方取中法，伪随机数法和取余数法。这三种效率都比较低。而无符号右移16位异或运算效率是最高的。至于底层是如何计算的我们下面看源码时给大家讲解。</span><br></pre></td></tr></table></figure>
 <p>2.面试题：当两个对象的hashCode相等时会怎么样？</p>
@@ -504,7 +507,7 @@
 <p>5.在不断的添加数据的过程中，会涉及到扩容问题，当超出临界值(且要存放的位置非空)时，扩容。默认的扩容方式：扩容为原来容量的2倍，并将原有的数据复制过来。</p>
 <p>6.通过上述描述，当位于一个链表中的元素较多，即hash值相等但是内容不相等的元素较多时，通过key值依次查找的效率较低。而<strong>JDK1.8</strong>中，哈希表存储采用数组+链表+红黑树实现，当链表长度(阀值)超过 8 时且当前数组的长度 &gt; 64时，将链表转换为红黑树，这样大大减少了查找时间。jdk8在哈希表中引入红黑树的原因只是为了查找效率更高。</p>
 <p>简单的来说，哈希表是由数组+链表+红黑树（JDK1.8增加了红黑树部分）实现的。如下图所示。</p>
-<p><img src="%E5%93%88%E5%B8%8C%E8%A1%A8.png" alt="哈希表"></p>
+<p><img src="%E5%93%88%E5%B8%8C%E8%A1%A8.jpg" alt="哈希表"></p>
 <p><strong>但是这样的话问题来了，传统hashMap的缺点，1.8为什么引入红黑树？这样结构的话不是更麻烦了吗，为何阈值大于8换成红黑树？</strong></p>
 <p>JDK 1.8 以前 HashMap 的实现是 数组+链表，即使哈希函数取得再好，也很难达到元素百分百均匀分布。当 HashMap 中有大量的元素都存放到同一个桶中时，这个桶下有一条长长的链表，这个时候 HashMap 就相当于一个单链表，假如单链表有 n 个元素，遍历的时间复杂度就是 O(n)，完全失去了它的优势。针对这种情况，JDK 1.8 中引入了 红黑树（查找时间复杂度为 O(logn)）来优化这个问题。 当链表长度很小的时候，即使遍历，速度也非常快，但是当链表长度不断变长，肯定会对查询性能有一定的影响，所以才需要转成树。</p>
 <p>至于为什么阈值是8，我想，去源码中找寻答案应该是最可靠的途径。 下面我们在分析源码的时候会介绍。</p>
@@ -819,7 +822,7 @@
         <ul class="pager">
           
           <li class="previous">
-            <a href="/cn/RandomAccess/" data-toggle="tooltip" data-placement="top" title="RandomAccess">&larr; Previous Post</a>
+            <a href="/en/RandomAccess/" data-toggle="tooltip" data-placement="top" title="RandomAccess">&larr; Previous Post</a>
           </li>
           
           
