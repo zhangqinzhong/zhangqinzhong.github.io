@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zhangqinzhong.com/en/java-8-Collector%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
+    
+    <lastmod>2021-12-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zhangqinzhong.com/en/%E9%80%92%E5%BD%92%E6%80%9D%E7%BB%B4%EF%BC%9A%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8/</loc>
     
     <lastmod>2021-10-13</lastmod>
@@ -67,36 +74,43 @@
 
   <url>
     <loc>https://zhangqinzhong.com/</loc>
-    <lastmod>2021-11-25</lastmod>
+    <lastmod>2021-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://zhangqinzhong.com/tags/RandomAccess/</loc>
+    <lastmod>2021-12-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangqinzhong.com/tags/Collector/</loc>
+    <lastmod>2021-12-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhangqinzhong.com/tags/%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/</loc>
-    <lastmod>2021-11-25</lastmod>
+    <lastmod>2021-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/tags/%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2021-11-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhangqinzhong.com/tags/RandomAccess/</loc>
-    <lastmod>2021-11-25</lastmod>
+    <lastmod>2021-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/tags/HashMap/</loc>
-    <lastmod>2021-11-25</lastmod>
+    <lastmod>2021-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -104,22 +118,22 @@
 
   
   <url>
+    <loc>https://zhangqinzhong.com/categories/JavaCollection/</loc>
+    <lastmod>2021-12-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zhangqinzhong.com/categories/ConcurrentProgramming/</loc>
-    <lastmod>2021-11-25</lastmod>
+    <lastmod>2021-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/categories/DataStructure/</loc>
-    <lastmod>2021-11-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhangqinzhong.com/categories/JavaCollection/</loc>
-    <lastmod>2021-11-25</lastmod>
+    <lastmod>2021-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

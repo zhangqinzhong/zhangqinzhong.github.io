@@ -133,7 +133,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://zhangqinzhong.com/en/">
+  <link rel="canonical" href="https://zhangqinzhong.com/archives/2021/12/">
   <title>
     
       zhangqinzhong
@@ -301,7 +301,7 @@
     <span>
       English
     </span>
-    <select id="lang-select" data-canonical="en/index.html">
+    <select id="lang-select" data-canonical="archives/2021/12/index.html">
       
       
       <option value="en"  selected >
@@ -378,9 +378,9 @@
       --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/archive_bg2.jpg');
     }
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/newhome_bg.jpg'); */
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -463,210 +463,91 @@
             ">
 
       <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
 
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/en/RandomAccess/">
-    <h2 class="post-title">
-      RandomAccess
-    </h2>
-    <h3 class="post-subtitle">
-      RandomAccess
-    </h3>
-    <div class="post-content-preview">
-      RandomAccess
-RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
-那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
-所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
-
-ArrayList基于数组实现，天然带下标......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#RandomAccess" title="RandomAccess">RandomAccess</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/en/递归思维：反转单链表/">
-    <h2 class="post-title">
-      递归思维：反转单链表
-    </h2>
-    <h3 class="post-subtitle">
-      递归思维：反转单链表
-    </h3>
-    <div class="post-content-preview">
-      递归思维：反转单链表
-基础：反转一个单链表
-![递归思维：k 个一组反转链表](递归思维：k 个一组反转链表.png)
-
-
-12345678910111213public ListNode reverseList(ListNode head) &#123;    //初始化两个指针    ListNode prev = null;    ListNode curr = head;    wh......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#反转单链表" title="反转单链表">反转单链表</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/en/缓存行伪共享/">
-    <h2 class="post-title">
-      缓存行伪共享
-    </h2>
-    <h3 class="post-subtitle">
-      缓存行伪共享
-    </h3>
-    <div class="post-content-preview">
-      缓存行伪共享
-
-简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#缓存行伪共享" title="缓存行伪共享">缓存行伪共享</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/java-8-Collector接口简单实现/">
-    <h2 class="post-title">
-      java 8 Collector接口简单实现
-    </h2>
-    <h3 class="post-subtitle">
       
-    </h3>
-    <div class="post-content-preview">
-      java 8 Collector接口简单实现
-Collector接口上的注释说明
-Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：
-A Collector is specified by four functions that work together to accumulate entries into a mutable r......
+
+      <!-- 归档列表 -->
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
+          <span class="tag-text">2021</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-10
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/java-8-Collector接口简单实现/" style="color: #0085a1">
+              <span>
+                java 8 Collector接口简单实现
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-13
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/递归思维：反转单链表/" style="color: #0085a1">
+              <span>
+                递归思维：反转单链表
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-13
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/缓存行伪共享/" style="color: #0085a1">
+              <span>
+                缓存行伪共享
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-13
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/RandomAccess/" style="color: #0085a1">
+              <span>
+                RandomAccess
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
+          <span class="tag-text">2020</span>
+        </span>
+        <ul>
+          
+          <li>
+            11-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/en/HashMap/" style="color: #0085a1">
+              <span>
+                HashMap
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
     </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-12-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Collector" title="Collector">Collector</a>
-    
   </div>
-  
-
 </div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/HashMap/">
-    <h2 class="post-title">
-      HashMap
-    </h2>
-    <h3 class="post-subtitle">
-      深入理解HashMap源码
-    </h3>
-    <div class="post-content-preview">
-      HashMap
-1.HashMap集合简介
-HashMap基于哈希表的Map接口实现，是以key-value存储形式存在，即主要用来存放键值对。HashMap 的实现不是同步的，这意味着它不是线程安全的。它的key、value都可以为null。此外，HashMap中的映射不是有序的。
-JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2020-11-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#HashMap" title="HashMap">HashMap</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    
-  </ul>
 
 
       <!-- 如果开启评论功能 -->
@@ -829,23 +710,23 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
 <div class="widget">
   <ul>
     
-    <a href="java-8-Collector%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/">
+    <a href="../../../en/java-8-Collector%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/">
       <li>java 8 Collector接口简单实现</li>
     </a>
     
-    <a href="%E9%80%92%E5%BD%92%E6%80%9D%E7%BB%B4%EF%BC%9A%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8/">
+    <a href="../../../en/%E9%80%92%E5%BD%92%E6%80%9D%E7%BB%B4%EF%BC%9A%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8/">
       <li>递归思维：反转单链表</li>
     </a>
     
-    <a href="%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/">
+    <a href="../../../en/%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/">
       <li>缓存行伪共享</li>
     </a>
     
-    <a href="RandomAccess/">
+    <a href="../../../en/RandomAccess/">
       <li>RandomAccess</li>
     </a>
     
-    <a href="HashMap/">
+    <a href="../../../en/HashMap/">
       <li>HashMap</li>
     </a>
     
@@ -877,7 +758,7 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../10/">October 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/11/">November 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1074,7 +955,7 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "zhangqinzhong";
     let ghPages = gh + ".github.io";
-    let pagePath = "en/index.html";
+    let pagePath = "archives/2021/12/index.html";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;

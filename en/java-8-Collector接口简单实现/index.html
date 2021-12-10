@@ -133,10 +133,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://zhangqinzhong.com/en/">
+  <link rel="canonical" href="https://zhangqinzhong.com/en/java-8-Collector接口简单实现/">
   <title>
     
-      zhangqinzhong
+      java 8 Collector接口简单实现 - zhangqinzhong
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -294,29 +294,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="en/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -369,18 +347,18 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/images/spenser-sembrat-unsplash.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io//img/images/spenser-sembrat-unsplash.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/images/spenser-sembrat-unsplash.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io//img/images/spenser-sembrat-unsplash.jpg');
     }
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/newhome_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/images/spenser-sembrat-unsplash.jpg'); */
       
     }
 
@@ -403,10 +381,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>张勤忠的博客</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">我喜欢你，因为乌鸦长得像写字台🏃🏻‍♀️</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Collector" title="Collector">Collector</a>
+              
+            </div>
+            <h1>java 8 Collector接口简单实现</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by zhangqinzhong on
+              2021-12-10
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">6</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -447,472 +457,295 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-
-      <!-- Main Content -->
-
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/en/RandomAccess/">
-    <h2 class="post-title">
-      RandomAccess
-    </h2>
-    <h3 class="post-subtitle">
-      RandomAccess
-    </h3>
-    <div class="post-content-preview">
-      RandomAccess
-RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
-那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
-所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
-
-ArrayList基于数组实现，天然带下标......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#RandomAccess" title="RandomAccess">RandomAccess</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/en/递归思维：反转单链表/">
-    <h2 class="post-title">
-      递归思维：反转单链表
-    </h2>
-    <h3 class="post-subtitle">
-      递归思维：反转单链表
-    </h3>
-    <div class="post-content-preview">
-      递归思维：反转单链表
-基础：反转一个单链表
-![递归思维：k 个一组反转链表](递归思维：k 个一组反转链表.png)
-
-
-12345678910111213public ListNode reverseList(ListNode head) &#123;    //初始化两个指针    ListNode prev = null;    ListNode curr = head;    wh......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#反转单链表" title="反转单链表">反转单链表</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
-  <a href="/en/缓存行伪共享/">
-    <h2 class="post-title">
-      缓存行伪共享
-    </h2>
-    <h3 class="post-subtitle">
-      缓存行伪共享
-    </h3>
-    <div class="post-content-preview">
-      缓存行伪共享
-
-简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#缓存行伪共享" title="缓存行伪共享">缓存行伪共享</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/java-8-Collector接口简单实现/">
-    <h2 class="post-title">
-      java 8 Collector接口简单实现
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      java 8 Collector接口简单实现
-Collector接口上的注释说明
-Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：
-A Collector is specified by four functions that work together to accumulate entries into a mutable r......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-12-10
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Collector" title="Collector">Collector</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/en/HashMap/">
-    <h2 class="post-title">
-      HashMap
-    </h2>
-    <h3 class="post-subtitle">
-      深入理解HashMap源码
-    </h3>
-    <div class="post-content-preview">
-      HashMap
-1.HashMap集合简介
-HashMap基于哈希表的Map接口实现，是以key-value存储形式存在，即主要用来存放键值对。HashMap 的实现不是同步的，这意味着它不是线程安全的。它的key、value都可以为null。此外，HashMap中的映射不是有序的。
-JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2020-11-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#HashMap" title="HashMap">HashMap</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    
-  </ul>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">VISITORS</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
-        <hr>
-    
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#RandomAccess" title="RandomAccess" rel="1">RandomAccess</a>
-    
-    
-    
-    <a href="/tags/#Collector" title="Collector" rel="1">Collector</a>
-    
-    
-    
-    <a href="/tags/#缓存行伪共享" title="缓存行伪共享" rel="1">缓存行伪共享</a>
-    
-    
-    
-    <a href="/tags/#反转单链表" title="反转单链表" rel="1">反转单链表</a>
-    
-    
-    
-    <a href="/tags/#HashMap" title="HashMap" rel="1">HashMap</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/sidebar-avatar.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>你是最棒的~</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/zhangqinzhong">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://twitter.com/zhangqinzhong">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.instagram.com/springbreezeboy">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.facebook.com/David John">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.zhihu.com/people/zhangqinzhong">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa  fa-stack-1x fa-inverse">知</i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="http://weibo.com/6213306199">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">RECENT POSTS</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="java-8-Collector%E6%8E%A5%E5%8F%A3%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/">
-      <li>java 8 Collector接口简单实现</li>
-    </a>
-    
-    <a href="%E9%80%92%E5%BD%92%E6%80%9D%E7%BB%B4%EF%BC%9A%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8/">
-      <li>递归思维：反转单链表</li>
-    </a>
-    
-    <a href="%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/">
-      <li>缓存行伪共享</li>
-    </a>
-    
-    <a href="RandomAccess/">
-      <li>RandomAccess</li>
-    </a>
-    
-    <a href="HashMap/">
-      <li>HashMap</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5><a href="/">FRIENDS</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://baidu.com" target="_blank">百度</a></li>
-  
-  <li><a href="https://google.com" target="_blank">Google</a></li>
-  
-  <li><a href="https://www.bilibili.com/" target="_blank">bilibili</a></li>
-  
-  <li><a href="https://weibo.com/" target="_blank">新浪微博</a></li>
-  
+        <h1>java 8 Collector接口简单实现</h1>
+<h2 id="Collector接口上的注释说明">Collector接口上的注释说明</h2>
+<p>Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：<br>
+A Collector is specified by four functions that work together to accumulate entries into a mutable result container, and optionally perform a final transform on the result. They are:</p>
+<ul>
+<li>creation of a new result container (supplier())</li>
+<li>incorporating a new data element into a result container (accumulator())</li>
+<li>combining two result containers into one (combiner())</li>
+<li>performing an optional final transform on the container (finisher())</li>
 </ul>
+<p>收集器由四个函数指定，这些函数一起工作，将条目累积到可变结果容器中，并可以选择对结果执行最终转换。他们是：</p>
+<ul>
+<li>supplier() 临时变量容器</li>
+<li>accumulator() 累加器</li>
+<li>combiner() 合并器</li>
+<li>finisher() 返回最终结果的方法</li>
+</ul>
+<p>注释上还给出了一个小例子。合并树</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Collector&lt;Widget, ?, TreeSet&lt;Widget&gt;&gt; intoSet = Collector.of(</span><br><span class="line">   <span class="comment">//临时变量为TreeSet</span></span><br><span class="line">   TreeSet::<span class="keyword">new</span>, </span><br><span class="line">   <span class="comment">//累加器调用TreeSet add方法将元素都添加进来</span></span><br><span class="line">   TreeSet::add, </span><br><span class="line">   <span class="comment">//合并器 将两个元素组合起来 此时这里的left 是TreeSet right也是TreeSet</span></span><br><span class="line">   (left, right) -&gt; &#123; </span><br><span class="line">   left.addAll(right);</span><br><span class="line">     <span class="keyword">return</span> left; </span><br><span class="line">   &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>再来看一下这个Collector接口 内容不是很多：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> java.util.stream;</span><br><span class="line"><span class="comment">//省略import的包...</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Collector</span>&lt;<span class="title">T</span>, <span class="title">A</span>, <span class="title">R</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 创建并返回新的可变结果容器的函数。返回一个函数，该函数返回一个新的、可变的结果容器，元素类型是A</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">Supplier&lt;A&gt; <span class="title">supplier</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 累加器 顾名思义 将流中的元素（T）进程一系列操作 放入A容器中（我是这么理解的）</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">BiConsumer&lt;A, T&gt; <span class="title">accumulator</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 接受两个部分结果并将其合并的函数。组合器函数可以将状态从一个参数折叠到另一个参数并返回该参数，或者可以返回一个新的结果容器。将两个部分结果组合成一个组合结果的函数</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">BinaryOperator&lt;A&gt; <span class="title">combiner</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 执行从中间累积类型A到最终结果类型R的最终转换。如果设置了特征标识_转换，则可以假定此函数是一个标识转换，具有从A到R的未检查强制转换。返回：将中间结果转换为最终结果的函数(这就用到了下面的枚举类，比如Collectors.toList() 由于临时元素A 和最终返回值R 是同一类型，就可以不实现finisher()函数，而是传入一个特征值，用于强制转换A到R)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">Function&lt;A, R&gt; <span class="title">finisher</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 返回：一组不可变的收集器特征</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">Set&lt;Characteristics&gt; <span class="title">characteristics</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 4个参数的静态方法</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>&lt;T, R&gt; Collector&lt;T, R, R&gt; <span class="title">of</span><span class="params">(Supplier&lt;R&gt; supplier,</span></span></span><br><span class="line"><span class="function"><span class="params">                                              BiConsumer&lt;R, T&gt; accumulator,</span></span></span><br><span class="line"><span class="function"><span class="params">                                              BinaryOperator&lt;R&gt; combiner,</span></span></span><br><span class="line"><span class="function"><span class="params">                                              Characteristics... characteristics)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//省略中间默认实现...</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Collectors.CollectorImpl&lt;&gt;(supplier, accumulator, combiner, cs);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 5个参数的静态方法</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>&lt;T, A, R&gt; Collector&lt;T, A, R&gt; <span class="title">of</span><span class="params">(Supplier&lt;A&gt; supplier,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 BiConsumer&lt;A, T&gt; accumulator,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 BinaryOperator&lt;A&gt; combiner,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 Function&lt;A, R&gt; finisher,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 Characteristics... characteristics)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//省略中间默认实现...</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Collectors.CollectorImpl&lt;&gt;(supplier, accumulator, combiner, finisher, cs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">enum</span> <span class="title">Characteristics</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">        * 并行</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        CONCURRENT,</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 无序</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        UNORDERED,</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 无需转换结果</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        IDENTITY_FINISH</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>一共有5个需要实现的方法，还有2个静态方法，方便我们快速的构建自定义的收集器。<br>
+还有一个枚举类，是用来优化收集器的。也是收集器最后一个方法<strong>Set&lt;Characteristics&gt; characteristics();</strong> 的泛型类型。</p>
+<p>我的简单实现，是为了实现一个小需求。<br>
+例子如下：</p>
+<blockquote>
+<p>假设有一个钱包数据集合 里面的元素是 Wallet wallet包含了多个用户的钱包信息 有用户ID 和钱包金额 我们要讲这个数据集合按照用户ID分组 结果返回一个map.<br>
+map的key是用户ID value是一个用户对象。用户对象里有一个属性，是个list。它包含了用户多个钱包金额</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectorTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Wallet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> BigDecimal money;</span><br><span class="line">        <span class="keyword">private</span> Integer personId;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> List&lt;Money&gt; moneys;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(List&lt;Money&gt; moneys)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.moneys = moneys;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Data</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Money</span> </span>&#123;</span><br><span class="line">            <span class="keyword">private</span> BigDecimal money;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 假设有一个钱包数据集合 里面的元素是 Wallet wallet包含了多个用户的钱包信息 有用户ID 和钱包金额 我们要讲这个数据集合按照用户ID分组 结果返回一个map</span></span><br><span class="line">        <span class="comment">// map的key是用户ID value是一个用户对象。用户对象里有一个属性，是个list。它包含了用户多个钱包金额</span></span><br><span class="line">        List&lt;Wallet&gt; walletList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//利用收集器实现</span></span><br><span class="line">        Map&lt;Integer, Person&gt; personMap = walletList.stream().collect(Collectors.groupingBy(Wallet::getPersonId, simpleCollector()));</span><br><span class="line">        <span class="comment">//大功告成</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 泛型说明 Collector&lt;T, A, R&gt; 对应了 Collector&lt;Wallet, List&lt;Person.Money&gt;, Person&gt;</span></span><br><span class="line"><span class="comment">     * &lt;T&gt; – (Wallet) 输入元素的类型</span></span><br><span class="line"><span class="comment">     * &lt;A&gt; – (List&lt;Person.Money&gt;) 是收集器中操作流的临时类型</span></span><br><span class="line"><span class="comment">     * &lt;R&gt; – (Person) 最终返回的结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Collector&lt;Wallet, List&lt;Person.Money&gt;, Person&gt; simpleCollector() &#123;</span><br><span class="line">        <span class="keyword">return</span> Collector.of(</span><br><span class="line">                <span class="comment">// supplier 一个中间临时变量</span></span><br><span class="line">                ArrayList::<span class="keyword">new</span>,</span><br><span class="line">                <span class="comment">// accumulator 将输入元素放入中间变量</span></span><br><span class="line">                <span class="comment">/**</span></span><br><span class="line"><span class="comment">     /**</span></span><br><span class="line"><span class="comment">     * 泛型说明 Collector&lt;T, A, R&gt; 对应了 Collector&lt;Wallet, List&lt;Person.Money&gt;, Person&gt;</span></span><br><span class="line"><span class="comment">     * &lt;T&gt; – (Wallet) 输入元素的类型</span></span><br><span class="line"><span class="comment">     * &lt;A&gt; – (List&lt;Person.Money&gt;) 是收集器中操作流的临时类型</span></span><br><span class="line"><span class="comment">     * &lt;R&gt; – (Person) 最终返回的结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Collector&lt;Wallet, List&lt;Person.Money&gt;, Person&gt; simpleCollector() &#123;</span><br><span class="line">        <span class="keyword">return</span> Collector.of(</span><br><span class="line">                <span class="comment">// supplier 一个中间临时变量</span></span><br><span class="line">                ArrayList::<span class="keyword">new</span>,</span><br><span class="line">                <span class="comment">// accumulator 将输入元素放入中间变量</span></span><br><span class="line">                (supplier, inputElements) -&gt; supplier.add(<span class="keyword">new</span> Person.Money(inputElements.getMoney())),</span><br><span class="line">                <span class="comment">// combiner 将中间变量的值合并到一个中间变量</span></span><br><span class="line">                (groupA, groupB) -&gt; &#123;</span><br><span class="line">                    groupA.addAll(groupB);</span><br><span class="line">                    <span class="keyword">return</span> groupA;</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// finisher 将中间变量转换为最终返回值</span></span><br><span class="line">                Person::<span class="keyword">new</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然啦。我们可以先利用stream的 Collectors.groupingBy进行分组。返回一个Map&lt;Integer,List&lt;Wallet&gt;&gt;.然后再遍历这个map 把value聚合起来。一样的。我这不是偷懒就想在一行里解决。就自己实现了一个简单的收集器。（这是伪造的一行，里面有个小方法。）</p>
 
 
         <hr>
-    
-        <!-- Archives -->
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/en/递归思维：反转单链表/" data-toggle="tooltip" data-placement="top" title="递归思维：反转单链表">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li></ul>
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
 </div>
+<!-- tip end -->
 
+        <!-- tip end -->
+        
 
-        <hr>
-    
-        <!-- Categories -->
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#JavaCollection">
-      <li>JavaCollection</li>
-    </a>
-    
-    <a href="/categories/#ConcurrentProgramming">
-      <li>ConcurrentProgramming</li>
-    </a>
-    
-    <a href="/categories/#DataStructure">
-      <li>DataStructure</li>
-    </a>
-    
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=java 8 Collector接口简单实现&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/en/java-8-Collector接口简单实现/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
+        <!-- Sharing End -->
+        
         <hr>
-    
-</div>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '807759333c17a44710d7',
+      clientSecret: 'e5a2fb060b16857c3b48830e22762dbb2b94aac3',
+      repo: 'zhangqinzhong.github.io',
+      owner: 'zhangqinzhong',
+      admin: 'zhangqinzhong',
+      id: 'Fri Dec 10 2021 10:29:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
 
 
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">java 8 Collector接口简单实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Collector%E6%8E%A5%E5%8F%A3%E4%B8%8A%E7%9A%84%E6%B3%A8%E9%87%8A%E8%AF%B4%E6%98%8E"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Collector接口上的注释说明</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Collector" title="Collector">Collector</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://baidu.com" target="_blank">百度</a>
+          </li>
+          
+          <li>
+            <a href="https://google.com" target="_blank">Google</a>
+          </li>
+          
+          <li>
+            <a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+          </li>
+          
+          <li>
+            <a href="https://weibo.com/" target="_blank">新浪微博</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      icon: 'ℬ'
+      // icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -1074,7 +907,7 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "zhangqinzhong";
     let ghPages = gh + ".github.io";
-    let pagePath = "en/index.html";
+    let pagePath = "en/java-8-Collector接口简单实现/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
