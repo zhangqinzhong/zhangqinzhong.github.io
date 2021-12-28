@@ -133,10 +133,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="https://zhangqinzhong.com/en/Mysql-8-0-Chapter-1-General-Information/">
+  <link rel="canonical" href="https://zhangqinzhong.com/en/Spring初步整理/">
   <title>
     
-      Mysql 8.0 Chapter 1 General Information - zhangqinzhong
+      Spring初步整理 - zhangqinzhong
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -347,18 +347,18 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/images/benaja-germann.jpg');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io//img/images/benaja-germann.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io//img/header_img/lml_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/images/benaja-germann.jpg');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io//img/images/benaja-germann.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io//img/header_img/lml_bg.jpg');
     }
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/images/benaja-germann.jpg'); */
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/img/header_img/lml_bg.jpg'); */
       
     }
 
@@ -384,14 +384,14 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#Chapter 1" title="Chapter 1">Chapter 1</a>
+              <a class="tag" href="/tags/#Spring 源码深度解析读后感" title="Spring 源码深度解析读后感">Spring 源码深度解析读后感</a>
               
             </div>
-            <h1>Mysql 8.0 Chapter 1 General Information</h1>
-            <h2 class="subheading">Mysql 第一章 开始啃mysql</h2>
+            <h1>Spring初步整理</h1>
+            <h2 class="subheading"></h2>
             <span class="meta">
               Posted by zhangqinzhong on
-              2021-12-11
+              2021-12-28
             </span>
 
 
@@ -399,11 +399,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">13</span> Minutes
+              Estimated Reading Time <span class="post-count">12</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">2.8k</span> In Total
+              Words <span class="post-count">2.6k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -465,176 +465,101 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>MySQL Reference Manual Chapter 1</h1>
-<h3 id="What-is-MySQL">What is MySQL?</h3>
-<ul>
-<li>
-<p>● MySQL is a database management system.</p>
-<p>A database is a structured collection of data.<br>
-It may be anything from a simple shopping list to a picture gallery or the vast amounts of information in a corporate network. To add, access, and process data stored in a computer database, you need a database management system such as MySQL Server.Since computers are very good at handling large amounts of data, database management systems play a central role in computing, as standalone utilities, or as parts of other applications.</p>
-</li>
-</ul>
-<p>数据库是数据的结构化集合。它能存任何东西，购物清单，图片库，或者是公司网络中的大量信息。要添加，访问，处理存储在计算机数据库中的数据。你需要一个数据库管理系统就像Mysql。由于计算机非常适合处理大量数据，数据库管理系统可以作为计算机的一个独立组件，或是其他应用程序的一部分，在计算中发挥着核心作用。</p>
-<ul>
-<li>
-<p>● MySQL databases are relational.</p>
-<p>A relational database stores data in separate tables rather than putting all the data in one big storeroom. The database structures are organized into physical files optimized for speed. The logical model, with objects such as databases, tables, views, rows, and columns, offers a flexible programming environment. You set up rules governing the relationships between different data fields, such as one-to-one, one-to-many, unique, required or optional, and “pointers” between different tables. The database enforces these rules, so that with a well-designed database, your application never sees inconsistent, duplicate, orphan, out-of-date, or missing data.</p>
-<p>The SQL part of “MySQL” stands for “Structured Query Language”. SQL is the most common standardized language used to access databases. Depending on your programming environment, you might enter SQL directly (for example, to generate reports), embed SQL statements into code written in another language, or use a language-specific API that hides the SQL syntax.</p>
-<p>SQL is defined by the ANSI/ISO SQL Standard. The SQL standard has been evolving since 1986 and several versions exist. In this manual, “SQL-92” refers to the standard released in 1992, “SQL:1999” refers to the standard released in 1999, and “SQL:2003” refers to the current version of the standard. We use the phrase “the SQL standard” to mean the current version of the SQL Standard at any time.</p>
-</li>
-</ul>
-<p>关系型数据将数据分离存在不同的表中，而不是把所有的数据都放在一个大存储室里。数据结构被组织成物理文件，用于优化速度。具有数据库、表、视图、行和列等对象的逻辑模型提供了灵活的编程环境。你可以设置规则来管理不同数据字段之间的关系，例如一对一、一对多、唯一、必需或可选以及不同表之间的“指针”。数据库强制执行这些规则，因此使用设计良好的数据库，应用程序永远不会看到不一致、重复、孤立、过期或丢失的数据。</p>
-<ul>
-<li>● MySQL software is Open Source.</li>
-</ul>
-<p>MySQL软件是开源的</p>
-<ul>
-<li>
-<p>● The MySQL Database Server is very fast, reliable, scalable, and easy to use.</p>
-<p>If that is what you are looking for, you should give it a try. MySQL Server can run comfortably on a desktop or laptop, alongside your other applications, web servers, and so on, requiring little or no attention. If you dedicate an entire machine to MySQL, you can adjust the settings to take advantage of all the memory, CPU power, and I/O capacity available. MySQL can also scale up to clusters of machines, networked together.</p>
-<p>MySQL Server was originally developed to handle large databases much faster than existing solutions and has been successfully used in highly demanding production environments for several years. Although under constant development, MySQL Server today offers a rich and useful set of functions. Its connectivity, speed, and security make MySQL Server highly suited for accessing databases on the Internet.</p>
-</li>
-</ul>
-<p>MySQL数据库是非常快速，可靠，可扩展并且易于使用的<br>
-MySQL服务器可以轻松地在台式机或笔记本电脑上运行，与其他应用程序、web服务器等一起运行，几乎不需要关注。如果将整台机器专用于MySQL，则可以调整设置以利用所有可用的内存、CPU电源和I/O容量。MySQL还可以扩展到联网的机器集群。</p>
-<p>MySQL Server最初是为处理大型数据库而开发的，其处理速度比现有解决方案快得多，并且已经成功地在高要求的生产环境中使用了几年。尽管MySQL服务器在不断开发中，但今天它提供了一组丰富而有用的功能。它的连接性、速度和安全性使MySQL服务器非常适合访问Internet上的数据库。</p>
-<ul>
-<li>
-<p>● MySQL Server works in client/server or embedded systems.</p>
-<p>The MySQL Database Software is a client/server system that consists of a multithreaded SQL server that supports different back ends, several different client programs and libraries, administrative tools, and a wide range of application programming interfaces (APIs).</p>
-<p>We also provide MySQL Server as an embedded multithreaded library that you can link into your application to get a smaller, faster, easier-to-manage standalone product.</p>
-</li>
-</ul>
-<p>MySQL服务在客户端/服务器或者嵌入式系统中工作<br>
-MySQL数据库软件是一个客户机/服务器系统，由支持不同后端的多线程SQL server组成，几个不同的客户端程序和库、管理工具和各种应用程序编程接口（API）。我们还提供MySQL服务器作为嵌入式多线程库，您可以将其链接到应用程序中，以获得更小、更快、更易于管理的独立产品。</p>
-<ul>
-<li>● A large amount of contributed MySQL software is available.</li>
-</ul>
-<p>提供了大量的MySQL软件。</p>
-<h3 id="1-2-2-The-Main-Features-of-MySQL">1.2.2 The Main Features of MySQL</h3>
-<h5 id="Internals-and-Portability-内部构件和可移植性">Internals and Portability 内部构件和可移植性</h5>
-<ul>
-<li>● Written in C and C++.</li>
-<li>● For portability, configured using <strong>CMake</strong>.</li>
-<li>● Uses multi-layered server design with independent modules.采用具有独立模块的多层服务器设计。</li>
-<li>● Designed to be fully multithreaded using kernel threads, to easily use multiple CPUs if they are available.设计为使用内核线程进行全多线程处理，以便在多个CPU可用时轻松使用。</li>
-<li>● Provides transactional and nontransactional storage engines.提供事务性和非事务性存储引擎。</li>
-<li>● Uses very fast B-tree disk tables (MyISAM) with index compression.使用索引压缩极快的B树磁盘表（MyISAM）。</li>
-<li>● Uses a very fast thread-based memory allocation system.使用非常快速的基于线程的内存分配系统。</li>
-<li>● Executes very fast joins using an optimized nested-loop join.使用优化的嵌套循环联接执行非常快速的联接。</li>
-<li>● Implements in-memory hash tables, which are used as temporary tables.实现内存中的哈希表，用作临时表。</li>
-<li>● Implements SQL functions using a highly optimized class library that should be as fast as possible. Usually there is no memory allocation at all after query initialization.使用应尽可能快的高度优化的类库实现SQL函数。通常在查询初始化之后根本没有内存分配。</li>
-<li>● Provides the server as a separate program for use in a client/server networked environment, and as a library that can be embedded (linked) into standalone applications. Such applications can be used in isolation or in environments where no network is available.将服务器作为一个单独的程序提供给客户机/服务器网络环境中使用，并作为一个可以嵌入（链接）到独立应用程序中的库。此类应用程序可以在隔离环境中使用，也可以在没有网络可用的环境中使用。</li>
-</ul>
-<h5 id="Data-Types">Data Types</h5>
-<ul>
-<li>● Many data types: signed/unsigned integers 1, 2, 3, 4, and 8 bytes long, FLOAT, DOUBLE, CHAR, VARCHAR, BINARY, VARBINARY, TEXT, BLOB, DATE, TIME, DATETIME, TIMESTAMP, YEAR, SET, ENUM, and OpenGIS spatial types. See Chapter 11, Data Types.</li>
-<li>● Fixed-length and variable-length string types.固定长度和可变长度数据类型</li>
-</ul>
-<h5 id="Statements-and-Functions-语法和函数">Statements and Functions 语法和函数</h5>
-<ul>
-<li>● Full operator and function support in the SELECT list and WHERE clause of queries. For example:查询的SELECT列表和WHERE子句中的完整运算符和函数支持。</li>
-</ul>
+        <h1>Spring源码深度解析</h1>
 <blockquote>
-<p>mysql&gt; SELECT CONCAT(first_name, ’ ', last_name)<br>
--&gt; FROM citizen<br>
--&gt; WHERE income/dependents &gt; 10000 AND age &gt; 30;</p>
+<p>Spring源码深度解析 读书整理</p>
 </blockquote>
+<p>Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson在其著作《Expert One-On-One J2EE Development and Design》中阐述的部分理念和原型衍生而来。Spring是为了解决企业应用开发的复杂性而创建的，它使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益</p>
+<h2 id="1-1-Spring的整体架构">1.1 Spring的整体架构</h2>
+<p>Spring框架是一个分层架构，它包含一系列的功能要素，并被分为大约20个模块，如图1-1所示。</p>
+<p><img src="spring%E6%9E%B6%E6%9E%84%E5%9B%BE.jpeg" alt="spring架构图"></p>
+<p>Spring官网中对IOC的定义。</p>
+<h3 id="1-1-Introduction-to-the-Spring-IoC-Container-and-Beans">1.1. Introduction to the Spring IoC Container and Beans</h3>
+<p>This chapter covers the Spring Framework implementation of the Inversion of Control (IoC) principle.</p>
+<p>本章介绍控制反转（IoC）原理的Spring框架实现。</p>
+<p>IoC is also known as dependency injection (DI).</p>
+<p>IoC也称为依赖注入（DI）。</p>
+<p>It is a process whereby objects define their dependencies (that is, the other objects they work with) only through constructor arguments, arguments to a factory method, or properties that are set on the object instance after it is constructed or returned from a factory method.</p>
+<p>它是这样一个过程：对象仅通过构造函数参数、工厂方法的参数或在对象实例构造或从工厂方法返回后在对象实例上设置的属性来定义它们的依赖关系（即它们使用的其他对象）。</p>
+<p>The container then injects those dependencies when it creates the bean.</p>
+<p>然后容器在创建bean时注入这些依赖项。</p>
+<p>This process is fundamentally the inverse (hence the name, Inversion of Control) of the bean itself controlling the instantiation or location of its dependencies by using direct construction of classes or a mechanism such as the Service Locator pattern.</p>
+<p>这个过程基本上是bean本身的逆过程（因此称为控制反转），通过使用类的直接构造或服务定位器模式等机制来控制其依赖项的实例化或位置。</p>
+<ol>
+<li>定义规范，解析各种配置文件。关键类 BeanDefinitionReader</li>
+<li>解析好之后，BeanDefinition接口，根据规则</li>
+<li>实例化：在堆中开辟空间，属性都是默认值。初始化：给属性完成赋值。</li>
+<li>BeanFactory定义创建bean的规范。</li>
+</ol>
+<p>java通俗理解下对象的创建方式：</p>
+<ol>
+<li>.java文件被编译为.class文件</li>
+<li>需要被初始化时（比如new 反射等），class文件被虚拟机通过类加载器加载到jvm</li>
+<li>初始化class对象的实例供使用</li>
+</ol>
+<p><img src="v2-b785bf02600169adb09738b87d092afc_r-20211201110043617.jpg" alt="preview"></p>
+<p>java 反射构建对象的方式。</p>
+<ol>
+<li>
+<p>Class.forName(“完全限定名”);</p>
+</li>
+<li>
+<p>对象.getClass();</p>
+</li>
+<li>
+<p>类.class;</p>
+<p>Constructor ctor = clazz.getDeclareConstructor();</p>
+<p>Object obj = ctor.getNewInstance();</p>
+</li>
+</ol>
+<p>BeanDefinition 表示bean定义</p>
+<p>Spring根据 BeanDefinition来创建Bean对象, BeanDefinition有很多的属性用来描述Bean</p>
+<p>BeanDefinition中的属性：</p>
 <ul>
-<li>● Full support for SQL GROUP BY and ORDER BY clauses. Support for group functions (COUNT(), AVG(), STD(), SUM(), MAX(), MIN(), and GROUP_CONCAT()).</li>
-<li>● Support for LEFT OUTER JOIN and RIGHT OUTER JOIN with both standard SQL and ODBC syntax.</li>
-<li>● Support for aliases on tables and columns as required by standard SQL.根据标准SQL的要求，支持表和列上的别名。</li>
-<li>● Support for DELETE, INSERT, REPLACE, and UPDATE to return the number of rows that were changed (affected), or to return the number of rows matched instead by setting a flag when connecting to the server.</li>
-<li>● Support for MySQL-specific <strong>SHOW</strong> statements that retrieve information about databases, storage engines, tables, and indexes. Support for the INFORMATION_SCHEMA database, implemented according to standard SQL.</li>
+<li>beanClass 表示一个bean的类型，比如OrderService.class,UserService.class,spring在创建bean的时候会根据此属性实例化得到对象。</li>
+<li>scope 表示一个bean的作用域,比如: scope:等于 singleton,该bean就是一个单例Bean; sope等于 prototype,该bean就是一个原型bean</li>
+<li>isLazy 表示一个bean是不是需要懒加載，原型bean的 isLazy属性不起作用， 懒加载的单例bean，会在第一次 getBean的时候生成该bean，非懒加载的单例bean，则会在 Spring启动过程中直接生成好。</li>
+<li>dependsOn 表示一个bean在创建之前依赖的其他bean，在一个bean创建之前，依赖的其他bean都要创建好。</li>
+<li>primary 表示一个bean是主bean，在spring中一个类型可以有多个bean对象，在进行依赖注入时，如果根据类型找到了多个bean，此时会判断是否存在一个主bean，如果存在，则直接将主bean注入给属性。</li>
+<li>initMethodName 表示一个bean的初始化方法，一个bean的声明周期过程中有一个步骤叫初始化，Spring会在这个步骤中去调用bean的初始化方法，初始化方法的逻辑由程序员自己控制，表示程序员可以自定义逻辑对bean进行加工。</li>
 </ul>
-<p>SHOW has many forms that provide information about databases, tables, columns, or status information about the server. This section describes those following: SHOW有许多表单，提供有关数据库、表、列的信息或有关服务器的状态信息。本节介绍了以下内容：</p>
-<blockquote>
-<p>SHOW {BINARY | MASTER} LOGS<br>
-SHOW BINLOG EVENTS [IN ‘log_name’] [FROM pos] [LIMIT [offset,] row_count]<br>
-SHOW CHARACTER SET [like_or_where]<br>
-SHOW COLLATION [like_or_where]<br>
-SHOW [FULL] COLUMNS FROM tbl_name [FROM db_name] [like_or_where]<br>
-SHOW CREATE DATABASE db_name<br>
-SHOW CREATE EVENT event_name<br>
-SHOW CREATE FUNCTION func_name<br>
-SHOW CREATE PROCEDURE proc_name<br>
-SHOW CREATE TABLE tbl_name<br>
-SHOW CREATE TRIGGER trigger_name<br>
-SHOW CREATE VIEW view_name<br>
-SHOW DATABASES [like_or_where]<br>
-SHOW ENGINE engine_name {STATUS | MUTEX}<br>
-SHOW [STORAGE] ENGINES<br>
-SHOW ERRORS [LIMIT [offset,] row_count]<br>
-SHOW EVENTS<br>
-SHOW FUNCTION CODE func_name<br>
-SHOW FUNCTION STATUS [like_or_where]<br>
-SHOW GRANTS FOR user<br>
-SHOW INDEX FROM tbl_name [FROM db_name]<br>
-SHOW MASTER STATUS<br>
-SHOW OPEN TABLES [FROM db_name] [like_or_where]<br>
-SHOW PLUGINS<br>
-SHOW PROCEDURE CODE proc_name<br>
-SHOW PROCEDURE STATUS [like_or_where]<br>
-SHOW PRIVILEGES<br>
-SHOW [FULL] PROCESSLIST<br>
-SHOW PROFILE [types] [FOR QUERY n] [OFFSET n] [LIMIT n]<br>
-SHOW PROFILES<br>
-SHOW RELAYLOG EVENTS [IN ‘log_name’] [FROM pos] [LIMIT [offset,] row_count]<br>
-SHOW {REPLICAS | SLAVE HOSTS}<br>
-SHOW {REPLICA | SLAVE} STATUS [FOR CHANNEL channel]<br>
-SHOW [GLOBAL | SESSION] STATUS [like_or_where]<br>
-SHOW TABLE STATUS [FROM db_name] [like_or_where]<br>
-SHOW [FULL] TABLES [FROM db_name] [like_or_where]<br>
-SHOW TRIGGERS [FROM db_name] [like_or_where]<br>
-SHOW [GLOBAL | SESSION] VARIABLES [like_or_where]<br>
-SHOW WARNINGS [LIMIT [offset,] row_count]</p>
-<p>like_or_where: {<br>
-LIKE ‘pattern’<br>
-| WHERE expr<br>
-}</p>
-</blockquote>
-<p>If the syntax for a given SHOW statement includes a LIKE ‘pattern’ part, ‘pattern’ is a string that can contain the SQL % and _ wildcard characters. The pattern is useful for restricting statement output to matching values.</p>
-<p>如果给定SHOW语句的语法包含LIKE“pattern”部分，“pattern”是一个可以包含SQL%和uu通配符的字符串。该模式用于将语句输出限制为匹配值。</p>
-<p>Several SHOW statements also accept a WHERE clause that provides more flexibility in specifying which rows to display. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/extended-show.html">Section 26.8, “Extensions to SHOW Statements”.</a></p>
-<p>一些SHOW语句还接受WHERE子句，该子句在指定要显示的行时提供了更大的灵活性。参见第26.8节“显示语句的扩展”。</p>
-<p>In SHOW statement results, user names and host names are quoted using backticks (`).</p>
-<p>在SHOW语句结果中，用户名和主机名使用倒钩（`）引用。</p>
-<p>Many MySQL APIs (such as PHP) enable you to treat the result returned from a SHOW statement as you would a result set from a SELECT; see <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/connectors-apis.html">Chapter 29, Connectors and APIs</a>, or your API documentation for more information. In addition, you can work in SQL with results from queries on tables in the INFORMATION_SCHEMA database, which you cannot easily do with results from SHOW statements. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/information-schema.html">Chapter 26, INFORMATION_SCHEMA Tables.</a></p>
-<p>许多MySQL API（如PHP）允许您将SHOW语句返回的结果视为SELECT语句的结果集；有关更多信息，请参阅第29章连接器和API或API文档。此外，您还可以在SQL中处理对INFORMATION_SCHEMA数据库中的表进行查询的结果，而这对于SHOW语句的结果来说是不容易做到的。参见第26章，信息和模式表。</p>
-<ul>
-<li>● An EXPLAIN statement to show how the optimizer resolves a query.</li>
-<li>● Independence of function names from table or column names. For example, ABS is a valid column name. The only restriction is that for a function call, no spaces are permitted between the function name and the “(” that follows it. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/keywords.html">Section 9.3, “Keywords and Reserved Words”.</a></li>
-<li>● You can refer to tables from different databases in the same statement.</li>
-</ul>
-<h5 id="Security">Security</h5>
-<ul>
-<li>● A privilege and password system that is very flexible and secure, and that enables host-based verification.</li>
-<li>● Password security by encryption of all password traffic when you connect to a server.</li>
-</ul>
-<h5 id="Scalability-and-Limits">Scalability and Limits</h5>
-<ul>
-<li>● Support for large databases. We use MySQL Server with databases that contain 50 million records. We also know of users who use MySQL Server with 200,000 tables and about 5,000,000,000 rows.</li>
-<li>● Support for up to 64 indexes per table. Each index may consist of 1 to 16 columns or parts of columns. The maximum index width for InnoDB tables is either 767 bytes or 3072 bytes. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/innodb-limits.html">Section 15.22, “InnoDB Limits”</a>. The maximum index width for MyISAM tables is 1000 bytes. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/myisam-storage-engine.html">Section 16.2, “The MyISAM Storage Engine”</a>. An index may use a prefix of a column for CHAR, VARCHAR, BLOB, or TEXT column types.</li>
-</ul>
-<h5 id="Connectivity">Connectivity</h5>
-<ul>
-<li>● The Connector/J interface provides MySQL support for Java client programs that use JDBC connections. Clients can be run on Windows or Unix. Connector/J source is available. See MySQL Connector/J 5.1 Developer Guide.支持JDBC连接</li>
-</ul>
-<p>官网还给出了支持很多其他连接方式，这里只摘取了JDBC连接的描述</p>
-<h5 id="Localization">Localization</h5>
+<p>@Component，@Bean，XML的bean标签。这些都会解析为BeanDefinition</p>
+<p>BeanFactoryPostProcessor 增强器（后置处理器）</p>
+<p>Factory hook that allows for custom modification of an application context’s bean definitions, adapting the bean property values of the context’s underlying bean factory.</p>
+<p>工厂钩子，允许自定义修改应用程序上下文的bean定义，调整上下文基础bean工厂的bean属性值。</p>
+<p>PlaceholderConfigurerSupport  写法为：${…}</p>
+<p>Abstract base class for property resource configurers that resolve placeholders in bean definition property values. Implementations pull values from a properties file or other property source into bean definitions.</p>
+<p>解析bean定义属性值中占位符的属性资源配置器的抽象基类。实现将属性文件或其他属性源中的值拉入bean定义。</p>
+<p>BeanPostProcessor 实现AOP的基类</p>
+<p>该接口有两个默认方法。分别是：</p>
+<ol>
+<li>postProcessBeforeInitialization</li>
+<li>postProcessAfterInitialization</li>
+</ol>
+<p><img src="BeanFactory.png" alt="preview"></p>
+<p>Environment 接口 继承PropertyResolver</p>
+<p>Interface representing the environment in which the current application is running. Models two key aspects of the application environment: profiles and properties. Methods related to property access are exposed via the PropertyResolver superinterface.</p>
+<p>表示当前应用程序正在其中运行的环境的接口。为应用程序环境的两个关键方面建模：概要文件和属性。与属性访问相关的方法通过PropertyResolver超级接口公开。</p>
+<p>实现类StandardEnvironment 获取系统级别环境变量</p>
+<p>Environment implementation suitable for use in ‘standard’ (i.e. non-web) applications.<br>
+In addition to the usual functions of a ConfigurableEnvironment such as property resolution and profile-related operations, this implementation configures two default property sources, to be searched in the following order:</p>
+<p>AbstractApplicationContext</p>
+<p>Abstract implementation of the ApplicationContext interface. Doesn’t mandate the type of storage used for configuration; simply implements common context functionality. Uses the Template Method design pattern, requiring concrete subclasses to implement abstract methods.</p>
+<p>ApplicationContext接口的抽象实现。不强制用于配置的存储类型；简单地实现公共上下文功能。使用模板方法设计模式，需要具体的子类来实现抽象方法。</p>
+<p>关键方法：refresh()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">refresh</span><span class="params">()</span> <span class="keyword">throws</span> BeansException, IllegalStateException </span>&#123;</span><br><span class="line">		<span class="keyword">synchronized</span> (<span class="keyword">this</span>.startupShutdownMonitor) &#123;</span><br><span class="line">			<span class="comment">// Prepare this context for refreshing.</span></span><br><span class="line">      <span class="comment">//早期的准备工作 初始化开始时间，打开是否开启的标志 创建系统环境变量，验证是否可以解析</span></span><br><span class="line">			prepareRefresh();</span><br><span class="line"></span><br><span class="line">			<span class="comment">// Tell the subclass to refresh the internal bean factory.</span></span><br><span class="line">      <span class="comment">//获取最新的BeanFactory工厂</span></span><br><span class="line">      <span class="comment">//关键方法 new DefaultListableBeanFactory ，loadBeanDefinitions加载定义的bean</span></span><br><span class="line">			ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();</span><br><span class="line"></span><br><span class="line">			<span class="comment">// Prepare the bean factory for use in this context.</span></span><br><span class="line">      <span class="comment">//准备BeanFactory 以便在上下文中使用</span></span><br><span class="line">			prepareBeanFactory(beanFactory);</span><br><span class="line"></span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="comment">// Allows post-processing of the bean factory in context subclasses.</span></span><br><span class="line">        <span class="comment">//bean工厂增强器，空方法。（SpringBoot中有实现）</span></span><br><span class="line">				postProcessBeanFactory(beanFactory);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Invoke factory processors registered as beans in the context.</span></span><br><span class="line">				invokeBeanFactoryPostProcessors(beanFactory);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Register bean processors that intercept bean creation.</span></span><br><span class="line">				registerBeanPostProcessors(beanFactory);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Initialize message source for this context.</span></span><br><span class="line">				initMessageSource();</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Initialize event multicaster for this context.</span></span><br><span class="line">        <span class="comment">//初始化时间多波器</span></span><br><span class="line">				initApplicationEventMulticaster();</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Initialize other special beans in specific context subclasses.</span></span><br><span class="line">				onRefresh();</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Check for listener beans and register them.</span></span><br><span class="line">        <span class="comment">//注册监听器</span></span><br><span class="line">				registerListeners();</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Instantiate all remaining (non-lazy-init) singletons.</span></span><br><span class="line">        <span class="comment">//加载所有非懒加载的单例bean</span></span><br><span class="line">				finishBeanFactoryInitialization(beanFactory);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Last step: publish corresponding event.</span></span><br><span class="line">				finishRefresh();</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">catch</span> (BeansException ex) &#123;</span><br><span class="line">				<span class="keyword">if</span> (logger.isWarnEnabled()) &#123;</span><br><span class="line">					logger.warn(<span class="string">&quot;Exception encountered during context initialization - &quot;</span> +</span><br><span class="line">							<span class="string">&quot;cancelling refresh attempt: &quot;</span> + ex);</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Destroy already created singletons to avoid dangling resources.</span></span><br><span class="line">				destroyBeans();</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Reset &#x27;active&#x27; flag.</span></span><br><span class="line">				cancelRefresh(ex);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Propagate exception to caller.</span></span><br><span class="line">				<span class="keyword">throw</span> ex;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">finally</span> &#123;</span><br><span class="line">				<span class="comment">// Reset common introspection caches in Spring&#x27;s core, since we</span></span><br><span class="line">				<span class="comment">// might not ever need metadata for singleton beans anymore...</span></span><br><span class="line">				resetCommonCaches();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Prepare this context for refreshing, setting its startup date and</span></span><br><span class="line"><span class="comment">	 * active flag as well as performing any initialization of property sources.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">prepareRefresh</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// Switch to active.</span></span><br><span class="line">		<span class="keyword">this</span>.startupDate = System.currentTimeMillis();</span><br><span class="line">		<span class="keyword">this</span>.closed.set(<span class="keyword">false</span>);</span><br><span class="line">		<span class="keyword">this</span>.active.set(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (logger.isDebugEnabled()) &#123;</span><br><span class="line">			<span class="keyword">if</span> (logger.isTraceEnabled()) &#123;</span><br><span class="line">				logger.trace(<span class="string">&quot;Refreshing &quot;</span> + <span class="keyword">this</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				logger.debug(<span class="string">&quot;Refreshing &quot;</span> + getDisplayName());</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Initialize any placeholder property sources in the context environment.</span></span><br><span class="line">    <span class="comment">//此方法是个空方法 没有任何实现</span></span><br><span class="line">		initPropertySources();</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Validate that all properties marked as required are resolvable:</span></span><br><span class="line">		<span class="comment">// see ConfigurablePropertyResolver#setRequiredProperties</span></span><br><span class="line">    <span class="comment">//getEnvironment 调用了 createEnvironment()方法，该方法new StandardEnvironment();创建了一个标准环境变量。validateRequiredProperties()验证setRequiredProperties指定的每个属性是否存在并解析</span></span><br><span class="line">		getEnvironment().validateRequiredProperties();</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Store pre-refresh ApplicationListeners...</span></span><br><span class="line">    <span class="comment">//初始化应用程序早期监听器</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>.earlyApplicationListeners == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">this</span>.earlyApplicationListeners = <span class="keyword">new</span> LinkedHashSet&lt;&gt;(<span class="keyword">this</span>.applicationListeners);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// Reset local application listeners to pre-refresh state.</span></span><br><span class="line">			<span class="keyword">this</span>.applicationListeners.clear();</span><br><span class="line">			<span class="keyword">this</span>.applicationListeners.addAll(<span class="keyword">this</span>.earlyApplicationListeners);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Allow for the collection of early ApplicationEvents,</span></span><br><span class="line">		<span class="comment">// to be published once the multicaster is available...</span></span><br><span class="line">    <span class="comment">//初始化 early ApplicationEvents</span></span><br><span class="line">		<span class="keyword">this</span>.earlyApplicationEvents = <span class="keyword">new</span> LinkedHashSet&lt;&gt;();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="FactoryBean">FactoryBean</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">FactoryBean</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * The name of an attribute that can be</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> org.springframework.core.AttributeAccessor#setAttribute set&#125; on a</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> org.springframework.beans.factory.config.BeanDefinition&#125; so that</span></span><br><span class="line"><span class="comment">	 * factory beans can signal their object type when it can&#x27;t be deduced from</span></span><br><span class="line"><span class="comment">	 * the factory bean class.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@since</span> 5.2</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	String OBJECT_TYPE_ATTRIBUTE = <span class="string">&quot;factoryBeanObjectType&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Return an instance (possibly shared or independent) of the object</span></span><br><span class="line"><span class="comment">	 * managed by this factory.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;As with a &#123;<span class="doctag">@link</span> BeanFactory&#125;, this allows support for both the</span></span><br><span class="line"><span class="comment">	 * Singleton and Prototype design pattern.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;If this FactoryBean is not fully initialized yet at the time of</span></span><br><span class="line"><span class="comment">	 * the call (for example because it is involved in a circular reference),</span></span><br><span class="line"><span class="comment">	 * throw a corresponding &#123;<span class="doctag">@link</span> FactoryBeanNotInitializedException&#125;.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;As of Spring 2.0, FactoryBeans are allowed to return &#123;<span class="doctag">@code</span> null&#125;</span></span><br><span class="line"><span class="comment">	 * objects. The factory will consider this as normal value to be used; it</span></span><br><span class="line"><span class="comment">	 * will not throw a FactoryBeanNotInitializedException in this case anymore.</span></span><br><span class="line"><span class="comment">	 * FactoryBean implementations are encouraged to throw</span></span><br><span class="line"><span class="comment">	 * FactoryBeanNotInitializedException themselves now, as appropriate.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> an instance of the bean (can be &#123;<span class="doctag">@code</span> null&#125;)</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@throws</span> Exception in case of creation errors</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> FactoryBeanNotInitializedException</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	<span class="function">T <span class="title">getObject</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Return the type of object that this FactoryBean creates,</span></span><br><span class="line"><span class="comment">	 * or &#123;<span class="doctag">@code</span> null&#125; if not known in advance.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;This allows one to check for specific types of beans without</span></span><br><span class="line"><span class="comment">	 * instantiating objects, for example on autowiring.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;In the case of implementations that are creating a singleton object,</span></span><br><span class="line"><span class="comment">	 * this method should try to avoid singleton creation as far as possible;</span></span><br><span class="line"><span class="comment">	 * it should rather estimate the type in advance.</span></span><br><span class="line"><span class="comment">	 * For prototypes, returning a meaningful type here is advisable too.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;This method can be called &lt;i&gt;before&lt;/i&gt; this FactoryBean has</span></span><br><span class="line"><span class="comment">	 * been fully initialized. It must not rely on state created during</span></span><br><span class="line"><span class="comment">	 * initialization; of course, it can still use such state if available.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;&lt;b&gt;<span class="doctag">NOTE:</span>&lt;/b&gt; Autowiring will simply ignore FactoryBeans that return</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@code</span> null&#125; here. Therefore it is highly recommended to implement</span></span><br><span class="line"><span class="comment">	 * this method properly, using the current state of the FactoryBean.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> the type of object that this FactoryBean creates,</span></span><br><span class="line"><span class="comment">	 * or &#123;<span class="doctag">@code</span> null&#125; if not known at the time of the call</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> ListableBeanFactory#getBeansOfType</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Nullable</span></span><br><span class="line">	Class&lt;?&gt; getObjectType();</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Is the object managed by this factory a singleton? That is,</span></span><br><span class="line"><span class="comment">	 * will &#123;<span class="doctag">@link</span> #getObject()&#125; always return the same object</span></span><br><span class="line"><span class="comment">	 * (a reference that can be cached)?</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;&lt;b&gt;<span class="doctag">NOTE:</span>&lt;/b&gt; If a FactoryBean indicates to hold a singleton object,</span></span><br><span class="line"><span class="comment">	 * the object returned from &#123;<span class="doctag">@code</span> getObject()&#125; might get cached</span></span><br><span class="line"><span class="comment">	 * by the owning BeanFactory. Hence, do not return &#123;<span class="doctag">@code</span> true&#125;</span></span><br><span class="line"><span class="comment">	 * unless the FactoryBean always exposes the same reference.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;The singleton status of the FactoryBean itself will generally</span></span><br><span class="line"><span class="comment">	 * be provided by the owning BeanFactory; usually, it has to be</span></span><br><span class="line"><span class="comment">	 * defined as singleton there.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;&lt;b&gt;<span class="doctag">NOTE:</span>&lt;/b&gt; This method returning &#123;<span class="doctag">@code</span> false&#125; does not</span></span><br><span class="line"><span class="comment">	 * necessarily indicate that returned objects are independent instances.</span></span><br><span class="line"><span class="comment">	 * An implementation of the extended &#123;<span class="doctag">@link</span> SmartFactoryBean&#125; interface</span></span><br><span class="line"><span class="comment">	 * may explicitly indicate independent instances through its</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@link</span> SmartFactoryBean#isPrototype()&#125; method. Plain &#123;<span class="doctag">@link</span> FactoryBean&#125;</span></span><br><span class="line"><span class="comment">	 * implementations which do not implement this extended interface are</span></span><br><span class="line"><span class="comment">	 * simply assumed to always return independent instances if the</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@code</span> isSingleton()&#125; implementation returns &#123;<span class="doctag">@code</span> false&#125;.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;The default implementation returns &#123;<span class="doctag">@code</span> true&#125;, since a</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@code</span> FactoryBean&#125; typically manages a singleton instance.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span> whether the exposed object is a singleton</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> #getObject()</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> SmartFactoryBean#isPrototype()</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">default</span> <span class="keyword">boolean</span> <span class="title">isSingleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/en/Spring初步整理/" data-toggle="tooltip" data-placement="top" title="Spring初步整理">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/en/java-8-Collector接口简单实现/" data-toggle="tooltip" data-placement="top" title="java 8 Collector接口简单实现">Next Post &rarr;</a>
+            <a href="/en/Mysql-8-0-Chapter-1-General-Information/" data-toggle="tooltip" data-placement="top" title="Mysql 8.0 Chapter 1 General Information">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -683,7 +608,7 @@ LIKE ‘pattern’<br>
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=Mysql 8.0 Chapter 1 General Information&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/en/Mysql-8-0-Chapter-1-General-Information/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Spring初步整理&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/en/Spring初步整理/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -717,7 +642,7 @@ LIKE ‘pattern’<br>
       repo: 'zhangqinzhong.github.io',
       owner: 'zhangqinzhong',
       admin: 'zhangqinzhong',
-      id: 'Sat Dec 11 2021 14:10:11 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Tue Dec 28 2021 21:34:38 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -770,7 +695,7 @@ LIKE ‘pattern’<br>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">MySQL Reference Manual Chapter 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#What-is-MySQL"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">What is MySQL?</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-2-The-Main-Features-of-MySQL"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">1.2.2 The Main Features of MySQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Internals-and-Portability-%E5%86%85%E9%83%A8%E6%9E%84%E4%BB%B6%E5%92%8C%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="toc-nav-number">1.0.2.0.1.</span> <span class="toc-nav-text">Internals and Portability 内部构件和可移植性</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Data-Types"><span class="toc-nav-number">1.0.2.0.2.</span> <span class="toc-nav-text">Data Types</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Statements-and-Functions-%E8%AF%AD%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.0.2.0.3.</span> <span class="toc-nav-text">Statements and Functions 语法和函数</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Security"><span class="toc-nav-number">1.0.2.0.4.</span> <span class="toc-nav-text">Security</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Scalability-and-Limits"><span class="toc-nav-number">1.0.2.0.5.</span> <span class="toc-nav-text">Scalability and Limits</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Connectivity"><span class="toc-nav-number">1.0.2.0.6.</span> <span class="toc-nav-text">Connectivity</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Localization"><span class="toc-nav-number">1.0.2.0.7.</span> <span class="toc-nav-text">Localization</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Spring源码深度解析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-1-Spring%E7%9A%84%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">1.1 Spring的整体架构</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-Introduction-to-the-Spring-IoC-Container-and-Beans"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">1.1. Introduction to the Spring IoC Container and Beans</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#FactoryBean"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">FactoryBean</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -793,7 +718,7 @@ LIKE ‘pattern’<br>
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#Chapter 1" title="Chapter 1">Chapter 1</a>
+            <a class="tag" href="/tags/#Spring 源码深度解析读后感" title="Spring 源码深度解析读后感">Spring 源码深度解析读后感</a>
             
           </div>
         </section>
@@ -1037,7 +962,7 @@ LIKE ‘pattern’<br>
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "zhangqinzhong";
     let ghPages = gh + ".github.io";
-    let pagePath = "en/Mysql-8-0-Chapter-1-General-Information/";
+    let pagePath = "en/Spring初步整理/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
