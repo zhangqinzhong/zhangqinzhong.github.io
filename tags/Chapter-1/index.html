@@ -144,7 +144,7 @@
 
 <!-- hack iOS CSS :active style -->
 
-	<body ontouchstart="" class="body--light body--dark">
+	<body ontouchstart="" class="body--light body--light">
 
 
 		<!-- ThemeColor -->
@@ -178,7 +178,7 @@
       ? b.pop()
       : '';
   }
-  let themeMode = 'dark';
+  let themeMode = 'light';
   if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
     let dbody = document.body.classList;
     themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
@@ -252,9 +252,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -263,9 +263,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -612,11 +612,11 @@
     
     
     
-    <a href="/tags/#RandomAccess" title="RandomAccess" rel="1">RandomAccess</a>
-    
-    
-    
     <a href="/tags/#Spring 源码深度解析读后感" title="Spring 源码深度解析读后感" rel="1">Spring 源码深度解析读后感</a>
+    
+    
+    
+    <a href="/tags/#RandomAccess" title="RandomAccess" rel="1">RandomAccess</a>
     
     
     
@@ -624,11 +624,11 @@
     
     
     
-    <a href="/tags/#反转单链表" title="反转单链表" rel="1">反转单链表</a>
-    
-    
-    
     <a href="/tags/#缓存行伪共享" title="缓存行伪共享" rel="1">缓存行伪共享</a>
+    
+    
+    
+    <a href="/tags/#反转单链表" title="反转单链表" rel="1">反转单链表</a>
     
     
     
@@ -804,20 +804,20 @@
       <li>MySQL 8.0 Reference Manual</li>
     </a>
     
-    <a href="/categories/#JavaCollection">
-      <li>JavaCollection</li>
-    </a>
-    
     <a href="/categories/#Spring">
       <li>Spring</li>
     </a>
     
-    <a href="/categories/#DataStructure">
-      <li>DataStructure</li>
+    <a href="/categories/#JavaCollection">
+      <li>JavaCollection</li>
     </a>
     
     <a href="/categories/#ConcurrentProgramming">
       <li>ConcurrentProgramming</li>
+    </a>
+    
+    <a href="/categories/#DataStructure">
+      <li>DataStructure</li>
     </a>
     
   </ul>
