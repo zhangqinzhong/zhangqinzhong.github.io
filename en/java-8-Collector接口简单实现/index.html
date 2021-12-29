@@ -241,17 +241,6 @@
           
           
           <li>
-            <a href="/archive/">
-              
-              ARCHIVES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/about/">
               
               ABOUT
@@ -266,6 +255,17 @@
             <a href="/categories/">
               
               CATEGORIES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
               
               
             </a>
@@ -399,11 +399,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">6</span> Minutes
+              Estimated Reading Time <span class="post-count">1</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.4k</span> In Total
+              Words <span class="post-count">506</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -465,37 +465,43 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>java 8 Collector接口简单实现</h1>
-<h2 id="Collector接口上的注释说明">Collector接口上的注释说明</h2>
-<p>Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：<br>
-A Collector is specified by four functions that work together to accumulate entries into a mutable result container, and optionally perform a final transform on the result. They are:</p>
+        
+<h1>java 8 Collector接口简单实现</h1>
+<h2>Collector接口上的注释说明</h2>
+<p>
+  Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：
+  A Collector is specified by four functions that work together to accumulate entries into a mutable result container, and optionally perform a final transform on the result. They are:
+</p>
 <ul>
-<li>creation of a new result container (supplier())</li>
-<li>incorporating a new data element into a result container (accumulator())</li>
-<li>combining two result containers into one (combiner())</li>
-<li>performing an optional final transform on the container (finisher())</li>
+  <li>creation of a new result container (supplier())</li>
+  <li>incorporating a new data element into a result container (accumulator())</li>
+  <li>combining two result containers into one (combiner())</li>
+  <li>performing an optional final transform on the container (finisher())</li>
 </ul>
 <p>收集器由四个函数指定，这些函数一起工作，将条目累积到可变结果容器中，并可以选择对结果执行最终转换。他们是：</p>
 <ul>
-<li>supplier() 临时变量容器</li>
-<li>accumulator() 累加器</li>
-<li>combiner() 合并器</li>
-<li>finisher() 返回最终结果的方法</li>
+  <li>supplier() 临时变量容器</li>
+  <li>accumulator() 累加器</li>
+  <li>combiner() 合并器</li>
+  <li>finisher() 返回最终结果的方法</li>
 </ul>
-<p>注释上还给出了一个小例子。合并树</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Collector&lt;Widget, ?, TreeSet&lt;Widget&gt;&gt; intoSet = Collector.of(</span><br><span class="line">   <span class="comment">//临时变量为TreeSet</span></span><br><span class="line">   TreeSet::<span class="keyword">new</span>, </span><br><span class="line">   <span class="comment">//累加器调用TreeSet add方法将元素都添加进来</span></span><br><span class="line">   TreeSet::add, </span><br><span class="line">   <span class="comment">//合并器 将两个元素组合起来 此时这里的left 是TreeSet right也是TreeSet</span></span><br><span class="line">   (left, right) -&gt; &#123; </span><br><span class="line">   left.addAll(right);</span><br><span class="line">     <span class="keyword">return</span> left; </span><br><span class="line">   &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>再来看一下这个Collector接口 内容不是很多：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> java.util.stream;</span><br><span class="line"><span class="comment">//省略import的包...</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Collector</span>&lt;<span class="title">T</span>, <span class="title">A</span>, <span class="title">R</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 创建并返回新的可变结果容器的函数。返回一个函数，该函数返回一个新的、可变的结果容器，元素类型是A</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">Supplier&lt;A&gt; <span class="title">supplier</span><span class="params">()</span></span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 累加器 顾名思义 将流中的元素（T）进程一系列操作 放入A容器中（我是这么理解的）</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">BiConsumer&lt;A, T&gt; <span class="title">accumulator</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 接受两个部分结果并将其合并的函数。组合器函数可以将状态从一个参数折叠到另一个参数并返回该参数，或者可以返回一个新的结果容器。将两个部分结果组合成一个组合结果的函数</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">BinaryOperator&lt;A&gt; <span class="title">combiner</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 执行从中间累积类型A到最终结果类型R的最终转换。如果设置了特征标识_转换，则可以假定此函数是一个标识转换，具有从A到R的未检查强制转换。返回：将中间结果转换为最终结果的函数(这就用到了下面的枚举类，比如Collectors.toList() 由于临时元素A 和最终返回值R 是同一类型，就可以不实现finisher()函数，而是传入一个特征值，用于强制转换A到R)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">Function&lt;A, R&gt; <span class="title">finisher</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 返回：一组不可变的收集器特征</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">Set&lt;Characteristics&gt; <span class="title">characteristics</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 4个参数的静态方法</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>&lt;T, R&gt; Collector&lt;T, R, R&gt; <span class="title">of</span><span class="params">(Supplier&lt;R&gt; supplier,</span></span></span><br><span class="line"><span class="function"><span class="params">                                              BiConsumer&lt;R, T&gt; accumulator,</span></span></span><br><span class="line"><span class="function"><span class="params">                                              BinaryOperator&lt;R&gt; combiner,</span></span></span><br><span class="line"><span class="function"><span class="params">                                              Characteristics... characteristics)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//省略中间默认实现...</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Collectors.CollectorImpl&lt;&gt;(supplier, accumulator, combiner, cs);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 5个参数的静态方法</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span>&lt;T, A, R&gt; Collector&lt;T, A, R&gt; <span class="title">of</span><span class="params">(Supplier&lt;A&gt; supplier,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 BiConsumer&lt;A, T&gt; accumulator,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 BinaryOperator&lt;A&gt; combiner,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 Function&lt;A, R&gt; finisher,</span></span></span><br><span class="line"><span class="function"><span class="params">                                                 Characteristics... characteristics)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//省略中间默认实现...</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Collectors.CollectorImpl&lt;&gt;(supplier, accumulator, combiner, finisher, cs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">enum</span> <span class="title">Characteristics</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">        * 并行</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        CONCURRENT,</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 无序</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        UNORDERED,</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 无需转换结果</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        IDENTITY_FINISH</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>一共有5个需要实现的方法，还有2个静态方法，方便我们快速的构建自定义的收集器。<br>
-还有一个枚举类，是用来优化收集器的。也是收集器最后一个方法<strong>Set&lt;Characteristics&gt; characteristics();</strong> 的泛型类型。</p>
-<p>我的简单实现，是为了实现一个小需求。<br>
-例子如下：</p>
+<p>注释上还给出了一个小例子。合并树</p>&#x3C;!--code￼0-->
+<p>再来看一下这个Collector接口 内容不是很多：</p>&#x3C;!--code￼1-->
+<p>
+  一共有5个需要实现的方法，还有2个静态方法，方便我们快速的构建自定义的收集器。
+  还有一个枚举类，是用来优化收集器的。也是收集器最后一个方法<strong>Set&#x3C;Characteristics> characteristics();</strong> 的泛型类型。
+</p>
+<p>
+  我的简单实现，是为了实现一个小需求。
+  例子如下：
+</p>
 <blockquote>
-<p>假设有一个钱包数据集合 里面的元素是 Wallet wallet包含了多个用户的钱包信息 有用户ID 和钱包金额 我们要讲这个数据集合按照用户ID分组 结果返回一个map.<br>
-map的key是用户ID value是一个用户对象。用户对象里有一个属性，是个list。它包含了用户多个钱包金额</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectorTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Wallet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> BigDecimal money;</span><br><span class="line">        <span class="keyword">private</span> Integer personId;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="meta">@NoArgsConstructor</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> List&lt;Money&gt; moneys;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(List&lt;Money&gt; moneys)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.moneys = moneys;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Data</span></span><br><span class="line">        <span class="meta">@NoArgsConstructor</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Money</span> </span>&#123;</span><br><span class="line">            <span class="keyword">private</span> BigDecimal money;</span><br><span class="line"></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="title">Money</span><span class="params">(BigDecimal money)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.money = money;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 假设有一个钱包数据集合 里面的元素是 Wallet wallet包含了多个用户的钱包信息 有用户ID 和钱包金额 我们要讲这个数据集合按照用户ID分组 结果返回一个map</span></span><br><span class="line">        <span class="comment">// map的key是用户ID value是一个用户对象。用户对象里有一个属性，是个list。它包含了用户多个钱包金额</span></span><br><span class="line">        List&lt;Wallet&gt; walletList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//利用收集器实现</span></span><br><span class="line">        Map&lt;Integer, Person&gt; personMap = walletList.stream().collect(Collectors.groupingBy(Wallet::getPersonId, simpleCollector()));</span><br><span class="line">        <span class="comment">//大功告成</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 泛型说明 Collector&lt;T, A, R&gt; 对应了 Collector&lt;Wallet, List&lt;Person.Money&gt;, Person&gt;</span></span><br><span class="line"><span class="comment">     * &lt;T&gt; – (Wallet) 输入元素的类型</span></span><br><span class="line"><span class="comment">     * &lt;A&gt; – (List&lt;Person.Money&gt;) 是收集器中操作流的临时类型</span></span><br><span class="line"><span class="comment">     * &lt;R&gt; – (Person) 最终返回的结果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Collector&lt;Wallet, List&lt;Person.Money&gt;, Person&gt; simpleCollector() &#123;</span><br><span class="line">        <span class="keyword">return</span> Collector.of(</span><br><span class="line">                <span class="comment">// supplier 一个中间临时变量</span></span><br><span class="line">                ArrayList::<span class="keyword">new</span>,</span><br><span class="line">                <span class="comment">// accumulator 将输入元素放入中间变量</span></span><br><span class="line">                (supplier, inputElements) -&gt; supplier.add(<span class="keyword">new</span> Person.Money(inputElements.getMoney())),</span><br><span class="line">                <span class="comment">// combiner 将中间变量的值合并到一个中间变量</span></span><br><span class="line">                (groupA, groupB) -&gt; &#123;</span><br><span class="line">                    groupA.addAll(groupB);</span><br><span class="line">                    <span class="keyword">return</span> groupA;</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// finisher 将中间变量转换为最终返回值</span></span><br><span class="line">                Person::<span class="keyword">new</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当然啦。我们可以先利用stream的 Collectors.groupingBy进行分组。返回一个Map&lt;Integer,List&lt;Wallet&gt;&gt;.然后再遍历这个map 把value聚合起来。一样的。我这不是偷懒就想在一行里解决。就自己实现了一个简单的收集器。（这是伪造的一行，里面有个小方法。）</p>
+  <p>
+    假设有一个钱包数据集合 里面的元素是 Wallet wallet包含了多个用户的钱包信息 有用户ID 和钱包金额 我们要讲这个数据集合按照用户ID分组 结果返回一个map.
+    map的key是用户ID value是一个用户对象。用户对象里有一个属性，是个list。它包含了用户多个钱包金额
+  </p>
+</blockquote>&#x3C;!--code￼2-->
+<p>当然啦。我们可以先利用stream的 Collectors.groupingBy进行分组。返回一个Map&#x3C;Integer,List&#x3C;Wallet>>.然后再遍历这个map 把value聚合起来。一样的。我这不是偷懒就想在一行里解决。就自己实现了一个简单的收集器。（这是伪造的一行，里面有个小方法。）</p>
 
 
         <hr>
@@ -644,7 +650,7 @@ map的key是用户ID value是一个用户对象。用户对象里有一个属性
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">java 8 Collector接口简单实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Collector%E6%8E%A5%E5%8F%A3%E4%B8%8A%E7%9A%84%E6%B3%A8%E9%87%8A%E8%AF%B4%E6%98%8E"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Collector接口上的注释说明</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">java 8 Collector接口简单实现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Collector接口上的注释说明</span></a></li></ol></li></ol>
         
         </div>
       </aside>
