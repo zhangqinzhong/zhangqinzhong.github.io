@@ -252,6 +252,17 @@
           
           
           <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
             <a href="/categories/">
               
               CATEGORIES
@@ -266,17 +277,6 @@
             <a href="/tags/">
               
               TAGS
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
               
               
             </a>
@@ -399,11 +399,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">2</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">384</span> In Total
+              Words <span class="post-count">596</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -465,28 +465,30 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        
-<h1>RandomAccess</h1>
+        <h1>RandomAccess</h1>
 <p>RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。</p>
 <p>那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。</p>
 <p>所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。</p>
 <ul>
-  <li>ArrayList基于数组实现，天然带下标，可以实现常量级的随机访问，复杂度为O(1)</li>
-  <li>LinkedList基于链表实现，随机访问需要依靠遍历实现，复杂度为O(n)</li>
+<li>ArrayList基于数组实现，天然带下标，可以实现常量级的随机访问，复杂度为O(1)</li>
+<li>LinkedList基于链表实现，随机访问需要依靠遍历实现，复杂度为O(n)</li>
 </ul>
-<p>二者的差距显而易见，所以ArrayList具备快速随机访问功能，而LinkedList没有。我们也能看到：</p>&#x3C;!--code￼0-->
+<p>二者的差距显而易见，所以ArrayList具备快速随机访问功能，而LinkedList没有。我们也能看到：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span>&lt;<span class="title">E</span>&gt; <span class="keyword">extends</span> <span class="title">AbstractList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">        <span class="keyword">implements</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt;, <span class="title">RandomAccess</span>, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span></span><br><span class="line"><span class="class"></span>&#123;<span class="comment">/*...*/</span>&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">    <span class="keyword">extends</span> <span class="title">AbstractSequentialList</span>&lt;<span class="title">E</span>&gt;</span></span><br><span class="line"><span class="class">    <span class="keyword">implements</span> <span class="title">List</span>&lt;<span class="title">E</span>&gt;, <span class="title">Deque</span>&lt;<span class="title">E</span>&gt;, <span class="title">Cloneable</span>, <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span>	</span></span><br><span class="line"><span class="class"></span>&#123;<span class="comment">/*...*/</span>&#125;</span><br></pre></td></tr></table></figure>
 <p>ArrayList实现了RandomAccess接口，而LinkedList没有。</p>
 <p>那么到底这个接口有什么用呢？</p>
 <p>当一个List拥有快速访问功能时，其遍历方法采用for循环最快速。而没有快速访问功能的List，遍历的时候采用Iterator迭代器最快速。</p>
-<p>当我们不明确获取到的是Arraylist，还是LinkedList的时候，我们可以通过RandomAccess来判断其是否支持快速随机访问，若支持则采用for循环遍历，否则采用迭代器遍历，如下方式：</p>&#x3C;!--code￼1-->
-<p>执行结果：</p>&#x3C;!--code￼2-->
+<p>当我们不明确获取到的是Arraylist，还是LinkedList的时候，我们可以通过RandomAccess来判断其是否支持快速随机访问，若支持则采用for循环遍历，否则采用迭代器遍历，如下方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RandomAccessTest</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; list = <span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RandomAccessTest</span><span class="params">(List&lt;String&gt; list)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.list = list;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(list <span class="keyword">instanceof</span> RandomAccess) &#123;</span><br><span class="line">            <span class="comment">// for循环</span></span><br><span class="line">            System.out.println(<span class="string">&quot;采用for循环遍历&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i&lt; list.size();i++) &#123;</span><br><span class="line">                System.out.println(list.get(i));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 迭代器</span></span><br><span class="line">            System.out.println(<span class="string">&quot;采用迭代器遍历&quot;</span>);</span><br><span class="line">            Iterator it = list.iterator();</span><br><span class="line">            <span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">                System.out.println(it.next());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = Arrays.asList(<span class="string">&quot;123&quot;</span>,<span class="string">&quot;456&quot;</span>,<span class="string">&quot;789&quot;</span>,<span class="string">&quot;1110&quot;</span>);</span><br><span class="line">        List&lt;String&gt; list1 = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        list1.add(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">        list1.add(<span class="string">&quot;bbb&quot;</span>);</span><br><span class="line">        list1.add(<span class="string">&quot;ccc&quot;</span>);</span><br><span class="line">        <span class="keyword">new</span> RandomAccessTest(list).loop();</span><br><span class="line">        <span class="keyword">new</span> RandomAccessTest(list1).loop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行结果：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">采用for循环遍历</span><br><span class="line">123</span><br><span class="line">456</span><br><span class="line">789</span><br><span class="line">1110</span><br><span class="line">采用迭代器遍历</span><br><span class="line">aaa</span><br><span class="line">bbb</span><br><span class="line">ccc</span><br></pre></td></tr></table></figure>
 <p>那么都有哪些类实现了这个接口呢？</p>
 <ul>
-  <li>ArrayList</li>
-  <li>Vector</li>
-  <li>CopyOnWriteArrayList</li>
-  <li>RandomAccessSubList</li>
-  <li>UnmodifiableArrayList</li>
+<li>ArrayList</li>
+<li>Vector</li>
+<li>CopyOnWriteArrayList</li>
+<li>RandomAccessSubList</li>
+<li>UnmodifiableArrayList</li>
 </ul>
 
 
