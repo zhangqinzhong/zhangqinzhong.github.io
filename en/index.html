@@ -238,8 +238,6 @@
 
           
           
-          
-          
           <li>
             <a href="/about/">
               
@@ -248,6 +246,19 @@
               
             </a>
           </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
           
           
           
@@ -266,17 +277,6 @@
             <a href="/tags/">
               
               TAGS
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              ARCHIVES
               
               
             </a>
@@ -485,13 +485,12 @@
       RandomAccess
     </h3>
     <div class="post-content-preview">
-      
-RandomAccess
+      RandomAccess
 RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
 那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
 所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
 
-  ArrayList基于数组实现，天然......
+ArrayList基于数组实现，天然带下标......
     </div>
   </a>
   
@@ -528,28 +527,12 @@ RandomAccess接口是一个标记接口，用以标记实现的List集合具备�
       递归思维：反转单链表
     </h3>
     <div class="post-content-preview">
-      
-递归思维：反转单链表
+      递归思维：反转单链表
 基础：反转一个单链表
 ![递归思维：k 个一组反转链表](递归思维：k 个一组反转链表.png)
 
-  
 
-
-  
-&#x3C;!--code￼0-->
-
-  
-&#x3C;!--code￼1-->
-进阶：反转单链表的一部分
-
-  
-
-
-  
-&#x3C;!--code￼2-->
-
-  base case 变为 n == 1，反转一个元素，就是它本身，同时要记录后驱节......
+12345678910111213public ListNode reverseList(ListNode head) &#123;    //初始化两个指针    ListNode prev = null;    ListNode curr = head;    wh......
     </div>
   </a>
   
@@ -586,10 +569,9 @@ RandomAccess接口是一个标记接口，用以标记实现的List集合具备�
       缓存行伪共享
     </h3>
     <div class="post-content-preview">
-      
-缓存行伪共享
+      缓存行伪共享
 
-  简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给C......
+简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加......
     </div>
   </a>
   
@@ -622,12 +604,11 @@ RandomAccess接口是一个标记接口，用以标记实现的List集合具备�
       
     </h3>
     <div class="post-content-preview">
-      
-Spring源码深度解析
+      Spring源码深度解析
 
-  Spring源码深度解析 读书整理
+Spring源码深度解析 读书整理
 
-Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson在其著作《Expert One-On-One J2EE Development and Design》中阐述的部分理念和原型衍生而来。Spring是为了解决企业应用开发的复杂性而创建的，它使用基本的JavaBean来完成以前只可能由EJ......
+Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson在其著作《Expert One-On-One J2EE Development and Design》中阐述的部分理念和原型衍生而来。Spring是为了解决企业应用开发的复杂性而创建的，它使用基本的JavaBean来完成以前只可能由EJB完成......
     </div>
   </a>
   
@@ -660,15 +641,13 @@ Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson�
       Mysql 第一章 开始啃mysql
     </h3>
     <div class="post-content-preview">
-      
-MySQL Reference Manual Chapter 1
+      MySQL Reference Manual Chapter 1
 What is MySQL?
 
-  
-    ● MySQL is a database management system.
-    
-      A database is a structured collection of data.
-      It may be anything from a simple sh......
+
+● MySQL is a database management system.
+A database is a structured collection of data.
+It may be anything from a simple shopping list to a picture......
     </div>
   </a>
   
@@ -701,12 +680,10 @@ What is MySQL?
       手动实现一个收集器，简单实现，为了实现产品经理的需求！
     </h3>
     <div class="post-content-preview">
-      
-java 8 Collector接口简单实现
+      java 8 Collector接口简单实现
 Collector接口上的注释说明
-
-  Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：
-  A Collector is specified by four functions that work together to accumulate entries into a mut......
+Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：
+A Collector is specified by four functions that work together to accumulate entries into a mutable r......
     </div>
   </a>
   
@@ -739,11 +716,10 @@ Collector接口上的注释说明
       深入理解HashMap源码
     </h3>
     <div class="post-content-preview">
-      
-HashMap
+      HashMap
 1.HashMap集合简介
 HashMap基于哈希表的Map接口实现，是以key-value存储形式存在，即主要用来存放键值对。HashMap 的实现不是同步的，这意味着它不是线程安全的。它的key、value都可以为null。此外，HashMap中的映射不是有序的。
-JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为......
+JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了......
     </div>
   </a>
   
@@ -805,10 +781,6 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
   <div class="tags">
     
     
-    <a href="/tags/#Chapter 1" title="Chapter 1" rel="1">Chapter 1</a>
-    
-    
-    
     <a href="/tags/#RandomAccess" title="RandomAccess" rel="1">RandomAccess</a>
     
     
@@ -817,11 +789,15 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
     
     
     
-    <a href="/tags/#Collector" title="Collector" rel="1">Collector</a>
+    <a href="/tags/#Chapter 1" title="Chapter 1" rel="1">Chapter 1</a>
     
     
     
     <a href="/tags/#缓存行伪共享" title="缓存行伪共享" rel="1">缓存行伪共享</a>
+    
+    
+    
+    <a href="/tags/#Collector" title="Collector" rel="1">Collector</a>
     
     
     
@@ -997,16 +973,16 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
 <div class="widget">
   <ul>
     
-    <a href="/categories/#MySQL 8.0 Reference Manual">
-      <li>MySQL 8.0 Reference Manual</li>
-    </a>
-    
     <a href="/categories/#JavaCollection">
       <li>JavaCollection</li>
     </a>
     
     <a href="/categories/#Spring">
       <li>Spring</li>
+    </a>
+    
+    <a href="/categories/#MySQL 8.0 Reference Manual">
+      <li>MySQL 8.0 Reference Manual</li>
     </a>
     
     <a href="/categories/#ConcurrentProgramming">
