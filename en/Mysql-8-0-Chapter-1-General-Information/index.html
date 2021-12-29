@@ -465,8 +465,8 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1>MySQL Reference Manual Chapter 1</h1>
-<h3 id="What-is-MySQL">What is MySQL?</h3>
+        <h1 id="MySQL-Reference-Manual-Chapter-1"><a class="header-anchor" href="#MySQL-Reference-Manual-Chapter-1"></a>MySQL Reference Manual Chapter 1</h1>
+<h3 id="What-is-MySQL"><a class="header-anchor" href="#What-is-MySQL"></a>What is MySQL?</h3>
 <ul>
 <li>
 <p>● MySQL is a database management system.</p>
@@ -511,8 +511,8 @@ MySQL数据库软件是一个客户机/服务器系统，由支持不同后端�
 <li>● A large amount of contributed MySQL software is available.</li>
 </ul>
 <p>提供了大量的MySQL软件。</p>
-<h3 id="1-2-2-The-Main-Features-of-MySQL">1.2.2 The Main Features of MySQL</h3>
-<h5 id="Internals-and-Portability-内部构件和可移植性">Internals and Portability 内部构件和可移植性</h5>
+<h3 id="1-2-2-The-Main-Features-of-MySQL"><a class="header-anchor" href="#1-2-2-The-Main-Features-of-MySQL"></a>1.2.2 The Main Features of MySQL</h3>
+<h5 id="Internals-and-Portability-内部构件和可移植性"><a class="header-anchor" href="#Internals-and-Portability-内部构件和可移植性"></a>Internals and Portability 内部构件和可移植性</h5>
 <ul>
 <li>● Written in C and C++.</li>
 <li>● For portability, configured using <strong>CMake</strong>.</li>
@@ -526,12 +526,12 @@ MySQL数据库软件是一个客户机/服务器系统，由支持不同后端�
 <li>● Implements SQL functions using a highly optimized class library that should be as fast as possible. Usually there is no memory allocation at all after query initialization.使用应尽可能快的高度优化的类库实现SQL函数。通常在查询初始化之后根本没有内存分配。</li>
 <li>● Provides the server as a separate program for use in a client/server networked environment, and as a library that can be embedded (linked) into standalone applications. Such applications can be used in isolation or in environments where no network is available.将服务器作为一个单独的程序提供给客户机/服务器网络环境中使用，并作为一个可以嵌入（链接）到独立应用程序中的库。此类应用程序可以在隔离环境中使用，也可以在没有网络可用的环境中使用。</li>
 </ul>
-<h5 id="Data-Types">Data Types</h5>
+<h5 id="Data-Types"><a class="header-anchor" href="#Data-Types"></a>Data Types</h5>
 <ul>
 <li>● Many data types: signed/unsigned integers 1, 2, 3, 4, and 8 bytes long, FLOAT, DOUBLE, CHAR, VARCHAR, BINARY, VARBINARY, TEXT, BLOB, DATE, TIME, DATETIME, TIMESTAMP, YEAR, SET, ENUM, and OpenGIS spatial types. See Chapter 11, Data Types.</li>
 <li>● Fixed-length and variable-length string types.固定长度和可变长度数据类型</li>
 </ul>
-<h5 id="Statements-and-Functions-语法和函数">Statements and Functions 语法和函数</h5>
+<h5 id="Statements-and-Functions-语法和函数"><a class="header-anchor" href="#Statements-and-Functions-语法和函数"></a>Statements and Functions 语法和函数</h5>
 <ul>
 <li>● Full operator and function support in the SELECT list and WHERE clause of queries. For example:查询的SELECT列表和WHERE子句中的完整运算符和函数支持。</li>
 </ul>
@@ -606,22 +606,22 @@ LIKE ‘pattern’<br>
 <li>● Independence of function names from table or column names. For example, ABS is a valid column name. The only restriction is that for a function call, no spaces are permitted between the function name and the “(” that follows it. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/keywords.html">Section 9.3, “Keywords and Reserved Words”.</a></li>
 <li>● You can refer to tables from different databases in the same statement.</li>
 </ul>
-<h5 id="Security">Security</h5>
+<h5 id="Security"><a class="header-anchor" href="#Security"></a>Security</h5>
 <ul>
 <li>● A privilege and password system that is very flexible and secure, and that enables host-based verification.</li>
 <li>● Password security by encryption of all password traffic when you connect to a server.</li>
 </ul>
-<h5 id="Scalability-and-Limits">Scalability and Limits</h5>
+<h5 id="Scalability-and-Limits"><a class="header-anchor" href="#Scalability-and-Limits"></a>Scalability and Limits</h5>
 <ul>
 <li>● Support for large databases. We use MySQL Server with databases that contain 50 million records. We also know of users who use MySQL Server with 200,000 tables and about 5,000,000,000 rows.</li>
 <li>● Support for up to 64 indexes per table. Each index may consist of 1 to 16 columns or parts of columns. The maximum index width for InnoDB tables is either 767 bytes or 3072 bytes. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/innodb-limits.html">Section 15.22, “InnoDB Limits”</a>. The maximum index width for MyISAM tables is 1000 bytes. See <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/myisam-storage-engine.html">Section 16.2, “The MyISAM Storage Engine”</a>. An index may use a prefix of a column for CHAR, VARCHAR, BLOB, or TEXT column types.</li>
 </ul>
-<h5 id="Connectivity">Connectivity</h5>
+<h5 id="Connectivity"><a class="header-anchor" href="#Connectivity"></a>Connectivity</h5>
 <ul>
 <li>● The Connector/J interface provides MySQL support for Java client programs that use JDBC connections. Clients can be run on Windows or Unix. Connector/J source is available. See MySQL Connector/J 5.1 Developer Guide.支持JDBC连接</li>
 </ul>
 <p>官网还给出了支持很多其他连接方式，这里只摘取了JDBC连接的描述</p>
-<h5 id="Localization">Localization</h5>
+<h5 id="Localization"><a class="header-anchor" href="#Localization"></a>Localization</h5>
 
 
         <hr>
@@ -770,7 +770,7 @@ LIKE ‘pattern’<br>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">MySQL Reference Manual Chapter 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#What-is-MySQL"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">What is MySQL?</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-2-The-Main-Features-of-MySQL"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">1.2.2 The Main Features of MySQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Internals-and-Portability-%E5%86%85%E9%83%A8%E6%9E%84%E4%BB%B6%E5%92%8C%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="toc-nav-number">1.0.2.0.1.</span> <span class="toc-nav-text">Internals and Portability 内部构件和可移植性</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Data-Types"><span class="toc-nav-number">1.0.2.0.2.</span> <span class="toc-nav-text">Data Types</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Statements-and-Functions-%E8%AF%AD%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.0.2.0.3.</span> <span class="toc-nav-text">Statements and Functions 语法和函数</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Security"><span class="toc-nav-number">1.0.2.0.4.</span> <span class="toc-nav-text">Security</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Scalability-and-Limits"><span class="toc-nav-number">1.0.2.0.5.</span> <span class="toc-nav-text">Scalability and Limits</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Connectivity"><span class="toc-nav-number">1.0.2.0.6.</span> <span class="toc-nav-text">Connectivity</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Localization"><span class="toc-nav-number">1.0.2.0.7.</span> <span class="toc-nav-text">Localization</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#MySQL-Reference-Manual-Chapter-1"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">MySQL Reference Manual Chapter 1</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#What-is-MySQL"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">What is MySQL?</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-2-The-Main-Features-of-MySQL"><span class="toc-nav-number">1.0.2.</span> <span class="toc-nav-text">1.2.2 The Main Features of MySQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Internals-and-Portability-%E5%86%85%E9%83%A8%E6%9E%84%E4%BB%B6%E5%92%8C%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="toc-nav-number">1.0.2.0.1.</span> <span class="toc-nav-text">Internals and Portability 内部构件和可移植性</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Data-Types"><span class="toc-nav-number">1.0.2.0.2.</span> <span class="toc-nav-text">Data Types</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Statements-and-Functions-%E8%AF%AD%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-nav-number">1.0.2.0.3.</span> <span class="toc-nav-text">Statements and Functions 语法和函数</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Security"><span class="toc-nav-number">1.0.2.0.4.</span> <span class="toc-nav-text">Security</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Scalability-and-Limits"><span class="toc-nav-number">1.0.2.0.5.</span> <span class="toc-nav-text">Scalability and Limits</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Connectivity"><span class="toc-nav-number">1.0.2.0.6.</span> <span class="toc-nav-text">Connectivity</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#Localization"><span class="toc-nav-number">1.0.2.0.7.</span> <span class="toc-nav-text">Localization</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
