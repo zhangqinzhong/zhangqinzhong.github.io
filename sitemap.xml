@@ -88,7 +88,7 @@
 
   <url>
     <loc>https://zhangqinzhong.com/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,49 +96,49 @@
   
   <url>
     <loc>https://zhangqinzhong.com/tags/Chapter-1/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/tags/RandomAccess/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/tags/Spring-%E6%BA%90%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E8%AF%BB%E5%90%8E%E6%84%9F/</loc>
-    <lastmod>2021-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhangqinzhong.com/tags/Collector/</loc>
-    <lastmod>2021-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhangqinzhong.com/tags/%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/tags/%E7%BC%93%E5%AD%98%E8%A1%8C%E4%BC%AA%E5%85%B1%E4%BA%AB/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangqinzhong.com/tags/%E5%8F%8D%E8%BD%AC%E5%8D%95%E9%93%BE%E8%A1%A8/</loc>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangqinzhong.com/tags/Collector/</loc>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/tags/HashMap/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -147,35 +147,35 @@
   
   <url>
     <loc>https://zhangqinzhong.com/categories/MySQL-8-0-Reference-Manual/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/categories/JavaCollection/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/categories/Spring/</loc>
-    <lastmod>2021-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhangqinzhong.com/categories/DataStructure/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://zhangqinzhong.com/categories/ConcurrentProgramming/</loc>
-    <lastmod>2021-12-29</lastmod>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhangqinzhong.com/categories/DataStructure/</loc>
+    <lastmod>2022-01-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
