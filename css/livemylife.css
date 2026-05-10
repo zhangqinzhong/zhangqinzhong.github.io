@@ -350,6 +350,21 @@ li.archive-list-item:hover a {
   -webkit-appearance: menulist-button;
   font-size: inherit;
   cursor: pointer;
+  outline: none;
+}
+
+#lang-select:focus {
+  outline: none;
+}
+
+#lang-select-label {
+  position: relative;
+}
+
+#lang-select-label:focus,
+#lang-select-label:focus-within {
+  outline: none;
+  text-decoration: none;
 }
 
 /* 滚动条背景与宽度 */

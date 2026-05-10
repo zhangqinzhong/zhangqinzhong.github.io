@@ -248,9 +248,9 @@
           
           
           <li>
-            <a href="/categories/">
+            <a href="/archive/">
               
-              CATEGORIES
+              ARCHIVES
               
               
             </a>
@@ -259,9 +259,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/categories/">
               
-              ARCHIVES
+              CATEGORIES
               
               
             </a>
@@ -481,11 +481,12 @@
       RandomAccess
     </h3>
     <div class="post-content-preview">
-      RandomAccessRandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
+      RandomAccess
+RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
 那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
 所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
 
-ArrayList基于数组实现，天然带下标，......
+ArrayList基于数组实现，天然带下标......
     </div>
   </a>
   
@@ -522,10 +523,12 @@ ArrayList基于数组实现，天然带下标，......
       递归思维：反转单链表
     </h3>
     <div class="post-content-preview">
-      递归思维：反转单链表基础：反转一个单链表
+      递归思维：反转单链表
+基础：反转一个单链表
+![递归思维：k 个一组反转链表](递归思维：k 个一组反转链表.png)
 
 
-12345678910111213public ListNode reverseList(ListNode head) &#123;    //初始化两个指针    ListNode prev = null;    ListNode curr = head;    while (curr != null) &#123;        //定义临时......
+12345678910111213public ListNode reverseList(ListNode head) &#123;    //初始化两个指针    ListNode prev = null;    ListNode curr = head;    wh......
     </div>
   </a>
   
@@ -562,7 +565,11 @@ ArrayList基于数组实现，天然带下标，......
       压力测试
     </h3>
     <div class="post-content-preview">
-      压力测试压力测试实操案例业务接口性能压测报告说明本次压力测试主要是为了应对抽奖活动推广，找出系统瓶颈， 提高单台服务器及整个集群的吞吐量，并根据负载均衡SLB， 系统（cpu、mem、io、network、进程及文件限制，内核参数）， nginx服务，java服务等进行优化，先后对活动参与首页(p1)、活动开奖页(p2)， 并通过单Pod节点， 多Pod节点进行压力测试； 并对产生的数据进行......
+      压力测试
+压力测试实操案例
+业务接口性能压测报告
+说明
+本次压力测试主要是为了应对抽奖活动推广，找出系统瓶颈， 提高单台服务器及整个集群的吞吐量，并根据负载均衡SLB， 系统（cpu、mem、io、network、进程及文件限制，内核参数）， nginx服务，java服务等进行优化，先后对活动参与首页(p1)、活动开奖页(p2)， 并通过单Pod节点， 多Pod节点进行压力测试； 并对产生的......
     </div>
   </a>
   
@@ -600,7 +607,8 @@ ArrayList基于数组实现，天然带下标，......
     </h3>
     <div class="post-content-preview">
       缓存行伪共享
-简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加上......
+
+简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加......
     </div>
   </a>
   
@@ -634,9 +642,10 @@ ArrayList基于数组实现，天然带下标，......
     </h3>
     <div class="post-content-preview">
       Spring源码深度解析
+
 Spring源码深度解析 读书整理
 
-Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson在其著作《Expert One-On-One J2EE Development and Design》中阐述的部分理念和原型衍生而来。Spring是为了解决企业应用开发的复杂性而创建的，它使用基本的JavaBean来完成以前只可能由EJB完成的......
+Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson在其著作《Expert One-On-One J2EE Development and Design》中阐述的部分理念和原型衍生而来。Spring是为了解决企业应用开发的复杂性而创建的，它使用基本的JavaBean来完成以前只可能由EJB完成......
     </div>
   </a>
   
@@ -669,9 +678,13 @@ Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson�
       Mysql 第一章 开始啃mysql
     </h3>
     <div class="post-content-preview">
-      MySQL Reference Manual Chapter 1What is MySQL?
+      MySQL Reference Manual Chapter 1
+What is MySQL?
+
+
 MySQL is a database management system.
-A database is a structured collection of data.It may be anything from a simple shopping list to a picture galle......
+A database is a structured collection of data.
+It may be anything from a simple shopping list to a picture g......
     </div>
   </a>
   
@@ -704,7 +717,10 @@ A database is a structured collection of data.It may be anything from a simple s
       手动实现一个收集器，简单实现，为了实现产品经理的需求！
     </h3>
     <div class="post-content-preview">
-      java 8 Collector接口简单实现Collector接口上的注释说明Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：A Collector is specified by four functions that work together to accumulate entries into a mutable resu......
+      java 8 Collector接口简单实现
+Collector接口上的注释说明
+Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：
+A Collector is specified by four functions that work together to accumulate entries into a mutable r......
     </div>
   </a>
   
@@ -737,8 +753,10 @@ A database is a structured collection of data.It may be anything from a simple s
       深入理解HashMap源码
     </h3>
     <div class="post-content-preview">
-      HashMap1.HashMap集合简介HashMap基于哈希表的Map接口实现，是以key-value存储形式存在，即主要用来存放键值对。HashMap 的实现不是同步的，这意味着它不是线程安全的。它的key、value都可以为null。此外，HashMap中的映射不是有序的。
-JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了解决......
+      HashMap
+1.HashMap集合简介
+HashMap基于哈希表的Map接口实现，是以key-value存储形式存在，即主要用来存放键值对。HashMap 的实现不是同步的，这意味着它不是线程安全的。它的key、value都可以为null。此外，HashMap中的映射不是有序的。
+JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了......
     </div>
   </a>
   
@@ -804,15 +822,15 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
     
     
     
-    <a href="/tags/#HashMap" title="HashMap" rel="2">HashMap</a>
-    
-    
-    
     <a href="/tags/#RandomAccess" title="RandomAccess" rel="2">RandomAccess</a>
     
     
     
     <a href="/tags/#Spring 源码深度解析读后感" title="Spring 源码深度解析读后感" rel="2">Spring 源码深度解析读后感</a>
+    
+    
+    
+    <a href="/tags/#HashMap" title="HashMap" rel="2">HashMap</a>
     
     
     
