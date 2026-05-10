@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
@@ -110,11 +111,6 @@
 
     
 
-    
-      <!-- gitalk start -->
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/css/gitalk.css"/>
-      <!-- gitalk end -->
     
 
   
@@ -263,9 +259,9 @@
           
           
           <li>
-            <a href="/tags/">
+            <a href="/archive/">
               
-              TAGS
+              ARCHIVES
               
               
             </a>
@@ -274,9 +270,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/tags/">
               
-              ARCHIVES
+              TAGS
               
               
             </a>
@@ -294,6 +290,30 @@
           <!-- LangSelect -->
           
           
+          
+          <!-- LangSelect start -->
+          <!-- LangSelect -->
+<li>
+  <a id="lang-select-label"><i class="fa fa-globe"></i>
+    <span>
+      English
+    </span>
+    <select id="lang-select" data-canonical="en/RandomAccess/">
+      
+      
+      <option value="cn" >
+        简体中文
+      </option>
+      
+      <option value="en"  selected >
+        English
+      </option>
+      
+    </select>
+  </a>
+</li>
+
+          <!-- LangSelect end -->
           
           
           
@@ -403,7 +423,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">596</span> In Total
+              Words <span class="post-count">595</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -465,8 +485,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h1 id="RandomAccess"><a class="header-anchor" href="#RandomAccess"></a>RandomAccess</h1>
-<p>RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。</p>
+        <h1 id="RandomAccess"><a href="#RandomAccess" class="headerlink" title="RandomAccess"></a>RandomAccess</h1><p>RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。</p>
 <p>那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。</p>
 <p>所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。</p>
 <ul>
@@ -494,15 +513,16 @@
 
         <hr>
         <!-- Pager -->
+        
         <ul class="pager">
           
           <li class="previous">
-            <a href="/en/缓存行伪共享/" data-toggle="tooltip" data-placement="top" title="缓存行伪共享">&larr; Previous Post</a>
+            <a href="/en/HashMap/" data-toggle="tooltip" data-placement="top" title="HashMap">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/en/HashMap/" data-toggle="tooltip" data-placement="top" title="HashMap">Next Post &rarr;</a>
+            <a href="/en/缓存行伪共享/" data-toggle="tooltip" data-placement="top" title="缓存行伪共享">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -567,62 +587,40 @@
         <hr>
 
         <!-- comments start -->
-        <!-- 1. gitalk comment -->
+        <!-- 1. giscus comment -->
 
-  <!-- gitalk start -->
-  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+  <!-- giscus start -->
+  <!-- Docs: https://giscus.app -->
 
-  <div id="gitalk-container"></div>
+  <div class="comment">
+    <script src="https://giscus.app/client.js"
+            data-repo="zhangqinzhong/zhangqinzhong.github.io"
+            data-repo-id="R_kgDOGI7Xjg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOGI7Xjs4C8uKW"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 
-  
-    <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io/js/comment/gitalk.js"></script>
-  
-
-  <script>
-    var gitalk = new Gitalk({
-      clientID: '807759333c17a44710d7',
-      clientSecret: 'e5a2fb060b16857c3b48830e22762dbb2b94aac3',
-      repo: 'zhangqinzhong.github.io',
-      owner: 'zhangqinzhong',
-      admin: 'zhangqinzhong',
-      id: 'Wed Oct 13 2021 18:00:17 GMT+0800', // Ensure uniqueness and length less than 50
-      distractionFreeMode: false, // Facebook-like distraction free mode
-      perPage: 10,
-      pagerDirection: 'last',
-      createIssueManually: false,
-      language: 'en',
-      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
-    });
-    gitalk.render('gitalk-container');
-
-    var gtFolded = () => {
-      setTimeout(function () {
-        let markdownBody = document.getElementsByClassName("markdown-body");
-        let list = Array.from(markdownBody);
-        list.forEach(item => {
-          if (item.clientHeight > 250) {
-            item.classList.add('gt-comment-body-folded');
-            item.style.maxHeight = '250px';
-            item.title = 'Click to Expand';
-            item.onclick = function () {
-              item.classList.remove('gt-comment-body-folded');
-              item.style.maxHeight = '';
-              item.title = '';
-              item.onclick = null;
-            };
-          }
-        })
-      }, 800);
-    }
-  </script>
-
-  <!-- gitalk end -->
+  <!-- giscus end -->
 
 
-<!-- 2. gitment comment -->
+<!-- 2. gitalk comment -->
 
 
-<!-- 3. disqus comment -->
+<!-- 3. gitment comment -->
+
+
+<!-- 4. disqus comment -->
 
 
         <!-- comments end -->
@@ -827,7 +825,7 @@
         <p class="copyright text-muted">
           Copyright &copy;
           zhangqinzhong
-          2022
+          2026
 <!--           <br> -->
 <!--           Theme by -->
 <!--           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a> -->
