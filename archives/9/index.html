@@ -469,104 +469,20 @@
   <!-- top end -->
   
 
-  <a href="/cn/基于AnythingLLM及Ollama构建本地知识库/">
+  <a href="/cn/scp/">
     <h2 class="post-title">
-      基于AnythingLLM及Ollama构建本地知识库
+      scp
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      基于AnythingLLM以及Ollama构建本地知识库
-
-RAG
-Ollama
-AnythingLLM
-
-1. 什么是 RAG
-RAG（Retrieval Augmented Generation）检索增强生成，是 2023 年最火热的 LLM 应用系统架构，它的作用简单来说就是通过检索获取相关的知识并将其融入 Prompt，让大模型能够参考相应的知识从而给出合理回答。
-现在的大模型在企业......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#AI" title="AI">AI</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/小恐龙/">
-    <h2 class="post-title">
-      小恐龙
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      小恐龙
-chrome://dino
-破解小恐龙，不会死亡，F12
-控制台编写JS ：
-Runner.instance_.gameOver = function(){};      //覆盖原有GameOver 函数为空函数，就不会死亡了。
-Runner.instance_.setSpeed(100)         //调节小恐龙奔跑速度
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#GoogleInternet" title="GoogleInternet">GoogleInternet</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/排查jar包内存/">
-    <h2 class="post-title">
-      排查jar包内存
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      排查jar包内存
-目前发现线上有个微服务内存比较紧张。记录一下排查过程。
-环境：k8s
-proc/6/status
-proc是虚拟目录 6 是进程ID
-...
+      scp
+1. 从本地复制到远程
+在本地服务器上将/root/lk目录下所有的文件传输到服务器43.224.34.73的/home/lk/cpfile目录下，命令为：
+scp -r /root/lk root@43.224.34.73:/home/lk/cpfile
+2. 从远程复制到本地
+在本地服务器上操作，将服务器43.224.34.73上/home/lk/目录下所有的文件全部复制到本地的......
     </div>
   </a>
   
@@ -593,34 +509,62 @@ proc是虚拟目录 6 是进程ID
   <!-- top end -->
   
 
-  <a href="/cn/数据结构和算法概述/">
+  <a href="/cn/spring-BeanFactory入门/">
     <h2 class="post-title">
-      数据结构和算法概述
+      spring-BeanFactory入门
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      数据结构和算法概述
-程序设计 = 数据结构+算法
+      spring-BeanFactory入门
+1234567DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);reader.loadBeanDefini......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Spring" title="Spring">Spring</a>
+    
+    <a href="/tags/#spring" title="spring">spring</a>
+    
+  </div>
+  
 
-数据结构和算法概述
-算法分析
-排序（稳定性，性能）
-线性表
-符号表
-树
-堆
-优先队列
-并查集
-图
+</div>
+<hr>
 
-一、数据结构和算法概述
-1.1什么是数据结构
-官方解释：
-数据结构是一门研究非数值计算的程序设计问题中的操作对象，以及他们之间的关系和操作等相关问题的学科。
-PS：数据结构就是把数据按照一定的关系组织起来的集合，用来组织和存储数据。
-1.2数......
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/tree/">
+    <h2 class="post-title">
+      tree
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      数据结构-树简介
+
+树是一个有n个有限节点组成一个具有层次关系的集合，每个节点有0个或者多个子节点，没有父节点的节点称为根节点，也就是说除了根节点以外每个节点都有父节点，并且有且只有一个。
+树的种类比较多，有二叉树，红黑树，AVL树，B树，哈夫曼树，字典树等等。
+甚至堆我们也可以把它看成是一棵树，树的这么多种类中，我们最常见的应该是二叉树了，下面我们来看一下他的结构。
+
+
+树的定义
+
+**结......
     </div>
   </a>
   
@@ -649,17 +593,16 @@ PS：数据结构就是把数据按照一定的关系组织起来的集合，用
   <!-- top end -->
   
 
-  <a href="/cn/查询当前目录占用的磁盘大小/">
+  <a href="/cn/win10系统的idea的terminal终端对git出现中文乱码问题/">
     <h2 class="post-title">
-      查询当前目录占用的磁盘大小
+      win10系统的idea的terminal终端对git出现中文乱码问题
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      查询当前目录占用的磁盘大小
-使用命令
-1du -sh .
+      IDEA windows终端乱码
+快捷键ctrl+alt+s进入设置界面，选择Tools-&gt;Terminal，将Environment Variables中添加LESSCHARSET=utf-8,即可解决使用git出现中文乱码的问题。
 ...
     </div>
   </a>
@@ -672,7 +615,7 @@ PS：数据结构就是把数据按照一定的关系组织起来的集合，用
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#linux" title="linux">linux</a>
+    <a href="/tags/#windows" title="windows">windows</a>
     
   </div>
   
@@ -687,19 +630,21 @@ PS：数据结构就是把数据按照一定的关系组织起来的集合，用
   <!-- top end -->
   
 
-  <a href="/cn/概述/">
+  <a href="/cn/windows7挂载linux目录/">
     <h2 class="post-title">
-      概述
+      windows7挂载linux目录
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      java
-
-Java是目前用户最多、使用范围最广的软件开发技术，Java的技术体系主要由支撑Java程序运行的 虚拟机、提供各开发领域接口支持的Java类库、Java编程语言及许许多多的第三方Java框架(如 Spring、MyBatis等)构成。
-
-Java不仅仅是一门编程语言，它还是一个由一系列计算机软件和规范组成的技术体系，这个技术 体系提供了完整的用于软件开发和跨平台部署的支持环境，......
+      windows7挂载linux目录
+windows挂载linux目录
+首先操作linux
+linux安装两个包nfs-utils和rpcbind：yum install -y nfs-utils rpcbind
+编辑配置文件，允许共享主机IP：vim /etc/exports
+/home/suzhou/chip_scan
+创建共享目录，给创建目录777权限：mkdir /home/nfste......
     </div>
   </a>
   
@@ -711,7 +656,7 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#JVM" title="JVM">JVM</a>
+    <a href="/tags/#windows" title="windows">windows</a>
     
   </div>
   
@@ -726,19 +671,65 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
   <!-- top end -->
   
 
-  <a href="/cn/模板模式/">
+  <a href="/cn/xxl-job/">
     <h2 class="post-title">
-      模板模式
+      xxl-job
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      模板模式简介
-在模板模式（Template Pattern）中，一个抽象类公开定义了执行它的方法的方式/模板。它的子类可以按需要重写方法实现，但调用将以抽象类中定义的方式进行。这种类型的设计模式属于行为型模式。
-介绍
-**意图：**定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
-**主要解决：**一些方法通用，却......
+      xxl-job分布式定时任务
+https://www.pppet.net/
+在线生成corn表达式网址
+为什么需要分布式定时任务？
+spring 的定时任务有哪些缺陷？
+1.不支持高可用。
+2.不支持动态修改定时循环的时间点
+3.不支持动态传参
+为什么使用xxl-job?
+1.定时任务的三大要素：触发器，任务，执行器
+2.可以通过分布式锁（redis）实现HA
+2.路由策略
+xxl-job ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#xxl-job" title="xxl-job">xxl-job</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/一致性Hash/">
+    <h2 class="post-title">
+      一致性Hash
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      一致性hash
+一 引言
+hash的意思是散列，目的将一组输入的数据均匀的分开、打散，往往用来配合路由算法做负载均衡，多用在分布式系统中。当前memcached，redis这类分布式kv缓存已经非常普遍。我们知道memcached的分布式其实是一种&quot;伪分布式&quot;，也就是它的服务器节点之间其实是无关联的，之间没有网络拓扑关系，由客户端来决定一个key要存放在哪台机器。
+具体来......
     </div>
   </a>
   
@@ -752,7 +743,7 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
     
     <a href="/tags/#Java" title="Java">Java</a>
     
-    <a href="/tags/#DesignPattern" title="DesignPattern">DesignPattern</a>
+    <a href="/tags/#JavaCollection" title="JavaCollection">JavaCollection</a>
     
   </div>
   
@@ -767,21 +758,16 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
   <!-- top end -->
   
 
-  <a href="/cn/算法分析/">
+  <a href="/cn/什么是算法/">
     <h2 class="post-title">
-      算法分析
+      什么是算法
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      算法分析
-一、算法分析
-有关算法时间耗费分析，时间复杂度。算法空间（内存）占用，空间复杂度。
-1.1 算法的时间复杂度分析
-如何度量算法的执行时间。
-事后分析法：
-12345678910111213public static void main(String [] args)&#123;  long start = System.currentTimeMillis();    int sum......
+      什么是算法-简介
+...
     </div>
   </a>
   
@@ -810,20 +796,23 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
   <!-- top end -->
   
 
-  <a href="/cn/策略模式/">
+  <a href="/cn/免密登录/">
     <h2 class="post-title">
-      策略模式
+      免密登录
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      策略模式
-在策略模式（Strategy Pattern）中，一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。
-在策略模式中，我们创建表示各种策略的对象和一个行为随着策略对象改变而改变的 context 对象。策略对象改变 context 对象的执行算法。
-介绍
-**意图：**定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。
-**主要解决：**在有多种算......
+      一、开启ssh登录权限
+
+ssh，secure shell protocol，以更加安全的方式连接远程服务器。
+
+12# ssh 命令 172.16.3.2 为服务器外网IPssh root@172.16.3.2
+二、免密登录：public-key 与 ssh-copy-id
+如何实现远程服务器的免密登录需要两个条件：
+
+两个文件：本地环境的 ~/.ssh/id_rsa.pub 与 远程服务......
     </div>
   </a>
   
@@ -835,9 +824,7 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#DesignPattern" title="DesignPattern">DesignPattern</a>
+    <a href="/tags/#linux" title="linux">linux</a>
     
   </div>
   
@@ -852,18 +839,34 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
   <!-- top end -->
   
 
-  <a href="/cn/线程池/">
+  <a href="/cn/函数式编程/">
     <h2 class="post-title">
-      线程池
+      函数式编程
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      线程池
-通过Executor类的静态方法快速创建线程池或者通过如下自定义线程池的方式创建线程池
-线程池构造函数
-123456789public ThreadPoolExecutor(int corePoolSize,                              int maximumPoolSize,                              long keep......
+      函数式编程
+
+
+Function&lt;T,R&gt;
+函数 （PS：（参数）-&gt; 结果 或 （参数1，参数2）-&gt; 结果）
+接受一个输入参数，返回一个结果。
+
+
+Consumer
+消费者   （参数）-&gt; 返回值为void
+代表了接受一个输入参数并且无返回的操作
+
+
+Predicate
+谓词  始终返回布尔值
+接受一个输入参数，返回一个布尔值结果。
+
+
+Supplier
+......
     </div>
   </a>
   
@@ -877,7 +880,7 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
     
     <a href="/tags/#Java" title="Java">Java</a>
     
-    <a href="/tags/#ConcurrentProgramming" title="ConcurrentProgramming">ConcurrentProgramming</a>
+    <a href="/tags/#JavaStream" title="JavaStream">JavaStream</a>
     
   </div>
   
@@ -1148,6 +1151,26 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
     <a href="/tags/#设计工具" title="设计工具" rel="1">设计工具</a>
     
     
+    
+    <a href="/tags/#设计" title="设计" rel="1">设计</a>
+    
+    
+    
+    <a href="/tags/#WebGL" title="WebGL" rel="2">WebGL</a>
+    
+    
+    
+    <a href="/tags/#创意技术" title="创意技术" rel="1">创意技术</a>
+    
+    
+    
+    <a href="/tags/#Design" title="Design" rel="1">Design</a>
+    
+    
+    
+    <a href="/tags/#Creative Tech" title="Creative Tech" rel="1">Creative Tech</a>
+    
+    
   </div>
 </section>
 
@@ -1261,16 +1284,16 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
       <li>Google Stitch：用嘴画 UI 的 AI 设计工具</li>
     </a>
     
+    <a href="../../cn/Active-Theory/">
+      <li>Active Theory：一个把网页做成艺术装置的工作室</li>
+    </a>
+    
+    <a href="../../en/Active-Theory/">
+      <li>Active Theory: The Studio That Turns Web Pages Into Art Installations</li>
+    </a>
+    
     <a href="../../cn/059%20Claude%20Code%20cch%20%E8%AF%B7%E6%B1%82%E5%A4%B4%E9%97%AE%E9%A2%98/">
       <li>Claude Code cch 请求头问题</li>
-    </a>
-    
-    <a href="../../cn/058%20Claude%20Code%20Prompt%20Cache%20%E5%AE%9E%E6%88%98%E9%81%BF%E5%9D%91/">
-      <li>Claude Code Prompt Cache 实战避坑</li>
-    </a>
-    
-    <a href="../../cn/057%20Claude%20Code%20Thinking%20%E6%A8%A1%E5%BC%8F/">
-      <li>Claude Code Thinking 模式</li>
     </a>
     
   </ul>
@@ -1301,7 +1324,7 @@ Java不仅仅是一门编程语言，它还是一个由一系列计算机软件�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2026/05/">May 2026</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/09/">September 2025</a><span class="archive-list-count">89</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2026/05/">May 2026</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2025/09/">September 2025</a><span class="archive-list-count">89</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/11/">November 2020</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
