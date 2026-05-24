@@ -473,48 +473,6 @@
   <!-- top end -->
   
 
-  <a href="/cn/RandomAccess/">
-    <h2 class="post-title">
-      RandomAccess
-    </h2>
-    <h3 class="post-subtitle">
-      RandomAccess
-    </h3>
-    <div class="post-content-preview">
-      RandomAccess
-RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
-那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
-所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
-
-ArrayList基于数组实现，天然带下标......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2021-10-13
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#RandomAccess" title="RandomAccess">RandomAccess</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
-  <!-- top end -->
-  
-
   <a href="/cn/递归思维：反转单链表/">
     <h2 class="post-title">
       递归思维：反转单链表
@@ -591,34 +549,229 @@ ArrayList基于数组实现，天然带下标......
   
   <!-- top start (article top hot config) -->
   
-  <div class="top">
-    <div class="iconfont icon-hot animated infinite tada"></div>
-  </div>
-  
   <!-- top end -->
   
 
-  <a href="/cn/缓存行伪共享/">
+  <a href="/cn/进制转换/">
     <h2 class="post-title">
-      缓存行伪共享
+      进制转换
     </h2>
     <h3 class="post-subtitle">
-      缓存行伪共享
+      
     </h3>
     <div class="post-content-preview">
-      缓存行伪共享
+      进制转换
 
-简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加......
+10进制转2进制采用’除2取余，逆序排列‘。
+
+10进制转2进制
+比如将10进制数 29转换为2进制，如下：
+
+10进制数29转换为2进制为11101
+2进制转10进制
+将2进制数 1011010转换为10进制，如下：
+
+2进制数 1011010转换为10进制为90
+...
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by zhangqinzhong on
-    2021-10-13
+    2025-09-12
   </p>
   <div class="tags">
     
-    <a href="/tags/#缓存行伪共享" title="缓存行伪共享">缓存行伪共享</a>
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#mathematics" title="mathematics">mathematics</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/阿里云服务器安装nginx/">
+    <h2 class="post-title">
+      阿里云服务器安装nginx
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      阿里云服务器安装nginx 配置https等
+Nginx相关介绍不在本篇赘述。直接步入正题。
+登录阿里云服务器
+
+新建nginx安装目录。并且切换到该目录下
+
+123mkdir /usr/local/nginxcd /usr/local/nginx
+
+使用yum 下载wget下装工具，使用wget下装nginx包
+
+1yum -y install wget
+
+下载nginx源文件
+
+1wge......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#nginx" title="nginx">nginx</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/锁/">
+    <h2 class="post-title">
+      锁
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      锁
+1、乐观锁
+
+乐观锁是一种乐观思想，假定当前环境是读多写少，遇到并发写的概率比较低，读数据时认为别的线程不会正在进行修改（所以没有上锁）。写数据时，判断当前 与期望值是否相同，如果相同则进行更新（更新期间加锁，保证是原子性的）。
+Java中的乐观锁： CAS，比较并替换，比较当前值（主内存中的值），与预期值（当前线程中的值，主内存中值的一份拷贝）是否一样，一样则更新，否则继续进行CAS操......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#ConcurrentProgramming" title="ConcurrentProgramming">ConcurrentProgramming</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/阿里云组件合集/">
+    <h2 class="post-title">
+      阿里云组件合集
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      阿里云组件大全
+
+云服务器ECS
+云数据库RDS
+容器服务k8s
+负载均衡CLB
+专有网络+交换机VPC
+弹性公网
+Polar分布式数据库
+Redis
+MongoDB
+NAT网关
+微服务引擎MSE
+ES
+数据传输DTS
+kafka
+应用实时监控服务Prometheus
+日志服务SLS
+RocketMQ
+SchedulerX分布式任务调度
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#阿里云组件" title="阿里云组件">阿里云组件</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/高性能MySQL/">
+    <h2 class="post-title">
+      高性能MySQL
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      MySql逻辑架构
+
+
+优化与执行
+mysql会解析查询，并创建内部数据结构（解析树），然后对其进行各种优化，包括重写查询，决定表的查询顺序，以及选择合适的索引。用户可以通过一些特殊的关键字来影响MySQL的决策，提示（hint）优化器。也可以请求explain，使用户可以知道服务器是如何进行优化决策的。对于select语句来说，在解析查询之前，服务器会先检查查询缓存（Query Cache......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#MySql" title="MySql">MySql</a>
     
   </div>
   
@@ -738,42 +891,6 @@ A Collector is specified by four functions that work together to accumulate entr
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/HashMap/">
-    <h2 class="post-title">
-      HashMap
-    </h2>
-    <h3 class="post-subtitle">
-      深入理解HashMap源码
-    </h3>
-    <div class="post-content-preview">
-      HashMap
-1.HashMap集合简介
-HashMap基于哈希表的Map接口实现，是以key-value存储形式存在，即主要用来存放键值对。HashMap 的实现不是同步的，这意味着它不是线程安全的。它的key、value都可以为null。此外，HashMap中的映射不是有序的。
-JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2020-11-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#HashMap" title="HashMap">HashMap</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -782,6 +899,10 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
       <a href="/cn/archives/10/">&larr; 上一页</a>
     </li>
     
+    
+    <li class="next">
+      <a href="/cn/archives/12/">下一页 &rarr;</a>
+    </li>
     
   </ul>
 
@@ -982,7 +1103,7 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
     
     
     
-    <a href="/tags/#AI" title="AI" rel="12">AI</a>
+    <a href="/tags/#AI" title="AI" rel="20">AI</a>
     
     
     
@@ -1010,11 +1131,11 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
     
     
     
-    <a href="/tags/#Claude Code" title="Claude Code" rel="9">Claude Code</a>
+    <a href="/tags/#Claude Code" title="Claude Code" rel="13">Claude Code</a>
     
     
     
-    <a href="/tags/#可视化" title="可视化" rel="9">可视化</a>
+    <a href="/tags/#可视化" title="可视化" rel="10">可视化</a>
     
     
     
@@ -1051,6 +1172,90 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
     
     
     <a href="/tags/#Creative Tech" title="Creative Tech" rel="1">Creative Tech</a>
+    
+    
+    
+    <a href="/tags/#Claude" title="Claude" rel="2">Claude</a>
+    
+    
+    
+    <a href="/tags/#Workflow" title="Workflow" rel="1">Workflow</a>
+    
+    
+    
+    <a href="/tags/#VSCode" title="VSCode" rel="2">VSCode</a>
+    
+    
+    
+    <a href="/tags/#Visualization" title="Visualization" rel="1">Visualization</a>
+    
+    
+    
+    <a href="/tags/#Productivity" title="Productivity" rel="1">Productivity</a>
+    
+    
+    
+    <a href="/tags/#Memory" title="Memory" rel="1">Memory</a>
+    
+    
+    
+    <a href="/tags/#DeepSeek" title="DeepSeek" rel="2">DeepSeek</a>
+    
+    
+    
+    <a href="/tags/#Coding Tools" title="Coding Tools" rel="1">Coding Tools</a>
+    
+    
+    
+    <a href="/tags/#Cache" title="Cache" rel="1">Cache</a>
+    
+    
+    
+    <a href="/tags/#Frontend" title="Frontend" rel="1">Frontend</a>
+    
+    
+    
+    <a href="/tags/#Canvas" title="Canvas" rel="2">Canvas</a>
+    
+    
+    
+    <a href="/tags/#Graphics" title="Graphics" rel="1">Graphics</a>
+    
+    
+    
+    <a href="/tags/#Open Source" title="Open Source" rel="1">Open Source</a>
+    
+    
+    
+    <a href="/tags/#工作流" title="工作流" rel="1">工作流</a>
+    
+    
+    
+    <a href="/tags/#编码工具" title="编码工具" rel="1">编码工具</a>
+    
+    
+    
+    <a href="/tags/#缓存" title="缓存" rel="1">缓存</a>
+    
+    
+    
+    <a href="/tags/#效率工具" title="效率工具" rel="1">效率工具</a>
+    
+    
+    
+    <a href="/tags/#记忆" title="记忆" rel="1">记忆</a>
+    
+    
+    
+    <a href="/tags/#前端" title="前端" rel="1">前端</a>
+    
+    
+    
+    <a href="/tags/#图形库" title="图形库" rel="1">图形库</a>
+    
+    
+    
+    <a href="/tags/#开源" title="开源" rel="1">开源</a>
     
     
   </div>
@@ -1158,24 +1363,24 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
 <div class="widget">
   <ul>
     
-    <a href="../../../en/Google-Stitch/">
-      <li>Google Stitch: AI UI Design Tool That Turns Words Into Interfaces</li>
+    <a href="../../../en/CC-Workflow-Studio/">
+      <li>CC Workflow Studio: Visual Workflow Editor for Claude Code</li>
     </a>
     
-    <a href="../../Google-Stitch/">
-      <li>Google Stitch：用嘴画 UI 的 AI 设计工具</li>
+    <a href="../../../en/Claude-Visualizer/">
+      <li>Claude Visualizer: Charts and Interactive Tools Right in the Chat</li>
     </a>
     
-    <a href="../../Active-Theory/">
-      <li>Active Theory：一个把网页做成艺术装置的工作室</li>
+    <a href="../../../en/Claudia/">
+      <li>Claudia: An AI Chief of Staff That Remembers People and Promises</li>
     </a>
     
-    <a href="../../../en/Active-Theory/">
-      <li>Active Theory: The Studio That Turns Web Pages Into Art Installations</li>
+    <a href="../../../en/DeepSeek-Reasonix/">
+      <li>DeepSeek-Reasonix: How an AI Coding Agent Achieves 99% Cache Hit Rate</li>
     </a>
     
-    <a href="../../059%20Claude%20Code%20cch%20%E8%AF%B7%E6%B1%82%E5%A4%B4%E9%97%AE%E9%A2%98/">
-      <li>Claude Code cch 请求头问题</li>
+    <a href="../../../en/LeaferJS/">
+      <li>LeaferJS: A Canvas Engine That Handles 1 Million Shapes</li>
     </a>
     
   </ul>
@@ -1206,7 +1411,7 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2026/05/">May 2026</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2025/09/">September 2025</a><span class="archive-list-count">89</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2026/05/">May 2026</a><span class="archive-list-count">23</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2025/09/">September 2025</a><span class="archive-list-count">89</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/11/">November 2020</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
@@ -1926,20 +2131,5 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-</body>
+	</body>
 </html>
