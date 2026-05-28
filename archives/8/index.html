@@ -469,27 +469,19 @@
   <!-- top end -->
   
 
-  <a href="/cn/ReactiveStreams/">
+  <a href="/cn/final/">
     <h2 class="post-title">
-      ReactiveStreams
+      final
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      理解反应式编程
-
-本章内容：
-
-反应式编程概览
-Reactor项目简介
-反应式地处理数据
-
-
-在开发应用程序代码时，我们可以编写两种风格的代码，即命令式和反应式。
-
-
-命令式（Imperative）的代码：非常类似于上文所提的虚构的报纸订阅方式。它由一组任务组成，每次只运行一项任务，每项任务又都依赖于前面的任务。数据会按批次进行处理，在前一项任务还没有完成对当前数据批次的处理时，不能将这些数......
+      java的final关键字详解
+在Java中，final关键字可用于修饰类、方法和变量。下面是每种情况的详解：
+1.final 类：当一个类被声明为 final 时，表示它不能被继承。换句话说，没有其他类可以继承该 final 类的任何特性。例如：
+12345final class MyFinalClass &#123;       // 类的代码   &#125;
+2.final 方法：当......
     </div>
   </a>
   
@@ -501,9 +493,9 @@ Reactor项目简介
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#Spring" title="Spring">Spring</a>
+    <a href="/tags/#Java" title="Java">Java</a>
     
-    <a href="/tags/#SpringReactive" title="SpringReactive">SpringReactive</a>
+    <a href="/tags/#ConcurrentProgramming" title="ConcurrentProgramming">ConcurrentProgramming</a>
     
   </div>
   
@@ -518,17 +510,20 @@ Reactor项目简介
   <!-- top end -->
   
 
-  <a href="/cn/Redis基础/">
+  <a href="/cn/github的actions使用简介/">
     <h2 class="post-title">
-      Redis基础
+      github的actions使用简介
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      Redis
-
-Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 Re......
+      GitHub actions 简介
+可以查看官网文档
+GitHub Actions 的基本功能
+这里记录一下使用GitHub actions遇到的问题 以及解决方案
+在编写build-docs.yml后，触发GitHub的工作流 遇到了
+12345Error: Error message: Unable to get ACTIONS_ID_TOKEN_REQUEST_URL env vari......
     </div>
   </a>
   
@@ -540,7 +535,9 @@ Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统�
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#redis" title="redis">redis</a>
+    <a href="/tags/#Git" title="Git">Git</a>
+    
+    <a href="/tags/#github" title="github">github</a>
     
   </div>
   
@@ -555,21 +552,19 @@ Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统�
   <!-- top end -->
   
 
-  <a href="/cn/RocketMQ事务消息/">
+  <a href="/cn/java中的双冒号访问/">
     <h2 class="post-title">
-      RocketMQ事务消息
+      java中的双冒号访问
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      RocketMQ事务消息
-
-RocketMQ事务消息
-
-一. 事务消息的定义事务消息可以认为是一个两阶段的提交消息实现，以确保分布式事务的最终一致性。事务性消息确保本地事务的执行和消息的发送可以原子执行。两阶段提交主要保证了分布式事务的原子性：即所有结点要么全做要么全不做，所谓的两个阶段是指：第一阶段：准备阶段；第二阶段：提交阶段。事务消息有三种状态：
-
-TransactionStatus.......
+      java中的双冒号访问
+记录一下使用java双冒号引用遇到的问题
+问题复现如下
+有抽象类A，子类B 如下，子类和父类不在同一个包下
+123456789101112131415161718192021222324252627public abstract class A &#123;    /**    *    protected abstract List&lt;Consumer&lt;L......
     </div>
   </a>
   
@@ -581,9 +576,9 @@ TransactionStatus.......
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#MQ" title="MQ">MQ</a>
+    <a href="/tags/#Java" title="Java">Java</a>
     
-    <a href="/tags/#RocketMQ" title="RocketMQ">RocketMQ</a>
+    <a href="/tags/#JavaStream" title="JavaStream">JavaStream</a>
     
   </div>
   
@@ -598,22 +593,116 @@ TransactionStatus.......
   <!-- top end -->
   
 
-  <a href="/cn/Spring IoC图形总结/">
+  <a href="/cn/java技术体系/">
     <h2 class="post-title">
-      Spring IoC图形总结
+      java技术体系
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      Spring IoC图形总结
-bean 的转换过程 {id=“bean_1”}
+      Java技术体系
+Java技术体系
+	从广义上讲，Kotlin、Clojure、JRuby、Groovy等运行于Java虚拟机上的编程语言及其相关的程序都属于Java技术体系中的一员。如果仅从传统意义上来看，JCP官方[1]所定义的Java技术体系包括了以 下几个组成部分:
 
-BeanDefinition 加载过程
 
-getBean 全流程
+Java程序设计语言
+各种硬件平台上的Java虚拟机实现
+Class文件格式
+Java类库API
+来自商业机构和开......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#JVM" title="JVM">JVM</a>
+    
+  </div>
+  
 
-bean 生命周期
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/jvm排查分析/">
+    <h2 class="post-title">
+      jvm排查分析
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      jstat
+jstat命令命令格式：
+jstat [Options] vmid [interval] [count]
+
+例如：jstat -gc 30149 5000
+说明：每5 秒一次显示进程号为30149的 java进成的 GC情况，结果如下图
+
+
+命令参数说明：
+Options，一般使用 -gcutil 或  -gc 查看gc 情况
+pid，当前运行的 java进程号
+interval......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#JVM" title="JVM">JVM</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/mac本地连接控制台数据库/">
+    <h2 class="post-title">
+      mac本地连接控制台数据库
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      在iterm2运行命令：
+1cd $(getconf DARWIN_USER_DIR)/com.apple.dock.launchpad/db
+
+再运行命令：
+1ll
+
+再运行命令：
+1pwd
+
+navicat新建连接
+
+
 
 ...
     </div>
@@ -627,9 +716,7 @@ bean 生命周期
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-    <a href="/tags/#spring" title="spring">spring</a>
+    <a href="/tags/#mac" title="mac">mac</a>
     
   </div>
   
@@ -644,16 +731,93 @@ bean 生命周期
   <!-- top end -->
   
 
-  <a href="/cn/Spring IoC之ClassPathXmlApplicationContext/">
+  <a href="/cn/mongo/">
     <h2 class="post-title">
-      Spring IoC之ClassPathXmlApplicationContext
+      mongo
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      Spring IoC之ClassPathXmlApplicationContext
-ApplicationContext 和 BeanFactory 两者都是用于加载 Bean 的，但是相比之下，ApplicationContext 提供了更多的扩展功能 ，简而言之： ApplicationContext 包含 BeanFactory 的所有功能。通常建议优先使用  ApplicationC......
+      mongo简介
+db.createUser({ user:‘zhangqinzhong’,pwd:‘zhangqinzhong’,roles:[ { role:‘dbOwner’, db: ‘yapi’}]});
+db.createUser({ user:‘admin’,pwd:‘zhangqinzhong’,roles:[ { role:‘userAdminAnyDatabase’, db......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#docker" title="docker">docker</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/scp/">
+    <h2 class="post-title">
+      scp
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      scp
+1. 从本地复制到远程
+在本地服务器上将/root/lk目录下所有的文件传输到服务器43.224.34.73的/home/lk/cpfile目录下，命令为：
+scp -r /root/lk root@43.224.34.73:/home/lk/cpfile
+2. 从远程复制到本地
+在本地服务器上操作，将服务器43.224.34.73上/home/lk/目录下所有的文件全部复制到本地的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#linux" title="linux">linux</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/spring-BeanFactory入门/">
+    <h2 class="post-title">
+      spring-BeanFactory入门
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      spring-BeanFactory入门
+1234567DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);reader.loadBeanDefini......
     </div>
   </a>
   
@@ -682,22 +846,24 @@ ApplicationContext 和 BeanFactory 两者都是用于加载 Bean 的，但是相
   <!-- top end -->
   
 
-  <a href="/cn/Spring bean的理解随笔/">
+  <a href="/cn/tree/">
     <h2 class="post-title">
-      Spring bean的理解随笔
+      tree
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      spring Bean的理解 随笔
+      数据结构-树简介
 
-闲暇之余对spring的bean有了一些新的理解。比如：哪些类可以作为spring的bean，这里的类指的是普通的class类，或者抽象类，或者接口，匿名内部类，其他内部类，枚举类。
+树是一个有n个有限节点组成一个具有层次关系的集合，每个节点有0个或者多个子节点，没有父节点的节点称为根节点，也就是说除了根节点以外每个节点都有父节点，并且有且只有一个。
+树的种类比较多，有二叉树，红黑树，AVL树，B树，哈夫曼树，字典树等等。
+甚至堆我们也可以把它看成是一棵树，树的这么多种类中，我们最常见的应该是二叉树了，下面我们来看一下他的结构。
 
-下面是java中常见的类，然后我搜到的一些简单的介绍，我能想到的。
 
-普通类（Regular Class）：这是最常见的类类型，它包含变量和方法。
-抽象类（Abstrac......
+树的定义
+
+**结......
     </div>
   </a>
   
@@ -709,173 +875,9 @@ ApplicationContext 和 BeanFactory 两者都是用于加载 Bean 的，但是相
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#Spring" title="Spring">Spring</a>
+    <a href="/tags/#Java" title="Java">Java</a>
     
-    <a href="/tags/#spring" title="spring">spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Spring boot 推断main方法/">
-    <h2 class="post-title">
-      Spring boot 推断main方法
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      SpringBoot源码解析之main方法推断
-SpringBoot首先会推断应用类型。在推断出应用类型之后，SpringBoot又进行了main方法的推断。
-在进行main方法的推断时，主要使用了堆栈信息一层层的判断，来获得main方法。具体源代码如下：
-1234567891011121314private Class&lt;?&gt; deduceMainApplicationClass......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-    <a href="/tags/#spring" title="spring">spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Spring-构造方法,@PostConstruct,InitializingBean接口执行顺序/">
-    <h2 class="post-title">
-      Spring-构造方法,@PostConstruct,InitializingBean接口执行顺序
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Spring-构造方法,@PostConstruct,InitializingBean接口执行顺序
-
-日常开发代码中可能会遇到需要在某些时间点初始化一些内容。对于此类场景，文章介绍了三种常用初始化的方式
-
-构造方法
-构造方法用于创建对象时,可以初始化对象的实例变量和其他属性,为对象的状态赋初值。
-构造方法比较常用，但是如果是在spring 环境中，bean是被spring管理初始化的，如果想......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-    <a href="/tags/#spring" title="spring">spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Spring-cloud-gateway/">
-    <h2 class="post-title">
-      Spring-cloud-gateway
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Spring cloud gateway
-该项目提供了一个在Spring生态系统之上构建的API网关，包括：Spring 5，Spring Boot 2和Project Reactor。Spring Cloud Gateway旨在提供一种简单而有效的方法来路由到API，并为它们提供跨领域的关注点，例如：安全性，监视/指标和弹性。
-1.如何引入Spring Cloud Gateway
-要在您的......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-    <a href="/tags/#Spring-cloud-gateway" title="Spring-cloud-gateway">Spring-cloud-gateway</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Spring/">
-    <h2 class="post-title">
-      Spring
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Spring源码深度解析
-
-Spring源码深度解析 读书整理
-
-Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson在其著作《Expert One-On-One J2EE Development and Design》中阐述的部分理念和原型衍生而来。Spring是为了解决企业应用开发的复杂性而创建的，它使用基本的JavaBean来完成以前只可能由EJB完成......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-    <a href="/tags/#spring" title="spring">spring</a>
+    <a href="/tags/#DataStructure" title="DataStructure">DataStructure</a>
     
   </div>
   

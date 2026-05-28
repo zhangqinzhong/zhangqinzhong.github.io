@@ -469,18 +469,220 @@
   <!-- top end -->
   
 
-  <a href="/cn/Markdown用法/">
+  <a href="/cn/Spring boot 推断main方法/">
     <h2 class="post-title">
-      Markdown用法
+      Spring boot 推断main方法
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      markdown用法
-内存需求[37]
-内存需求37
-Lombok v1.18.20 支持 JDK 16 开箱即用
+      SpringBoot源码解析之main方法推断
+SpringBoot首先会推断应用类型。在推断出应用类型之后，SpringBoot又进行了main方法的推断。
+在进行main方法的推断时，主要使用了堆栈信息一层层的判断，来获得main方法。具体源代码如下：
+1234567891011121314private Class&lt;?&gt; deduceMainApplicationClass......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Spring" title="Spring">Spring</a>
+    
+    <a href="/tags/#spring" title="spring">spring</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Spring-构造方法,@PostConstruct,InitializingBean接口执行顺序/">
+    <h2 class="post-title">
+      Spring-构造方法,@PostConstruct,InitializingBean接口执行顺序
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Spring-构造方法,@PostConstruct,InitializingBean接口执行顺序
+
+日常开发代码中可能会遇到需要在某些时间点初始化一些内容。对于此类场景，文章介绍了三种常用初始化的方式
+
+构造方法
+构造方法用于创建对象时,可以初始化对象的实例变量和其他属性,为对象的状态赋初值。
+构造方法比较常用，但是如果是在spring 环境中，bean是被spring管理初始化的，如果想......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Spring" title="Spring">Spring</a>
+    
+    <a href="/tags/#spring" title="spring">spring</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Spring-cloud-gateway/">
+    <h2 class="post-title">
+      Spring-cloud-gateway
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Spring cloud gateway
+该项目提供了一个在Spring生态系统之上构建的API网关，包括：Spring 5，Spring Boot 2和Project Reactor。Spring Cloud Gateway旨在提供一种简单而有效的方法来路由到API，并为它们提供跨领域的关注点，例如：安全性，监视/指标和弹性。
+1.如何引入Spring Cloud Gateway
+要在您的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Spring" title="Spring">Spring</a>
+    
+    <a href="/tags/#Spring-cloud-gateway" title="Spring-cloud-gateway">Spring-cloud-gateway</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Spring/">
+    <h2 class="post-title">
+      Spring
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Spring源码深度解析
+
+Spring源码深度解析 读书整理
+
+Spring是于2003年兴起的一个轻量级的Java开源框架，由Rod Johnson在其著作《Expert One-On-One J2EE Development and Design》中阐述的部分理念和原型衍生而来。Spring是为了解决企业应用开发的复杂性而创建的，它使用基本的JavaBean来完成以前只可能由EJB完成......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Spring" title="Spring">Spring</a>
+    
+    <a href="/tags/#spring" title="spring">spring</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Spring拦截器,过滤器,切面/">
+    <h2 class="post-title">
+      Spring拦截器,过滤器,切面
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Spring拦截器,过滤器,切面
+在Spring Boot的 Web 应用中，过滤器Filter、拦截器Interceptor和 切面Aspect是实现横切关注点功能的三种不同机制，主要区别在于实现的范围、灵活性和执行顺序。
+1. 过滤器（Filter）
+过滤器是 Servlet 规范中的概念，作用于 Servlet 容器中，请求和响应都可以被过滤器拦截并处理。
+实现方式：实现 javax.......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#Spring" title="Spring">Spring</a>
+    
+    <a href="/tags/#spring" title="spring">spring</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/Synchronize/">
+    <h2 class="post-title">
+      Synchronize
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      synchronize
 ...
     </div>
   </a>
@@ -493,7 +695,9 @@ Lombok v1.18.20 支持 JDK 16 开箱即用
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#markdown" title="markdown">markdown</a>
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#ConcurrentProgramming" title="ConcurrentProgramming">ConcurrentProgramming</a>
     
   </div>
   
@@ -508,188 +712,15 @@ Lombok v1.18.20 支持 JDK 16 开箱即用
   <!-- top end -->
   
 
-  <a href="/cn/MavenArchetype/">
+  <a href="/cn/ThreadLocal/">
     <h2 class="post-title">
-      MavenArchetype
+      ThreadLocal
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      maven archetype
-为什么会写这篇文章，因为公司先在构建项目骨架都是用的 maven archetype ，身为一个上进的渣渣猿，自己还是有必要了解下这个东西的。
-使用我们的maven archetype生成项目模板
-方式一（推荐）：
-使用maven命令行：
-mvn archetype:generate -DgroupId=&lt;GROUP_ID&gt; -DartifactI......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#maven" title="maven">maven</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/MySQL事务/">
-    <h2 class="post-title">
-      MySQL事务
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Mysql事务学习
-一、事务定义(Transaction)
-
-
-Transaction
-事务：一个最小的不可再分的工作单元；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元)
-一个完整的业务需要批量的DML(insert、update、delete)语句共同联合完成
-
-
-二、事务四大特征(ACID)
-
-atomicity：原子性
-consistency 一致......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#MySql" title="MySql">MySql</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/MySQL架构/">
-    <h2 class="post-title">
-      MySQL架构
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      1. MySQL体系架构
- MySQL Server架构自顶向下大致可以分网络连接层、服务层、存储引擎层和系统文件层。
-1.1 网络连接层
-客户端连接器（Client Connectors）：提供与MySQL服务器建立的支持。目前几乎支持所有主流的服务器编程技术，例如常见的Java、C、Python、.NET等，它们通过各自的API技术与MySQL建立连接。
-1.2 服务层（MySQL Se......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#MySql" title="MySql">MySql</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Mybatis插入数据获取ID的问题/">
-    <h2 class="post-title">
-      Mybatis插入数据获取ID的问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      记一次Mybatis Insert获取ID的问题
-异常描述
-1No setter found for the keyProperty&#x27;id&#x27; in &#x27;java.lang.Long&#x27;
-通常集成Mybatis后可以通过如下方式获取Mysql数据库自增ID。
-Mapper
-12345678public interface UserMapper &#123; ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#mybatis" title="mybatis">mybatis</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Mysql命令/">
-    <h2 class="post-title">
-      Mysql命令
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      MySql 命令
-自定义排序
-
-语法规则：FIELD(value,str1,str2,str3,str4)
-value分别与str1，str2，str3，str4比较
-
-
-示例：SELECT * FROM books WHERE books.author IN (‘李雷’,‘韩梅梅’,‘安华’) ORDER BY FIELD(author, ‘李雷’,‘韩梅梅’,‘安华’);
+      ThreadLocal 详解
 
 ...
     </div>
@@ -703,7 +734,9 @@ value分别与str1，str2，str3，str4比较
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#MySql" title="MySql">MySql</a>
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#ConcurrentProgramming" title="ConcurrentProgramming">ConcurrentProgramming</a>
     
   </div>
   
@@ -718,102 +751,21 @@ value分别与str1，str2，str3，str4比较
   <!-- top end -->
   
 
-  <a href="/cn/Mysql查询优化/">
+  <a href="/cn/Volatile/">
     <h2 class="post-title">
-      Mysql查询优化
+      Volatile
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      Mysql查询优化
-例如：
-1234567891011-- EXPLAIN EXTENDEDSELECT	*FROM	boxWHERE	box.create_time &gt;= &#x27;2021-11-02 00:00:00&#x27; 	AND box.create_time &lt;= &#x27;2021-11-25 23:59:59&#x27; GROUP BY	box.num......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#MySql" title="MySql">MySql</a>
-    
-  </div>
-  
+      volatile原理
+volatile 的底层实现原理是内存屏障, Memory Barrier( Memory Fence)
+对 volatile变量的写指令后会加入写屏障
+对 volatile变量的读指令前会加入读屏障
 
-</div>
-<hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
 
-  <a href="/cn/Navicat破解/">
-    <h2 class="post-title">
-      Navicat破解
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Navicat破解
-
-Navicat Premium 16
-
-一、卸载原有navicat（没装过的跳过这一步）
-
-控制面板里卸载原有navicat
-找一下原来navicat的安装目录 删干净
-删除Navicat的注册表信息
-
-按下Win+R键，然后输入regedit并按Enter键来打开注册表编辑器。
-在注册表编辑器中，导航到以下路径：计算机\HKEY_CURRENT_USER\Softwa......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#MySql" title="MySql">MySql</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Postman拦截器/">
-    <h2 class="post-title">
-      Postman拦截器
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      解决postman无法安装node的问题
-解决postman无法安装node的问题
-MacOS:
-mkdir ~/Library/Application Support/Google/Chrome/NativeMessagingHosts
-chmod +wx ~/Library/Application Support/Google/Chrome/NativeMessagingHosts
 ...
     </div>
   </a>
@@ -826,7 +778,9 @@ chmod +wx ~/Library/Application Support/Google/Chrome/NativeMessagingHosts
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#postman" title="postman">postman</a>
+    <a href="/tags/#Java" title="Java">Java</a>
+    
+    <a href="/tags/#ConcurrentProgramming" title="ConcurrentProgramming">ConcurrentProgramming</a>
     
   </div>
   
@@ -841,37 +795,19 @@ chmod +wx ~/Library/Application Support/Google/Chrome/NativeMessagingHosts
   <!-- top end -->
   
 
-  <a href="/cn/Netty简介/">
+  <a href="/cn/Web唤起本地应用程序/">
     <h2 class="post-title">
-      Netty简介
+      Web唤起本地应用程序
     </h2>
     <h3 class="post-subtitle">
       
     </h3>
     <div class="post-content-preview">
-      NIO基础
-non-blocking io 非阻塞IO
-NIO支持面向缓冲区的、基于通道的IO操作。NIO将以更加高效的方式进行文件的读写操作。
-1.1 IO与NIO的区别
-
-
-
-IO
-NIO
-
-
-
-
-面向流(Stream Oriented)
-面向缓冲区(Buffer Oriented)
-
-
-阻塞IO(Blocking IO)
-非阻塞IO(NonBlocking IO)
-
-
-
-选择器(Sel......
+      Web唤起本地应用程序
+例如：在任意浏览器输入 tencent:// 既可唤起QQ
+windows参考文献：
+https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)
+用网页调用本地应用程序的思路是，先进行注......
     </div>
   </a>
   
@@ -883,7 +819,45 @@ NIO
     
     <a href="/tags/#Typora" title="Typora">Typora</a>
     
-    <a href="/tags/#Netty" title="Netty">Netty</a>
+    <a href="/tags/#windows" title="windows">windows</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/curl/">
+    <h2 class="post-title">
+      curl
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      curl
+curl -H “Content-Type:application/json” -X POST -d ‘{“decryptList”:[{“tid”:“1936397919241533508”}]}’ ‘localhost:25000/tmall/oaid/decrypt’
+curl localhost:25000/tmall/test/api
+java -jar ms_tmall......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2025-09-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Typora" title="Typora">Typora</a>
+    
+    <a href="/tags/#linux" title="linux">linux</a>
     
   </div>
   

@@ -469,33 +469,151 @@
   <!-- top end -->
   
 
-  <a href="/cn/模板模式/">
+  <a href="/cn/java-8-Collector接口简单实现/">
     <h2 class="post-title">
-      模板模式
+      java 8 Collector接口简单实现
     </h2>
     <h3 class="post-subtitle">
-      
+      手动实现一个收集器，简单实现，为了实现产品经理的需求！
     </h3>
     <div class="post-content-preview">
-      模板模式简介
-在模板模式（Template Pattern）中，一个抽象类公开定义了执行它的方法的方式/模板。它的子类可以按需要重写方法实现，但调用将以抽象类中定义的方式进行。这种类型的设计模式属于行为型模式。
-介绍
-**意图：**定义一个操作中的算法的骨架，而将一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。
-**主要解决：**一些方法通用，却......
+      java 8 Collector接口简单实现
+Collector接口上的注释说明
+Collector是一个收集器接口，是专门用来作为Stream的collect方法的参数的。我们挑重点注释看：
+A Collector is specified by four functions that work together to accumulate entries into a mutable r......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by zhangqinzhong on
-    2025-09-12
+    2021-12-10
   </p>
   <div class="tags">
     
-    <a href="/tags/#Typora" title="Typora">Typora</a>
+    <a href="/tags/#Collector" title="Collector">Collector</a>
     
-    <a href="/tags/#Java" title="Java">Java</a>
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/递归思维：反转单链表/">
+    <h2 class="post-title">
+      递归思维：反转单链表
+    </h2>
+    <h3 class="post-subtitle">
+      递归思维：反转单链表
+    </h3>
+    <div class="post-content-preview">
+      递归思维：反转单链表
+基础：反转一个单链表
+![递归思维：k 个一组反转链表](递归思维：k 个一组反转链表.png)
+
+
+12345678910111213public ListNode reverseList(ListNode head) &#123;    //初始化两个指针    ListNode prev = null;    ListNode curr = head;    wh......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2021-10-13
+  </p>
+  <div class="tags">
     
-    <a href="/tags/#DesignPattern" title="DesignPattern">DesignPattern</a>
+    <a href="/tags/#反转单链表" title="反转单链表">反转单链表</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/缓存行伪共享/">
+    <h2 class="post-title">
+      缓存行伪共享
+    </h2>
+    <h3 class="post-subtitle">
+      缓存行伪共享
+    </h3>
+    <div class="post-content-preview">
+      缓存行伪共享
+
+简介： ##什么是伪共享 CPU缓存系统中是以缓存行（cache line）为单位存储的。目前主流的CPU Cache的Cache Line大小都是64Bytes。在多线程情况下，如果需要修改“共享同一个缓存行的变量”，就会无意中影响彼此的性能，这就是伪共享（False Sharing）。 ##CPU的三级缓存 由于CPU的速度远远大于内存速度，所以CPU设计者们就给CPU加......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2021-10-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#缓存行伪共享" title="缓存行伪共享">缓存行伪共享</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <div class="top">
+    <div class="iconfont icon-hot animated infinite tada"></div>
+  </div>
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/RandomAccess/">
+    <h2 class="post-title">
+      RandomAccess
+    </h2>
+    <h3 class="post-subtitle">
+      RandomAccess
+    </h3>
+    <div class="post-content-preview">
+      RandomAccess
+RandomAccess接口是一个标记接口，用以标记实现的List集合具备快速随机访问的能力。
+那么什么是随机访问的能力呢？其实很简单，随机访问就是随机的访问List中的任何一个元素。
+所有的List实现都支持随机访问的，只是基于基本结构的不同，实现的速度不同罢了，这里的快速随机访问，那么就不是所有List集合都支持了。
+
+ArrayList基于数组实现，天然带下标......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by zhangqinzhong on
+    2021-10-13
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#RandomAccess" title="RandomAccess">RandomAccess</a>
     
   </div>
   
@@ -510,379 +628,28 @@
   <!-- top end -->
   
 
-  <a href="/cn/算法分析/">
+  <a href="/cn/HashMap/">
     <h2 class="post-title">
-      算法分析
+      HashMap
     </h2>
     <h3 class="post-subtitle">
-      
+      深入理解HashMap源码
     </h3>
     <div class="post-content-preview">
-      算法分析
-一、算法分析
-有关算法时间耗费分析，时间复杂度。算法空间（内存）占用，空间复杂度。
-1.1 算法的时间复杂度分析
-如何度量算法的执行时间。
-事后分析法：
-12345678910111213public static void main(String [] args)&#123;  long start = System.currentTimeMillis();    int sum......
+      HashMap
+1.HashMap集合简介
+HashMap基于哈希表的Map接口实现，是以key-value存储形式存在，即主要用来存放键值对。HashMap 的实现不是同步的，这意味着它不是线程安全的。它的key、value都可以为null。此外，HashMap中的映射不是有序的。
+JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了......
     </div>
   </a>
   
   <p class="post-meta" style="margin: 10px 0;">
     Posted by zhangqinzhong on
-    2025-09-12
+    2020-11-17
   </p>
   <div class="tags">
     
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#DataStructure" title="DataStructure">DataStructure</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/策略模式/">
-    <h2 class="post-title">
-      策略模式
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      策略模式
-在策略模式（Strategy Pattern）中，一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。
-在策略模式中，我们创建表示各种策略的对象和一个行为随着策略对象改变而改变的 context 对象。策略对象改变 context 对象的执行算法。
-介绍
-**意图：**定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。
-**主要解决：**在有多种算......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#DesignPattern" title="DesignPattern">DesignPattern</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/线程池/">
-    <h2 class="post-title">
-      线程池
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      线程池
-通过Executor类的静态方法快速创建线程池或者通过如下自定义线程池的方式创建线程池
-线程池构造函数
-123456789public ThreadPoolExecutor(int corePoolSize,                              int maximumPoolSize,                              long keep......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#ConcurrentProgramming" title="ConcurrentProgramming">ConcurrentProgramming</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/自动内存管理/">
-    <h2 class="post-title">
-      自动内存管理
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      自动内存管理
-运行时数据区域
-Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。这些区域 有各自的用途，以及创建和销毁的时间，有的区域随着虚拟机进程的启动而一直存在，有些区域则是 依赖用户线程的启动和结束而建立和销毁。根据《Java虚拟机规范》的规定，Java虚拟机所管理的内存 将会包括以下几个运行时数据区域，如图2-1所示。
-
-
-
-程序计数器(Progr......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#JVM" title="JVM">JVM</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/苹果地图macos.app,proxy问题/">
-    <h2 class="post-title">
-      苹果地图macos.app,proxy问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Apple Macbook地图.app 无法使用高德地图数据的问题
-由于使用了Clashx proxy 导致地图app无法导航路线等问题。
-解决办法是配置proxy规则。
-打开Clashx的配置文件夹，找到当前正在使用的配置文件。编辑配置文件。
-在rules下新增如下规则：
-1- DOMAIN-SUFFIX,ls.apple.com,DIRECT
-
-保存配置好的配置文件。点击Clashx的重......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#mac" title="mac">mac</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/解析json对象出现$ref的问题/">
-    <h2 class="post-title">
-      解析json对象出现$ref的问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      解析json对象出现$ref的问题
-问题分析
-循环引用：当一个对象包含另一个对象时，fastjson就会把该对象解析成引用。引用是通过$ref标示的，下面介绍一些引用的描述
-“$ref”:“…” 上一级
-“$ref”:“@” 当前对象，也就是自引用
-“$ref”:“$” 根对象
-“$ref”:“$.children.0” 基于路径的引用，相当于 root.getChildren().get(......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#json" title="json">json</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/设置虚拟机命令行模式运行/">
-    <h2 class="post-title">
-      设置虚拟机命令行模式运行
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      设置虚拟机命令行模式运行
-centos中6种运行级别如下：
-0：关机                        runleve0  — poweroff.target
-1：单用户                    runleve1  — rescue.target
-2：多用户无网络         runleve2  — multi-user.target
-3：多用户有网络     ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#linux" title="linux">linux</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/进制转换/">
-    <h2 class="post-title">
-      进制转换
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      进制转换
-
-10进制转2进制采用’除2取余，逆序排列‘。
-
-10进制转2进制
-比如将10进制数 29转换为2进制，如下：
-
-10进制数29转换为2进制为11101
-2进制转10进制
-将2进制数 1011010转换为10进制，如下：
-
-2进制数 1011010转换为10进制为90
-...
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#Java" title="Java">Java</a>
-    
-    <a href="/tags/#mathematics" title="mathematics">mathematics</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/阿里云服务器安装nginx/">
-    <h2 class="post-title">
-      阿里云服务器安装nginx
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      阿里云服务器安装nginx 配置https等
-Nginx相关介绍不在本篇赘述。直接步入正题。
-登录阿里云服务器
-
-新建nginx安装目录。并且切换到该目录下
-
-123mkdir /usr/local/nginxcd /usr/local/nginx
-
-使用yum 下载wget下装工具，使用wget下装nginx包
-
-1yum -y install wget
-
-下载nginx源文件
-
-1wge......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by zhangqinzhong on
-    2025-09-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Typora" title="Typora">Typora</a>
-    
-    <a href="/tags/#nginx" title="nginx">nginx</a>
+    <a href="/tags/#HashMap" title="HashMap">HashMap</a>
     
   </div>
   
@@ -898,10 +665,6 @@ Nginx相关介绍不在本篇赘述。直接步入正题。
       <a href="/archives/11/">&larr; 上一页</a>
     </li>
     
-    
-    <li class="next">
-      <a href="/archives/13/">下一页 &rarr;</a>
-    </li>
     
   </ul>
 
