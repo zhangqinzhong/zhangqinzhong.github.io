@@ -5,11 +5,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-Hook%E9%85%8D%E7%BD%AESchema/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-Hook%E6%9C%BA%E5%88%B6%E6%80%BB%E8%A7%88/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-Hook%E6%9C%BA%E5%88%B6%E6%80%BB%E8%A7%88/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-Hook%E9%85%8D%E7%BD%AESchema/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -25,11 +25,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-%E4%BC%9A%E8%AF%9D%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9FHook/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-PreToolUse/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-PreToolUse/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Hook%E7%B3%BB%E7%BB%9F-%E4%BC%9A%E8%AF%9D%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9FHook/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -93,11 +93,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Java-Agent%E5%BC%80%E5%8F%91-%E5%AE%9E%E6%88%98-%E5%80%BC%E7%8F%ADAI%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Java-Agent%E5%BC%80%E5%8F%91-%E5%AE%9E%E6%88%98-%E5%80%BC%E7%8F%ADAI%E6%89%A9%E5%B1%95%E6%96%B9%E5%90%91/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Java-Agent%E5%BC%80%E5%8F%91-%E5%AE%9E%E6%88%98-%E5%80%BC%E7%8F%ADAI%E6%89%A9%E5%B1%95%E6%96%B9%E5%90%91/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Java-Agent%E5%BC%80%E5%8F%91-%E5%AE%9E%E6%88%98-%E5%80%BC%E7%8F%ADAI%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -209,6 +209,10 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-LocalAgentTask/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-LocalShellTask/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
@@ -217,19 +221,15 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-LocalAgentTask/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-Task%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-TeamTask%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-Task%E5%90%8E%E5%8F%B0%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F-TeamTask%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -409,11 +409,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-branch%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-advisor%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-advisor%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-branch%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -433,18 +433,6 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-insights%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-review%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-security-review%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-voice%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
@@ -457,11 +445,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-%E5%B0%8F%E5%9E%8B%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-review%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-security-review%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -477,15 +465,23 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%A4%9AAgent%E5%8D%8F%E8%AE%AE%E7%94%9F%E6%80%81-ACP%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%A4%9AAgent%E5%8D%8F%E8%AE%AE%E7%94%9F%E6%80%81-ACP%E6%A0%B8%E5%BF%83%E5%8E%9F%E8%AF%AD/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-%E5%B0%8F%E5%9E%8B%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%A4%9AAgent%E5%8D%8F%E8%AE%AE%E7%94%9F%E6%80%81-%E5%8D%8F%E8%AE%AE%E7%94%9F%E6%80%81%E5%85%A8%E6%99%AF/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%A4%9AAgent%E5%8D%8F%E8%AE%AE%E7%94%9F%E6%80%81-ACP%E6%A0%B8%E5%BF%83%E5%8E%9F%E8%AF%AD/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -505,10 +501,6 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-03-%E6%A0%B8%E5%BF%83%E5%B7%A5%E5%85%B7-FileEditTool/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-03-%E6%A0%B8%E5%BF%83%E5%B7%A5%E5%85%B7-FileReadTool/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
@@ -518,6 +510,10 @@
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-03-%E6%A0%B8%E5%BF%83%E5%B7%A5%E5%85%B7-GlobTool/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F-insights%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -597,6 +593,10 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-03-%E6%A0%B8%E5%BF%83%E5%B7%A5%E5%85%B7-FileEditTool/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-08-MCP%E4%B8%8E%E5%A4%96%E9%83%A8-WebSearchTool/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
@@ -605,15 +605,15 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-Bash-AST%E8%A7%A3%E6%9E%90%E5%99%A8/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-Bash%E5%AE%89%E5%85%A8%E5%B1%82/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-Markdown%E9%85%8D%E7%BD%AE%E5%8A%A0%E8%BD%BD%E5%99%A8/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-Bash-AST%E8%A7%A3%E6%9E%90%E5%99%A8/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -661,19 +661,19 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-03-%E4%B8%BB%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D-%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8C%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F-%E8%87%AA%E5%AE%9A%E4%B9%89Agent%E5%8A%A0%E8%BD%BD/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-03-%E4%B8%BB%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D-%E6%93%8D%E4%BD%9C%E5%AE%89%E5%85%A8%E8%A7%84%E5%88%99/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-03-%E4%B8%BB%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D-%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8C%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-03-%E4%B8%BB%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D-%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-03-%E4%B8%BB%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D-%E6%93%8D%E4%BD%9C%E5%AE%89%E5%85%A8%E8%A7%84%E5%88%99/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -777,11 +777,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-LSPTool-prompt/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-ListMcpResourcesTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-ListMcpResourcesTool-prompt/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-LSPTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -789,11 +789,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-NotebookEditTool-prompt/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-PowerShellTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-PowerShellTool-prompt/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-NotebookEditTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -817,15 +817,15 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-SleepTool-prompt/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-TaskCreateTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-TaskGetTool-prompt/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-SleepTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -857,11 +857,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-WebFetchTool-prompt/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-WebSearchTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-WebSearchTool-prompt/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-05-%E5%B7%A5%E5%85%B7%E6%8F%90%E7%A4%BA%E8%AF%8D-WebFetchTool-prompt/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -913,11 +913,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-06-%E6%9C%8D%E5%8A%A1%E5%B1%82%E6%8F%90%E7%A4%BA%E8%AF%8D-%E8%BE%93%E5%85%A5%E9%A2%84%E6%B5%8B%E6%8F%90%E7%A4%BA%E8%AF%8D/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-06-%E6%9C%8D%E5%8A%A1%E5%B1%82%E6%8F%90%E7%A4%BA%E8%AF%8D-%E9%AA%8C%E8%AF%81Agent%E6%8F%90%E7%A4%BA%E8%AF%8D/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-06-%E6%9C%8D%E5%8A%A1%E5%B1%82%E6%8F%90%E7%A4%BA%E8%AF%8D-%E9%AA%8C%E8%AF%81Agent%E6%8F%90%E7%A4%BA%E8%AF%8D/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-06-%E6%9C%8D%E5%8A%A1%E5%B1%82%E6%8F%90%E7%A4%BA%E8%AF%8D-%E8%BE%93%E5%85%A5%E9%A2%84%E6%B5%8B%E6%8F%90%E7%A4%BA%E8%AF%8D/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -941,11 +941,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%9E%B6%E6%9E%84/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%B3%BB%E7%BB%9F-%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1001,11 +1001,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-YOLO%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB%E5%99%A8/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-%E5%88%86%E7%B1%BB%E5%99%A8%E5%AE%A1%E6%89%B9%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-%E5%88%86%E7%B1%BB%E5%99%A8%E5%AE%A1%E6%89%B9%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-YOLO%E8%87%AA%E5%8A%A8%E5%88%86%E7%B1%BB%E5%99%A8/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1057,11 +1057,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-%E6%9D%83%E9%99%90%E8%A7%84%E5%88%99%E5%8A%A0%E8%BD%BD%E4%B8%8E%E6%8C%81%E4%B9%85%E5%8C%96/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-%E6%9D%83%E9%99%90%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-%E6%9D%83%E9%99%90%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-%E6%9D%83%E9%99%90%E8%A7%84%E5%88%99%E5%8A%A0%E8%BD%BD%E4%B8%8E%E6%8C%81%E4%B9%85%E5%8C%96/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1093,6 +1093,10 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Agent-%E5%A4%9AAgent%E5%8D%8F%E4%BD%9C/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Agent-%E5%AF%B9%E8%AF%9D%E5%BE%AA%E7%8E%AF%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
@@ -1102,10 +1106,6 @@
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Agent-%E6%88%90%E6%9C%AC%E4%B8%8E%E9%80%9F%E7%8E%87%E9%99%90%E5%88%B6/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84Agent-%E5%A4%9AAgent%E5%8D%8F%E4%BD%9C/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1157,11 +1157,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-API%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%8E%82/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-API%E5%B1%82-claude/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-API%E5%B1%82-claude/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-API%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%8E%82/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1193,11 +1193,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-XML%E6%A0%87%E7%AD%BE%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%86%E6%9E%90%E5%99%A8/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%86%E6%9E%90%E5%99%A8/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-XML%E6%A0%87%E7%AD%BE%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1237,11 +1237,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E6%9F%A5%E8%AF%A2%E7%8A%B6%E6%80%81%E6%9C%BA-QueryGuard/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E6%96%9C%E6%9D%A0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E6%96%9C%E6%9D%A0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E6%9F%A5%E8%AF%A2%E7%8A%B6%E6%80%81%E6%9C%BA-QueryGuard/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1261,19 +1261,19 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E8%BD%BB%E9%87%8FAPI%E8%B0%83%E7%94%A8-sideQuery/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%A4%84%E7%90%86%E5%99%A8/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E9%99%84%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E8%BD%BB%E9%87%8FAPI%E8%B0%83%E7%94%A8-sideQuery/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E9%99%84%E4%BB%B6%E7%B3%BB%E7%BB%9F-attachments/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E-%E9%99%84%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1285,15 +1285,15 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A1%A5%E6%8E%A5%E4%B8%8E%E9%9B%86%E6%88%90-Agent%E4%B8%8A%E4%B8%8B%E6%96%87%E9%9A%94%E7%A6%BB/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A1%A5%E6%8E%A5%E4%B8%8E%E9%9B%86%E6%88%90-Agent%E8%BF%9B%E5%BA%A6%E6%91%98%E8%A6%81/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A1%A5%E6%8E%A5%E4%B8%8E%E9%9B%86%E6%88%90-Bridge%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E6%A1%A5%E6%8E%A5%E4%B8%8E%E9%9B%86%E6%88%90-Agent%E4%B8%8A%E4%B8%8B%E6%96%87%E9%9A%94%E7%A6%BB/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1397,11 +1397,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-OpenTelemetry%E9%81%A5%E6%B5%8B/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-Plan%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-Plan%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-OpenTelemetry%E9%81%A5%E6%B5%8B/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1417,19 +1417,15 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E4%BC%81%E4%B8%9A%E8%BF%9C%E7%A8%8B%E8%AE%BE%E7%BD%AE/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E6%89%98%E7%AE%A1%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E6%8F%90%E7%A4%BA%E7%B3%BB%E7%BB%9F-Tips/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E6%8F%90%E7%A4%BA%E7%B3%BB%E7%BB%9F-Tips/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E6%89%98%E7%AE%A1%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1438,6 +1434,10 @@
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E6%96%87%E4%BB%B6%E5%BF%AB%E7%85%A7%E4%B8%8ERewind/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E4%BC%81%E4%B8%9A%E8%BF%9C%E7%A8%8B%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1453,11 +1453,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6-policyLimits/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E6%B2%99%E7%AE%B1%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E6%B2%99%E7%AE%B1%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E7%89%B9%E6%80%A7%E5%8A%9F%E8%83%BD-%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6-policyLimits/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1565,11 +1565,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F-%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F-%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F-%E6%A6%82%E8%BF%B0/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1709,10 +1709,6 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-Settings%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-Shell%E7%8E%AF%E5%A2%83%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
@@ -1722,6 +1718,10 @@
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-Token%E9%A2%84%E7%AE%97%E8%A7%A3%E6%9E%90/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-Settings%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1765,15 +1765,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E5%90%AF%E5%8A%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E5%AD%90Agent%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E5%90%AF%E5%8A%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1785,7 +1781,7 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E5%BE%AA%E7%8E%AF%E7%BC%93%E5%86%B2%E5%8C%BACircularBuffer/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E5%AD%90Agent%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1793,15 +1789,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E6%85%A2%E9%80%9F%E6%93%8D%E4%BD%9C%E7%9B%91%E6%8E%A7/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E6%80%9D%E8%80%83-Thinking/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E6%8E%A8%E8%8D%90%E4%B8%8E%E8%B6%85%E9%87%8F%E7%A7%AF%E5%88%86/</loc>
-    <lastmod>2026-06-28</lastmod>
-  </url>
-  <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E6%80%9D%E8%80%83-Thinking/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1817,7 +1809,15 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E6%85%A2%E9%80%9F%E6%93%8D%E4%BD%9C%E7%9B%91%E6%8E%A7/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
     <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E6%A6%82%E8%BF%B0/</loc>
+    <lastmod>2026-06-28</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E5%BE%AA%E7%8E%AF%E7%BC%93%E5%86%B2%E5%8C%BACircularBuffer/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1837,11 +1837,11 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E7%A6%BB%E5%BC%80%E6%91%98%E8%A6%81/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E7%A3%81%E7%9B%98%E6%B8%85%E7%90%86%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://zhangqinzhong.com/cn/ClaudeCode-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7-%E7%A6%BB%E5%BC%80%E6%91%98%E8%A6%81/</loc>
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
@@ -1909,11 +1909,11 @@
     <lastmod>2026-05-24</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/en/Claude-Visualizer/</loc>
+    <loc>https://zhangqinzhong.com/en/Claudia/</loc>
     <lastmod>2026-05-24</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/en/Claudia/</loc>
+    <loc>https://zhangqinzhong.com/en/Claude-Visualizer/</loc>
     <lastmod>2026-05-24</lastmod>
   </url>
   <url>
@@ -2245,11 +2245,11 @@
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/win10%E7%B3%BB%E7%BB%9F%E7%9A%84idea%E7%9A%84terminal%E7%BB%88%E7%AB%AF%E5%AF%B9git%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://zhangqinzhong.com/cn/tree/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/tree/</loc>
+    <loc>https://zhangqinzhong.com/cn/win10%E7%B3%BB%E7%BB%9F%E7%9A%84idea%E7%9A%84terminal%E7%BB%88%E7%AB%AF%E5%AF%B9git%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
@@ -2285,11 +2285,11 @@
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/%E6%8E%92%E6%9F%A5jar%E5%8C%85%E5%86%85%E5%AD%98/</loc>
+    <loc>https://zhangqinzhong.com/cn/%E5%B0%8F%E6%81%90%E9%BE%99/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/%E5%B0%8F%E6%81%90%E9%BE%99/</loc>
+    <loc>https://zhangqinzhong.com/cn/%E6%8E%92%E6%9F%A5jar%E5%8C%85%E5%86%85%E5%AD%98/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
@@ -2309,11 +2309,19 @@
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
+    <loc>https://zhangqinzhong.com/cn/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/%E8%8B%B9%E6%9E%9C%E5%9C%B0%E5%9B%BEmacos.app,proxy%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://zhangqinzhong.com/cn/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/</loc>
+    <lastmod>2025-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</loc>
+    <lastmod>2025-09-12</lastmod>
+  </url>
+  <url>
+    <loc>https://zhangqinzhong.com/cn/%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
@@ -2329,15 +2337,11 @@
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
-    <loc>https://zhangqinzhong.com/cn/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://zhangqinzhong.com/cn/%E8%8B%B9%E6%9E%9C%E5%9C%B0%E5%9B%BEmacos.app,proxy%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/%E9%94%81/</loc>
-    <lastmod>2025-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://zhangqinzhong.com/cn/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
@@ -2346,10 +2350,6 @@
   </url>
   <url>
     <loc>https://zhangqinzhong.com/cn/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%84%E4%BB%B6%E5%90%88%E9%9B%86/</loc>
-    <lastmod>2025-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://zhangqinzhong.com/cn/%E7%BA%BF%E7%A8%8B%E6%B1%A0/</loc>
     <lastmod>2025-09-12</lastmod>
   </url>
   <url>
