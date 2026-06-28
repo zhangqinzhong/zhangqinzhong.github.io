@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209764208-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-209764208-1');
+    </script>
+
+  <!-- Baidu Tongji -->
+    <script async type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?49af1e7917558c9124fc1709797fc578";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!-- 谷歌站点认证 -->
+  <meta name="google-site-verification" content="Vt7J2aQm6nTcvrQzU-Wuee1c_GZ_ESgKvWr_vE_x46o" />
+  <!-- 百度站点认证 -->
+  <meta name="baidu-site-verification" content="code-WfUpk4GQY3" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="张奶豆"/>
+  <meta name="keyword" content="Java,Spring,JVM,Redis,Rabbit Mq,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://zhangqinzhong.com/cn/ClaudeCode-工具系统-Bash-AST解析器/">
+  <title>
+    
+      Bash AST 解析器架构 - zhangqinzhong
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'zhangqinzhong-github-io/zhangqinzhong'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">张勤忠的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713//img/images/unsplash.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713//img/images/unsplash.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/images/unsplash.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/signature.jpg');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#工具系统" title="工具系统">工具系统</a>
+              
+              <a class="tag" href="/tags/#源码" title="源码">源码</a>
+              
+            </div>
+            <h1>Bash AST 解析器架构</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by zhangqinzhong on
+              2026-06-03
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">5</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="概述"><a class="header-anchor" href="#概述"></a>概述</h2>
+<p><code>utils/bash/</code>（约 12,000 行，6 个文件）实现了 CC 的<strong>纯 TypeScript Bash 解析器</strong>，将 Shell 命令字符串解析为 AST（抽象语法树），使权限系统能准确判断命令的安全性。这是安全架构的核心——只有 AST 能完全理解命令结构，字符串匹配必然存在绕过风险。</p>
+<hr>
+<h2 id="为什么需要自己写-Bash-解析器"><a class="header-anchor" href="#为什么需要自己写-Bash-解析器"></a>为什么需要自己写 Bash 解析器</h2>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">问题：</span><br><span class="line">  <span class="string">&quot;git status &amp;&amp; eval &#x27;rm -rf /&#x27;&quot;</span></span><br><span class="line">  字符串匹配 → 发现<span class="string">&quot;git status&quot;</span> → 可能批准</span><br><span class="line">  AST 解析   → 发现 <span class="built_in">eval</span> 命令 → 拒绝（too-<span class="built_in">complex</span>）</span><br><span class="line"></span><br><span class="line">字符串匹配的根本缺陷：</span><br><span class="line">  - 无法区分命令名和参数中的相同字符串</span><br><span class="line">  - 无法理解命令组合逻辑（&amp;&amp;、||、|）</span><br><span class="line">  - 无法识别变量展开和命令替换</span><br><span class="line"></span><br><span class="line">AST 解析的设计原则：FAIL-CLOSED</span><br><span class="line">  任何 AST 中出现未明确允许的节点类型 → too-<span class="built_in">complex</span> → 要求用户确认</span><br><span class="line">  宁可多问用户，也不冒险静默批准</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="文件架构"><a class="header-anchor" href="#文件架构"></a>文件架构</h2>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">utils/bash/</span><br><span class="line">  bashParser.<span class="keyword">ts</span>    <span class="number">4436</span>行  ← 纯 TypeScript 词法分析器 + 语法分析器</span><br><span class="line">  ast.<span class="keyword">ts</span>           <span class="number">2679</span>行  ← AST 节点分析（安全性分类）</span><br><span class="line">  commands.<span class="keyword">ts</span>      <span class="number">1339</span>行  ← 从 AST 提取 SimpleCommand 列表</span><br><span class="line">  heredoc.<span class="keyword">ts</span>        <span class="number">733</span>行  ← Here-document 解析（&lt;&lt;EOF...EOF）</span><br><span class="line">  ShellSnapshot.<span class="keyword">ts</span>  <span class="number">582</span>行  ← Shell 环境快照（工具路径、函数定义）</span><br><span class="line">  shellQuote.<span class="keyword">ts</span>     ~<span class="number">50</span>行  ← 安全的 <span class="keyword">shell</span> 字符串引用</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="bashParser-ts-—-纯-TypeScript-解析器"><a class="header-anchor" href="#bashParser-ts-—-纯-TypeScript-解析器"></a>bashParser.ts — 纯 TypeScript 解析器</h2>
+<h3 id="设计选择：不依赖-WASM"><a class="header-anchor" href="#设计选择：不依赖-WASM"></a>设计选择：不依赖 WASM</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 原始方案：用 tree-sitter-bash 的 WASM 版本</span></span><br><span class="line"><span class="comment">// 问题：WASM 加载异步，启动慢，依赖外部资源</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 实际方案：从零写纯 TS 解析器</span></span><br><span class="line"><span class="comment">// - 与 tree-sitter-bash 输出格式兼容（节点类型相同）</span></span><br><span class="line"><span class="comment">// - 经过 3449 个 golden corpus 输入验证</span></span><br><span class="line"><span class="comment">// - 同步执行，零延迟</span></span><br></pre></td></tr></table></figure>
+<h3 id="关键限制"><a class="header-anchor" href="#关键限制"></a>关键限制</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PARSE_TIMEOUT_MS = <span class="number">50</span>    <span class="comment">// 50ms 超时（防止 DoS）</span></span><br><span class="line"><span class="keyword">const</span> MAX_NODES = <span class="number">50_000</span>       <span class="comment">// 节点数上限（防止 OOM）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 超时或超出节点数 → PARSE_ABORTED → 当作 too-complex 处理</span></span><br><span class="line"><span class="comment">// 而不是崩溃或返回不完整结果</span></span><br></pre></td></tr></table></figure>
+<h3 id="AST-节点类型"><a class="header-anchor" href="#AST-节点类型"></a>AST 节点类型</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">type</span> TsNode = &#123;</span><br><span class="line">  <span class="keyword">type</span>: <span class="built_in">string</span>      <span class="comment">// 节点类型（&#x27;command&#x27;, &#x27;pipeline&#x27;, &#x27;list&#x27; 等）</span></span><br><span class="line">  text: <span class="built_in">string</span>      <span class="comment">// 原始文本</span></span><br><span class="line">  startIndex: <span class="built_in">number</span>  <span class="comment">// UTF-8 字节偏移量（不是 JS 字符索引！）</span></span><br><span class="line">  endIndex: <span class="built_in">number</span></span><br><span class="line">  children: TsNode[]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>UTF-8 字节偏移量</strong>：严格使用字节偏移，不是字符索引。CJK 字符可能是 3 字节，emoji 可能是 4 字节。这与 tree-sitter-bash 的约定一致，避免字符边界混乱。</p>
+<hr>
+<h2 id="ast-ts-—-安全分类"><a class="header-anchor" href="#ast-ts-—-安全分类"></a>ast.ts — 安全分类</h2>
+<h3 id="ParseForSecurityResult"><a class="header-anchor" href="#ParseForSecurityResult"></a>ParseForSecurityResult</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ParseForSecurityResult =</span><br><span class="line">  | &#123; <span class="attr">kind</span>: <span class="string">&#x27;simple&#x27;</span>; commands: SimpleCommand[] &#125;      <span class="comment">// 可以安全分析</span></span><br><span class="line">  | &#123; <span class="attr">kind</span>: <span class="string">&#x27;too-complex&#x27;</span>; reason: <span class="built_in">string</span>; nodeType?: <span class="built_in">string</span> &#125;  <span class="comment">// 拒绝分析</span></span><br><span class="line">  | &#123; <span class="attr">kind</span>: <span class="string">&#x27;parse-unavailable&#x27;</span> &#125;                      <span class="comment">// 解析器不可用</span></span><br></pre></td></tr></table></figure>
+<h3 id="允许的结构类型（STRUCTURAL-TYPES）"><a class="header-anchor" href="#允许的结构类型（STRUCTURAL-TYPES）"></a>允许的结构类型（STRUCTURAL_TYPES）</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可以安全递归遍历的节点（组合结构）</span></span><br><span class="line"><span class="keyword">const</span> STRUCTURAL_TYPES = <span class="keyword">new</span> <span class="built_in">Set</span>([</span><br><span class="line">  <span class="string">&#x27;program&#x27;</span>,              <span class="comment">// 根节点</span></span><br><span class="line">  <span class="string">&#x27;list&#x27;</span>,                 <span class="comment">// a &amp;&amp; b || c</span></span><br><span class="line">  <span class="string">&#x27;pipeline&#x27;</span>,             <span class="comment">// a | b</span></span><br><span class="line">  <span class="string">&#x27;redirected_statement&#x27;</span>, <span class="comment">// command &gt;file</span></span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="comment">// 分隔符（连接器，忽略）</span></span><br><span class="line"><span class="keyword">const</span> SEPARATOR_TYPES = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">&#x27;&amp;&amp;&#x27;</span>, <span class="string">&#x27;||&#x27;</span>, <span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;;&#x27;</span>, <span class="string">&#x27;&amp;&#x27;</span>, <span class="string">&#x27;|&amp;&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>])</span><br></pre></td></tr></table></figure>
+<p><strong>设计原则</strong>：只有明确列在 allowlist 中的节点类型才可以处理。任何未知类型 → <code>too-complex</code>。这是 FAIL-CLOSED 设计的核心体现。</p>
+<h3 id="命令替换处理（-）"><a class="header-anchor" href="#命令替换处理（-）"></a>命令替换处理（$()）</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// $(subcommand) 在外层 argv 中替换为占位符</span></span><br><span class="line"><span class="keyword">const</span> CMDSUB_PLACEHOLDER = <span class="string">&#x27;__CMDSUB_OUTPUT__&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 效果：</span></span><br><span class="line"><span class="comment">// &quot;git diff $(cat file.txt)&quot;</span></span><br><span class="line"><span class="comment">// → 外层 argv: [&#x27;git&#x27;, &#x27;diff&#x27;, &#x27;__CMDSUB_OUTPUT__&#x27;]</span></span><br><span class="line"><span class="comment">// → 内层 commands: [&#x27;cat&#x27;, &#x27;file.txt&#x27;]（单独分析）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 优点：</span></span><br><span class="line"><span class="comment">// - 外层可以匹配 &quot;git diff&quot; 规则</span></span><br><span class="line"><span class="comment">// - 内层也可以独立检查（cat 是只读工具）</span></span><br></pre></td></tr></table></figure>
+<h3 id="变量展开追踪"><a class="header-anchor" href="#变量展开追踪"></a>变量展开追踪</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> VAR_PLACEHOLDER = <span class="string">&#x27;__TRACKED_VAR__&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// VAR=value &amp;&amp; command $VAR</span></span><br><span class="line"><span class="comment">// → 追踪 VAR=value → 知道 $VAR 是 &quot;value&quot;</span></span><br><span class="line"><span class="comment">// → 可以展开替换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 安全检查：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">containsAnyPlaceholder</span>(<span class="params">value: <span class="built_in">string</span></span>): <span class="title">boolean</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> value.includes(CMDSUB_PLACEHOLDER) || value.includes(VAR_PLACEHOLDER)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 包含占位符的值不是纯字面量，不能信任作为直接参数</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="SimpleCommand-—-最终提取结果"><a class="header-anchor" href="#SimpleCommand-—-最终提取结果"></a>SimpleCommand — 最终提取结果</h2>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">type</span> SimpleCommand = &#123;</span><br><span class="line">  argv: <span class="built_in">string</span>[]                              <span class="comment">// 命令名 + 参数（引号已解析）</span></span><br><span class="line">  envVars: &#123; <span class="attr">name</span>: <span class="built_in">string</span>; value: <span class="built_in">string</span> &#125;[]  <span class="comment">// 前置 VAR=val 赋值</span></span><br><span class="line">  redirects: Redirect[]                       <span class="comment">// 重定向（&gt; &gt;&gt; &lt; 等）</span></span><br><span class="line">  text: <span class="built_in">string</span>                                <span class="comment">// 原始源代码片段（UI 显示用）</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例：</span></span><br><span class="line"><span class="comment">// &quot;LOG=debug git status &gt;output.txt&quot;</span></span><br><span class="line"><span class="comment">// → argv: [&#x27;git&#x27;, &#x27;status&#x27;]</span></span><br><span class="line"><span class="comment">// → envVars: [&#123; name: &#x27;LOG&#x27;, value: &#x27;debug&#x27; &#125;]</span></span><br><span class="line"><span class="comment">// → redirects: [&#123; op: &#x27;&gt;&#x27;, target: &#x27;output.txt&#x27; &#125;]</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="heredoc-ts-—-Here-document-支持"><a class="header-anchor" href="#heredoc-ts-—-Here-document-支持"></a>heredoc.ts — Here-document 支持</h2>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// &lt;&lt;EOF...EOF 语法的完整解析</span></span><br><span class="line"><span class="comment">// 正确处理 heredoc 分隔符、缩进（&lt;&lt;-）、变量展开</span></span><br><span class="line"><span class="comment">// 对于权限系统：heredoc 内容通常是命令参数，不影响命令名匹配</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="ShellSnapshot-ts-—-工具路径和函数注入"><a class="header-anchor" href="#ShellSnapshot-ts-—-工具路径和函数注入"></a>ShellSnapshot.ts — 工具路径和函数注入</h2>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建 Shell 环境快照：</span></span><br><span class="line"><span class="comment">// 1. 注入 CC 内置工具的 shell 函数</span></span><br><span class="line"><span class="comment">//    （ripgrep、bfs 等嵌入式工具通过 argv0 trick 调用）</span></span><br><span class="line"><span class="comment">// 2. 记录工具的绝对路径</span></span><br><span class="line"><span class="comment">// 3. 用于 bash 子进程的环境初始化</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createArgv0ShellFunction</span>(<span class="params">funcName, argv0, binaryPath</span>): <span class="title">string</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 创建兼容多平台的 shell 函数：</span></span><br><span class="line">  <span class="comment">// - zsh: 用 ARGV0= 环境变量</span></span><br><span class="line">  <span class="comment">// - bash（非子shell）: 用 exec -a</span></span><br><span class="line">  <span class="comment">// - Windows: 用 ARGV0= 环境变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Golden-Corpus-验证"><a class="header-anchor" href="#Golden-Corpus-验证"></a>Golden Corpus 验证</h2>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3449 个测试用例</span></span><br><span class="line"><span class="comment">// 从真实的 tree-sitter-bash WASM 输出生成</span></span><br><span class="line"><span class="comment">// 纯 TS 解析器 vs WASM 输出对比验证</span></span><br><span class="line"><span class="comment">// 确保 AST 结构完全兼容</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试文件：src/utils/bash/__tests__/bashParser.golden.ts</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="与权限系统的集成"><a class="header-anchor" href="#与权限系统的集成"></a>与权限系统的集成</h2>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">用户输入命令</span><br><span class="line">  ↓</span><br><span class="line">bashParser<span class="selector-class">.parse</span>() → AST</span><br><span class="line">  ↓</span><br><span class="line">ast<span class="selector-class">.parseForSecurity</span>() → SimpleCommand<span class="selector-attr">[]</span> 或 too-complex</span><br><span class="line">  ↓</span><br><span class="line">too-complex → 要求用户确认（权限弹窗）</span><br><span class="line">simple → commands<span class="selector-class">.ts</span> 提取 argv<span class="selector-attr">[0]</span> → 与权限规则匹配</span><br><span class="line">  ↓</span><br><span class="line"><span class="string">&quot;git&quot;</span> 在 alwaysAllowRules<span class="selector-attr">[<span class="string">&quot;Bash(git status:*)&quot;</span>]</span> → 允许</span><br><span class="line">不在规则中 → 询问用户</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="相关文档"><a class="header-anchor" href="#相关文档"></a>相关文档</h2>
+<ul>
+<li><a href="/03-%E5%B7%A5%E5%85%B7%E7%B3%BB%E7%BB%9F/05-Bash%E5%AE%89%E5%85%A8%E5%B1%82">Bash 安全层</a> — 使用此解析器的安全检查层</li>
+<li><a href="/00-%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/13-%E4%B8%BA%E4%BB%80%E4%B9%88Fail-Closed%E8%AE%BE%E8%AE%A1">为什么 Fail-Closed 设计</a> — AST 解析的 Fail-Closed 设计原则</li>
+<li><a href="/05-%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F/03-%E5%B7%A5%E5%85%B7%E6%9D%83%E9%99%90%E6%A3%80%E6%9F%A5%E6%B5%81%E7%A8%8B">权限检查流程</a> — 解析结果在权限流中的使用</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/ClaudeCode-工具系统-AgentTool实现/" data-toggle="tooltip" data-placement="top" title="AgentTool 实现">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/ClaudeCode-工具系统-Bash安全层/" data-toggle="tooltip" data-placement="top" title="Bash 安全层">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Bash AST 解析器架构&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/cn/ClaudeCode-工具系统-Bash-AST解析器/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. giscus comment -->
+
+  <!-- giscus start -->
+  <!-- Docs: https://giscus.app -->
+
+  <div class="comment">
+    <script src="https://giscus.app/client.js"
+            data-repo="zhangqinzhong/zhangqinzhong.github.io"
+            data-repo-id="R_kgDOGI7Xjg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOGI7Xjs4C8uKW"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
+  <!-- giscus end -->
+
+
+<!-- 2. gitalk comment -->
+
+
+<!-- 3. gitment comment -->
+
+
+<!-- 4. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E8%87%AA%E5%B7%B1%E5%86%99-Bash-%E8%A7%A3%E6%9E%90%E5%99%A8"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">为什么需要自己写 Bash 解析器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E6%9E%B6%E6%9E%84"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">文件架构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#bashParser-ts-%E2%80%94-%E7%BA%AF-TypeScript-%E8%A7%A3%E6%9E%90%E5%99%A8"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">bashParser.ts — 纯 TypeScript 解析器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AE%BE%E8%AE%A1%E9%80%89%E6%8B%A9%EF%BC%9A%E4%B8%8D%E4%BE%9D%E8%B5%96-WASM"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">设计选择：不依赖 WASM</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%B3%E9%94%AE%E9%99%90%E5%88%B6"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">关键限制</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#AST-%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">AST 节点类型</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ast-ts-%E2%80%94-%E5%AE%89%E5%85%A8%E5%88%86%E7%B1%BB"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">ast.ts — 安全分类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ParseForSecurityResult"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">ParseForSecurityResult</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%81%E8%AE%B8%E7%9A%84%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B%EF%BC%88STRUCTURAL-TYPES%EF%BC%89"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">允许的结构类型（STRUCTURAL_TYPES）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%91%BD%E4%BB%A4%E6%9B%BF%E6%8D%A2%E5%A4%84%E7%90%86%EF%BC%88-%EF%BC%89"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">命令替换处理（$()）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%98%E9%87%8F%E5%B1%95%E5%BC%80%E8%BF%BD%E8%B8%AA"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">变量展开追踪</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#SimpleCommand-%E2%80%94-%E6%9C%80%E7%BB%88%E6%8F%90%E5%8F%96%E7%BB%93%E6%9E%9C"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">SimpleCommand — 最终提取结果</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#heredoc-ts-%E2%80%94-Here-document-%E6%94%AF%E6%8C%81"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">heredoc.ts — Here-document 支持</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ShellSnapshot-ts-%E2%80%94-%E5%B7%A5%E5%85%B7%E8%B7%AF%E5%BE%84%E5%92%8C%E5%87%BD%E6%95%B0%E6%B3%A8%E5%85%A5"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">ShellSnapshot.ts — 工具路径和函数注入</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Golden-Corpus-%E9%AA%8C%E8%AF%81"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">Golden Corpus 验证</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%8E%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%9B%86%E6%88%90"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">与权限系统的集成</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">相关文档</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#工具系统" title="工具系统">工具系统</a>
+            
+            <a class="tag" href="/tags/#源码" title="源码">源码</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://baidu.com" target="_blank">百度</a>
+          </li>
+          
+          <li>
+            <a href="https://google.com" target="_blank">Google</a>
+          </li>
+          
+          <li>
+            <a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+          </li>
+          
+          <li>
+            <a href="https://weibo.com/" target="_blank">新浪微博</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      icon: 'ℬ'
+      // icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/springbreezeboy">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.facebook.com/David John">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          zhangqinzhong
+          2026
+<!--           <br> -->
+<!--           Theme by -->
+<!--           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a> -->
+<!--           <span style="display: inline-block; margin: 0 5px;"> -->
+<!--             <i class="fa fa-heart"></i> -->
+<!--           </span> -->
+<!--           re-Ported by -->
+<!--           <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a> -->
+<!--           | -->
+<!--           <iframe style="margin-left: 2px; margin-bottom:-5px;"  -->
+<!--           frameborder="0" scrolling="0" width="91px" height="20px"  -->
+<!--           src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/mouseclick.js"  content='奶豆~,喵喵~,喵~,喵~,吃饭~,睡觉~,跑酷~,搞破坏~,洗澡~' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivrRoot = "https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713";
+    let pagePath = "cn/ClaudeCode-工具系统-Bash-AST解析器/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivrRoot;
+    } else {
+      jsdelivrurl = jsdelivrRoot + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://zhangqinzhong.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

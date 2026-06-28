@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209764208-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-209764208-1');
+    </script>
+
+  <!-- Baidu Tongji -->
+    <script async type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?49af1e7917558c9124fc1709797fc578";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!-- 谷歌站点认证 -->
+  <meta name="google-site-verification" content="Vt7J2aQm6nTcvrQzU-Wuee1c_GZ_ESgKvWr_vE_x46o" />
+  <!-- 百度站点认证 -->
+  <meta name="baidu-site-verification" content="code-WfUpk4GQY3" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="张奶豆"/>
+  <meta name="keyword" content="Java,Spring,JVM,Redis,Rabbit Mq,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://zhangqinzhong.com/cn/ClaudeCode-命令系统-小型命令参考/">
+  <title>
+    
+      斜杠命令完整参考 - zhangqinzhong
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'zhangqinzhong-github-io/zhangqinzhong'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">张勤忠的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713//img/images/unsplash.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713//img/images/unsplash.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/img/images/unsplash.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/signature.jpg');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#命令" title="命令">命令</a>
+              
+              <a class="tag" href="/tags/#CLI" title="CLI">CLI</a>
+              
+            </div>
+            <h1>斜杠命令完整参考</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by zhangqinzhong on
+              2026-06-19
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">5</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.3k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <p>CC 内置约 64 个斜杠命令，分为 <code>local</code>（纯逻辑）、<code>local-jsx</code>（带 React UI）、<code>prompt</code>（Skill 展开）三种类型。本文档覆盖所有未单独成文的命令。</p>
+<hr>
+<h2 id="会话与对话管理"><a class="header-anchor" href="#会话与对话管理"></a>会话与对话管理</h2>
+<h3 id="clear"><a class="header-anchor" href="#clear"></a>/clear</h3>
+<p>清除当前对话历史，保留系统配置。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/clear</span><br></pre></td></tr></table></figure>
+<p>与 <code>/compact</code> 的区别：<code>/compact</code> 保留 AI 摘要，<code>/clear</code> 完全清空。</p>
+<h3 id="copy"><a class="header-anchor" href="#copy"></a>/copy</h3>
+<p>把最后一条 assistant 回复复制到系统剪贴板。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">copy</span></span><br></pre></td></tr></table></figure>
+<h3 id="rename-新标题"><a class="header-anchor" href="#rename-新标题"></a>/rename <code>&lt;新标题&gt;</code></h3>
+<p>重命名当前会话，影响 <code>/resume</code> 时的列表显示。</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">rename</span> 修复 auth bug</span><br></pre></td></tr></table></figure>
+<h3 id="resume"><a class="header-anchor" href="#resume"></a>/resume</h3>
+<p>恢复历史会话。不带参数显示最近会话列表；带 session-id 直接恢复。</p>
+<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">resume</span></span><br><span class="line">/<span class="keyword">resume</span> abc123</span><br></pre></td></tr></table></figure>
+<h3 id="diff"><a class="header-anchor" href="#diff"></a>/diff</h3>
+<p>展示当前工作区所有<strong>未提交的变更</strong>（git diff）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/diff</span></span><br></pre></td></tr></table></figure>
+<h3 id="context"><a class="header-anchor" href="#context"></a>/context</h3>
+<p>显示上下文窗口可视化网格（哪些内容占了多少 token）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/context</span></span><br></pre></td></tr></table></figure>
+<h3 id="status"><a class="header-anchor" href="#status"></a>/status</h3>
+<p>显示完整系统状态：连接的 MCP 服务器、权限模式、当前模型、会话 ID 等。</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">status</span></span><br></pre></td></tr></table></figure>
+<h3 id="rewind"><a class="header-anchor" href="#rewind"></a>/rewind</h3>
+<p>交互式选择历史检查点，回滚对话和文件状态到某个时间点。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/rewind</span></span><br></pre></td></tr></table></figure>
+<h3 id="export"><a class="header-anchor" href="#export"></a>/export</h3>
+<p>导出当前对话为 Markdown 文件或复制到剪贴板。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/export</span>                    <span class="comment"># 复制到剪贴板</span></span><br><span class="line"><span class="string">/export</span> ~<span class="string">/conversation.md</span>  <span class="comment"># 写入文件</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="配置与设置"><a class="header-anchor" href="#配置与设置"></a>配置与设置</h2>
+<h3 id="config"><a class="header-anchor" href="#config"></a>/config</h3>
+<p>打开交互式配置面板，可设置模型、权限模式、主题等所有选项。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/config</span><br></pre></td></tr></table></figure>
+<h3 id="theme"><a class="header-anchor" href="#theme"></a>/theme</h3>
+<p>交互式切换终端颜色主题（<code>dark</code> / <code>light</code> / <code>solarized</code> / <code>dracula</code> 等）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/theme</span></span><br></pre></td></tr></table></figure>
+<h3 id="vim"><a class="header-anchor" href="#vim"></a>/vim</h3>
+<p>在 Vim 编辑模式和普通模式之间切换。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/vim</span>        <span class="comment"># 开启 Vim 模式</span></span><br><span class="line"><span class="string">/vim</span> off    <span class="comment"># 关闭 Vim 模式</span></span><br></pre></td></tr></table></figure>
+<p>等价于 <code>claude config set editorMode vim</code>。</p>
+<h3 id="keybindings"><a class="header-anchor" href="#keybindings"></a>/keybindings</h3>
+<p>创建并用系统编辑器打开 <code>~/.claude/keybindings.json</code>。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/keybindings</span></span><br></pre></td></tr></table></figure>
+<h3 id="model-模型名"><a class="header-anchor" href="#model-模型名"></a>/model <code>[模型名]</code></h3>
+<p>查看或切换当前使用的模型。</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/model</span><br><span class="line">/model claude-sonnet<span class="string">-4</span><span class="string">-6</span></span><br><span class="line">/model claude-haiku<span class="string">-4</span><span class="string">-5</span><span class="string">-20251001</span></span><br></pre></td></tr></table></figure>
+<h3 id="effort-level"><a class="header-anchor" href="#effort-level"></a>/effort <code>[level]</code></h3>
+<p>设置 thinking token 预算级别。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/effort</span> low     <span class="comment"># 快速响应</span></span><br><span class="line"><span class="string">/effort</span> high    <span class="comment"># 深度思考</span></span><br><span class="line"><span class="string">/effort</span> max     <span class="comment"># 最大预算</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="账户与认证"><a class="header-anchor" href="#账户与认证"></a>账户与认证</h2>
+<h3 id="login"><a class="header-anchor" href="#login"></a>/login</h3>
+<p>登录或切换账户（<a target="_blank" rel="noopener" href="http://Claude.ai">Claude.ai</a> OAuth 或 API Key 输入）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/login</span></span><br></pre></td></tr></table></figure>
+<h3 id="logout"><a class="header-anchor" href="#logout"></a>/logout</h3>
+<p>退出账户，清除本地存储的 Token 和 API Key。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">logout</span></span><br></pre></td></tr></table></figure>
+<h3 id="cost"><a class="header-anchor" href="#cost"></a>/cost</h3>
+<p>查看当前会话费用或订阅使用情况。</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/cost</span><br><span class="line"><span class="meta"># API Key 用户：$0.45 (2,345 in + 876 out tokens)</span></span><br><span class="line"><span class="meta"># 订阅用户：显示订阅额度使用进度</span></span><br></pre></td></tr></table></figure>
+<h3 id="usage"><a class="header-anchor" href="#usage"></a>/usage</h3>
+<p>显示速率限制使用情况和重置时间。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/usage</span></span><br></pre></td></tr></table></figure>
+<h3 id="privacy-settings"><a class="header-anchor" href="#privacy-settings"></a>/privacy-settings</h3>
+<p>跳转浏览器打开 Anthropic 隐私设置页面。</p>
+<hr>
+<h2 id="工具与集成管理"><a class="header-anchor" href="#工具与集成管理"></a>工具与集成管理</h2>
+<h3 id="mcp"><a class="header-anchor" href="#mcp"></a>/mcp</h3>
+<p>MCP 服务器管理面板——查看连接状态、添加/删除服务器。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/mcp</span></span><br></pre></td></tr></table></figure>
+<h3 id="ide"><a class="header-anchor" href="#ide"></a>/ide</h3>
+<p>IDE 集成管理——安装/查看 VS Code 和 JetBrains 扩展状态。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/ide</span></span><br></pre></td></tr></table></figure>
+<h3 id="plugin"><a class="header-anchor" href="#plugin"></a>/plugin</h3>
+<p>插件管理面板——浏览市场、安装/卸载插件。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/plugin</span></span><br></pre></td></tr></table></figure>
+<h3 id="reload-plugins"><a class="header-anchor" href="#reload-plugins"></a>/reload-plugins</h3>
+<p>在当前会话激活最新安装的插件，不需要重启 CC。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/reload-plugins</span></span><br></pre></td></tr></table></figure>
+<h3 id="skills"><a class="header-anchor" href="#skills"></a>/skills</h3>
+<p>列出当前可用的所有 Skill（内置 + 自定义）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/skills</span></span><br></pre></td></tr></table></figure>
+<h3 id="hooks"><a class="header-anchor" href="#hooks"></a>/hooks</h3>
+<p>交互式配置 Hook 事件处理器（PreToolUse、PostToolUse 等）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/hooks</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="代码与工作区"><a class="header-anchor" href="#代码与工作区"></a>代码与工作区</h2>
+<h3 id="files"><a class="header-anchor" href="#files"></a>/files</h3>
+<p>列出当前上下文中 CC 知道的所有文件。</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">files</span></span><br></pre></td></tr></table></figure>
+<h3 id="add-dir-路径"><a class="header-anchor" href="#add-dir-路径"></a>/add-dir <code>&lt;路径&gt;</code></h3>
+<p>将额外目录添加到允许的工作目录范围。</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/add-dir ~/</span><span class="keyword">project</span>/libs</span><br></pre></td></tr></table></figure>
+<h3 id="permissions"><a class="header-anchor" href="#permissions"></a>/permissions</h3>
+<p>交互式管理工具权限规则（allow / deny 列表）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/permissions</span></span><br></pre></td></tr></table></figure>
+<h3 id="memory"><a class="header-anchor" href="#memory"></a>/memory</h3>
+<p>在系统编辑器中打开 <code>~/.claude/CLAUDE.md</code>（用户级记忆文件）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/memory</span></span><br></pre></td></tr></table></figure>
+<h3 id="doctor"><a class="header-anchor" href="#doctor"></a>/doctor</h3>
+<p>运行安装诊断，检查 API Key、MCP 连接、快捷键配置等是否正确。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/doctor</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="计划与任务"><a class="header-anchor" href="#计划与任务"></a>计划与任务</h2>
+<h3 id="plan"><a class="header-anchor" href="#plan"></a>/plan</h3>
+<p>进入 Plan 模式——CC 生成实现方案但不执行，等待用户审批。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/plan</span></span><br></pre></td></tr></table></figure>
+<h3 id="tasks"><a class="header-anchor" href="#tasks"></a>/tasks</h3>
+<p>后台任务管理面板。</p>
+<figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="variable"><span class="class">tasks</span></span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="信息与帮助"><a class="header-anchor" href="#信息与帮助"></a>信息与帮助</h2>
+<h3 id="help"><a class="header-anchor" href="#help"></a>/help</h3>
+<p>显示所有可用命令和快捷键。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+<h3 id="release-notes"><a class="header-anchor" href="#release-notes"></a>/release-notes</h3>
+<p>查看当前版本的更新日志。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/release-notes</span><br></pre></td></tr></table></figure>
+<h3 id="stats"><a class="header-anchor" href="#stats"></a>/stats</h3>
+<p>显示使用统计（总会话数、token 使用量、最常用工具等）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/stats</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="快速功能"><a class="header-anchor" href="#快速功能"></a>快速功能</h2>
+<h3 id="fast"><a class="header-anchor" href="#fast"></a>/fast</h3>
+<p>在快速模式（减少 thinking）和标准模式之间切换。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/fast</span></span><br><span class="line"><span class="string">/fast</span> on</span><br><span class="line"><span class="string">/fast</span> off</span><br></pre></td></tr></table></figure>
+<h3 id="btw-问题"><a class="header-anchor" href="#btw-问题"></a>/btw <code>&lt;问题&gt;</code></h3>
+<p>快速提问，不打断主对话流。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/btw</span> 这个函数的复杂度是多少？</span><br></pre></td></tr></table></figure>
+<h3 id="color-颜色"><a class="header-anchor" href="#color-颜色"></a>/color <code>&lt;颜色&gt;</code></h3>
+<p>改变当前会话提示栏颜色（多窗口时方便区分）。</p>
+<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">color</span> <span class="built_in">blue</span></span><br><span class="line">/<span class="built_in">color</span> <span class="built_in">red</span></span><br><span class="line">/<span class="built_in">color</span> reset</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="集成与应用"><a class="header-anchor" href="#集成与应用"></a>集成与应用</h2>
+<h3 id="session"><a class="header-anchor" href="#session"></a>/session</h3>
+<p>生成当前会话的可分享 URL 或二维码（在另一设备继续）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/session</span></span><br></pre></td></tr></table></figure>
+<h3 id="desktop"><a class="header-anchor" href="#desktop"></a>/desktop</h3>
+<p>在 Claude Desktop 应用中打开并继续当前会话。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/desktop</span></span><br></pre></td></tr></table></figure>
+<h3 id="mobile"><a class="header-anchor" href="#mobile"></a>/mobile</h3>
+<p>生成二维码，在手机上继续当前会话。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/mobile</span></span><br></pre></td></tr></table></figure>
+<h3 id="install-github-app"><a class="header-anchor" href="#install-github-app"></a>/install-github-app</h3>
+<p>安装 CC 的 GitHub Actions 集成，配置自动代码审查。</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">install</span>-github-app</span><br></pre></td></tr></table></figure>
+<h3 id="install-slack-app"><a class="header-anchor" href="#install-slack-app"></a>/install-slack-app</h3>
+<p>安装 CC 的 Slack 应用集成。</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">install</span>-slack-app</span><br></pre></td></tr></table></figure>
+<h3 id="feedback-内容"><a class="header-anchor" href="#feedback-内容"></a>/feedback <code>[内容]</code></h3>
+<p>提交反馈或 bug 报告。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/feedback</span> 这个功能不对<span class="string">...</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="终端设置"><a class="header-anchor" href="#终端设置"></a>终端设置</h2>
+<h3 id="terminal-setup"><a class="header-anchor" href="#terminal-setup"></a>/terminal-setup</h3>
+<p>安装终端快捷键配置（修改 <code>.zshrc</code> / <code>.bashrc</code> 等）。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/terminal-setup</span><br></pre></td></tr></table></figure>
+<h3 id="statusline"><a class="header-anchor" href="#statusline"></a>/statusline</h3>
+<p>配置 IDE 状态栏集成（VS Code / JetBrains 底部状态栏显示）。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">/statusline</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="退出"><a class="header-anchor" href="#退出"></a>退出</h2>
+<h3 id="exit"><a class="header-anchor" href="#exit"></a>/exit</h3>
+<p>退出 CC REPL，等价于 <code>Ctrl+D</code>。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="命令类型说明"><a class="header-anchor" href="#命令类型说明"></a>命令类型说明</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>代表命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>local</code></td>
+<td>纯逻辑，同步执行</td>
+<td><code>/clear</code>、<code>/cost</code>、<code>/copy</code></td>
+</tr>
+<tr>
+<td><code>local-jsx</code></td>
+<td>带 React UI 的交互界面</td>
+<td><code>/config</code>、<code>/mcp</code>、<code>/plugin</code>、<code>/theme</code></td>
+</tr>
+<tr>
+<td><code>prompt</code></td>
+<td>Skill 展开为提示词注入对话</td>
+<td>自定义 skill</td>
+</tr>
+</tbody>
+</table>
+<p><code>local-jsx</code> 命令在管道模式（<code>-p</code>）下<strong>不可用</strong>（<code>supportsNonInteractive: false</code>）。</p>
+<hr>
+<h2 id="相关文档"><a class="header-anchor" href="#相关文档"></a>相关文档</h2>
+<ul>
+<li><a href="/19-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F/01-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84">命令系统架构</a> — 命令注册与加载</li>
+<li><a href="/09-Skill%E7%B3%BB%E7%BB%9F/01-Skill%E6%9C%BA%E5%88%B6">Skill 机制</a> — prompt 类型命令的底层</li>
+<li><a href="/20-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B7%A5%E5%85%B7/46-%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%B3%BB%E7%BB%9F">快捷键系统</a> — 命令的键盘触发</li>
+<li><a href="/19-%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F/13-insights%E4%BC%9A%E8%AF%9D%E5%88%86%E6%9E%90%E5%91%BD%E4%BB%A4">insights 会话分析</a> — <code>/insights</code> 详细实现</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/ClaudeCode-命令系统-命令系统架构/" data-toggle="tooltip" data-placement="top" title="命令系统架构">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/ClaudeCode-命令系统-概述/" data-toggle="tooltip" data-placement="top" title="命令系统">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=斜杠命令完整参考&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/cn/ClaudeCode-命令系统-小型命令参考/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. giscus comment -->
+
+  <!-- giscus start -->
+  <!-- Docs: https://giscus.app -->
+
+  <div class="comment">
+    <script src="https://giscus.app/client.js"
+            data-repo="zhangqinzhong/zhangqinzhong.github.io"
+            data-repo-id="R_kgDOGI7Xjg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOGI7Xjs4C8uKW"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
+  <!-- giscus end -->
+
+
+<!-- 2. gitalk comment -->
+
+
+<!-- 3. gitment comment -->
+
+
+<!-- 4. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BC%9A%E8%AF%9D%E4%B8%8E%E5%AF%B9%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">会话与对话管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#clear"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">&#x2F;clear</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#copy"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">&#x2F;copy</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#rename-%E6%96%B0%E6%A0%87%E9%A2%98"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">&#x2F;rename &lt;新标题&gt;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#resume"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">&#x2F;resume</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#diff"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">&#x2F;diff</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#context"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">&#x2F;context</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#status"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">&#x2F;status</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#rewind"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">&#x2F;rewind</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#export"><span class="toc-nav-number">1.9.</span> <span class="toc-nav-text">&#x2F;export</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%AE%BE%E7%BD%AE"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">配置与设置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#config"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">&#x2F;config</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#theme"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">&#x2F;theme</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#vim"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">&#x2F;vim</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#keybindings"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">&#x2F;keybindings</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#model-%E6%A8%A1%E5%9E%8B%E5%90%8D"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">&#x2F;model [模型名]</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#effort-level"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">&#x2F;effort [level]</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B4%A6%E6%88%B7%E4%B8%8E%E8%AE%A4%E8%AF%81"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">账户与认证</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#login"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">&#x2F;login</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#logout"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">&#x2F;logout</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#cost"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">&#x2F;cost</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#usage"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">&#x2F;usage</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#privacy-settings"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">&#x2F;privacy-settings</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B7%A5%E5%85%B7%E4%B8%8E%E9%9B%86%E6%88%90%E7%AE%A1%E7%90%86"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">工具与集成管理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mcp"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">&#x2F;mcp</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ide"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">&#x2F;ide</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#plugin"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">&#x2F;plugin</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#reload-plugins"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">&#x2F;reload-plugins</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#skills"><span class="toc-nav-number">4.5.</span> <span class="toc-nav-text">&#x2F;skills</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#hooks"><span class="toc-nav-number">4.6.</span> <span class="toc-nav-text">&#x2F;hooks</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%8E%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">代码与工作区</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#files"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">&#x2F;files</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#add-dir-%E8%B7%AF%E5%BE%84"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">&#x2F;add-dir &lt;路径&gt;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#permissions"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">&#x2F;permissions</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#memory"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">&#x2F;memory</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#doctor"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">&#x2F;doctor</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AE%A1%E5%88%92%E4%B8%8E%E4%BB%BB%E5%8A%A1"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">计划与任务</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#plan"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">&#x2F;plan</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#tasks"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">&#x2F;tasks</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BF%A1%E6%81%AF%E4%B8%8E%E5%B8%AE%E5%8A%A9"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">信息与帮助</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#help"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">&#x2F;help</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#release-notes"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">&#x2F;release-notes</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#stats"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">&#x2F;stats</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BF%AB%E9%80%9F%E5%8A%9F%E8%83%BD"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">快速功能</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#fast"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">&#x2F;fast</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#btw-%E9%97%AE%E9%A2%98"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text">&#x2F;btw &lt;问题&gt;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#color-%E9%A2%9C%E8%89%B2"><span class="toc-nav-number">8.3.</span> <span class="toc-nav-text">&#x2F;color &lt;颜色&gt;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9B%86%E6%88%90%E4%B8%8E%E5%BA%94%E7%94%A8"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">集成与应用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#session"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text">&#x2F;session</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#desktop"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text">&#x2F;desktop</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#mobile"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text">&#x2F;mobile</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#install-github-app"><span class="toc-nav-number">9.4.</span> <span class="toc-nav-text">&#x2F;install-github-app</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#install-slack-app"><span class="toc-nav-number">9.5.</span> <span class="toc-nav-text">&#x2F;install-slack-app</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#feedback-%E5%86%85%E5%AE%B9"><span class="toc-nav-number">9.6.</span> <span class="toc-nav-text">&#x2F;feedback [内容]</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%88%E7%AB%AF%E8%AE%BE%E7%BD%AE"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">终端设置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#terminal-setup"><span class="toc-nav-number">10.1.</span> <span class="toc-nav-text">&#x2F;terminal-setup</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#statusline"><span class="toc-nav-number">10.2.</span> <span class="toc-nav-text">&#x2F;statusline</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%80%80%E5%87%BA"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">退出</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#exit"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">&#x2F;exit</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">命令类型说明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">相关文档</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#命令" title="命令">命令</a>
+            
+            <a class="tag" href="/tags/#CLI" title="CLI">CLI</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://baidu.com" target="_blank">百度</a>
+          </li>
+          
+          <li>
+            <a href="https://google.com" target="_blank">Google</a>
+          </li>
+          
+          <li>
+            <a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+          </li>
+          
+          <li>
+            <a href="https://weibo.com/" target="_blank">新浪微博</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      icon: 'ℬ'
+      // icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/springbreezeboy">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.facebook.com/David John">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          zhangqinzhong
+          2026
+<!--           <br> -->
+<!--           Theme by -->
+<!--           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a> -->
+<!--           <span style="display: inline-block; margin: 0 5px;"> -->
+<!--             <i class="fa fa-heart"></i> -->
+<!--           </span> -->
+<!--           re-Ported by -->
+<!--           <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a> -->
+<!--           | -->
+<!--           <iframe style="margin-left: 2px; margin-bottom:-5px;"  -->
+<!--           frameborder="0" scrolling="0" width="91px" height="20px"  -->
+<!--           src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/mouseclick.js"  content='奶豆~,喵喵~,喵~,喵~,吃饭~,睡觉~,跑酷~,搞破坏~,洗澡~' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivrRoot = "https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713";
+    let pagePath = "cn/ClaudeCode-命令系统-小型命令参考/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivrRoot;
+    } else {
+      jsdelivrurl = jsdelivrRoot + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://zhangqinzhong.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-28-154713' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
