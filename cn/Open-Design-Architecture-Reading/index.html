@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209764208-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-209764208-1');
+    </script>
+
+  <!-- Baidu Tongji -->
+    <script async type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?49af1e7917558c9124fc1709797fc578";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!-- 谷歌站点认证 -->
+  <meta name="google-site-verification" content="Vt7J2aQm6nTcvrQzU-Wuee1c_GZ_ESgKvWr_vE_x46o" />
+  <!-- 百度站点认证 -->
+  <meta name="baidu-site-verification" content="code-WfUpk4GQY3" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="张奶豆"/>
+  <meta name="keyword" content="Java,Spring,JVM,Redis,Rabbit Mq,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://zhangqinzhong.com/cn/Open-Design-Architecture-Reading/">
+  <title>
+    
+      Open Design 架构解析：一个产品化的多 Agent CLI 工作台 - zhangqinzhong
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'zhangqinzhong-github-io/zhangqinzhong'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">张勤忠的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005//img/images/unsplash.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005//img/images/unsplash.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/img/images/unsplash.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/signature.jpg');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#架构" title="架构">架构</a>
+              
+              <a class="tag" href="/tags/#开源" title="开源">开源</a>
+              
+              <a class="tag" href="/tags/#Agent" title="Agent">Agent</a>
+              
+              <a class="tag" href="/tags/#Open Design" title="Open Design">Open Design</a>
+              
+            </div>
+            <h1>Open Design 架构解析：一个产品化的多 Agent CLI 工作台</h1>
+            <h2 class="subheading">100+ Skill、261 个 Plugin、28 个 Agent Adapter，如何把多 CLI 做成统一产品</h2>
+            <span class="meta">
+              Posted by zhangqinzhong on
+              2026-06-30
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">6</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.7k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h1 id="Open-Design-架构解析：一个产品化的多-Agent-CLI-工作台"><a class="header-anchor" href="#Open-Design-架构解析：一个产品化的多-Agent-CLI-工作台"></a>Open Design 架构解析：一个产品化的多 Agent CLI 工作台</h1>
+<p><a target="_blank" rel="noopener" href="https://github.com/open-design">Open Design</a> 是一个开源的 local-first 设计生产力工具。跟 Claude Design、v0、Lovable 这类产品不同，它没有自己写 Agent Loop，而是在用户本地已安装的成熟 Agent CLI（Claude Code、Codex、DeepSeek 等）之上，加了一层产品化架构。</p>
+<p>截止目前：100+ Skill、150+ 品牌设计系统、261 个 Plugin、28 个 Agent Adapter。</p>
+<h2 id="三层-App-分工"><a class="header-anchor" href="#三层-App-分工"></a>三层 App 分工</h2>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apps<span class="regexp">/daemon/</span>  → 核心执行层：Hono HTTP 服务、SQLite、agent 子进程管理、prompt 组装、SSE 转发、plugin 快照</span><br><span class="line">apps<span class="regexp">/web/</span>     → 纯 UI 层：React + Tailwind SPA，只调 <span class="regexp">/api/</span>*，消费 SSE</span><br><span class="line">apps<span class="regexp">/desktop/</span> → Electron 壳：打包 daemon + web，不做业务逻辑</span><br><span class="line">packages<span class="regexp">/contracts/</span> → Web/daemon 共享类型，二者不能互相 <span class="keyword">import</span></span><br></pre></td></tr></table></figure>
+<p>边界约束很严格：<code>apps/web</code> 不能 import <code>apps/daemon/src</code>，所有共享类型必须走 <code>packages/contracts</code>。这比常见的&quot;前端随便引后端类型&quot;的 monorepo 干净很多。</p>
+<h2 id="28-个-Agent-Adapter：不是在抽象，而是在声明差异"><a class="header-anchor" href="#28-个-Agent-Adapter：不是在抽象，而是在声明差异"></a>28 个 Agent Adapter：不是在抽象，而是在声明差异</h2>
+<p>这套架构最值得看的部分是 Agent Runtime。它没有把所有 CLI 统一成一个抽象接口，而是给每个 agent 写一个独立的声明式 def 文件（<code>apps/daemon/src/runtimes/defs/</code>），精确描述这个 CLI 跟别的有什么不同。</p>
+<p>以三个典型 adapter 为例：</p>
+<h3 id="Claude-Code"><a class="header-anchor" href="#Claude-Code"></a>Claude Code</h3>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude -p --input-format stream-json --output-format stream-json --verbose</span><br></pre></td></tr></table></figure>
+<ul>
+<li>prompt 通过 stdin 写入，走 stream-json 双流 JSONL 协议</li>
+<li>支持 <code>--resume &lt;id&gt;</code> 恢复会话</li>
+<li>MCP 通过写 <code>.mcp.json</code> 到工作目录注入</li>
+<li>权限走 <code>--permission-mode bypassPermissions</code>，避免 headless 卡 approval</li>
+</ul>
+<h3 id="Codex"><a class="header-anchor" href="#Codex"></a>Codex</h3>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">codex exec --json --skip-git-repo-check ...</span><br><span class="line">codex exec resume --json &lt;thread_id&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>prompt 同样 stdin 写入</li>
+<li>session id 不是自己指定的，而是从 stream 的 <code>thread.started.thread_id</code> 事件里捕获</li>
+<li>resume 时不能再传 <code>-C</code> / <code>--add-dir</code>，否则 Codex 直接报错</li>
+<li>Windows/WSL 下 sandbox 策略不同，必要时切 <code>danger-full-access</code></li>
+</ul>
+<h3 id="DeepSeek"><a class="header-anchor" href="#DeepSeek"></a>DeepSeek</h3>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deepseek exec --auto [--model &lt;id&gt;] &quot;&lt;prompt&gt;&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>prompt 是 argv 位置参数，不是 stdin</strong></li>
+<li>因为有 Windows 32KB / Linux 单参数限制，声明 <code>maxPromptArgBytes: 30000</code></li>
+<li>输出是 plain stdout，不是流式 JSON</li>
+<li><code>--auto</code> 跳过 TTY 下的 approval prompt</li>
+</ul>
+<p>这三个例子说明一件事：<strong>每个 CLI 的输入方式、输出格式、resume 策略、权限机制、sandbox 行为都不同</strong>。想用一个统一 PTY 抽象层去套所有 agent，一定会丢掉关键能力。</p>
+<p>一个 <code>RuntimeAgentDef</code> 声明的东西包括：</p>
+<ul>
+<li><code>bin</code> / <code>fallbackBins</code> — 二进制路径和降级替代</li>
+<li><code>buildArgs()</code> — 如何把 run 参数变成 CLI 参数</li>
+<li><code>promptViaStdin</code> — prompt 是 stdin、argv、还是文件</li>
+<li><code>streamFormat</code> — 输出的流格式（<code>claude-stream-json</code> / <code>json-event-stream</code> / <code>plain</code> / <code>acp-json-rpc</code> / <code>pi-rpc</code> 等）</li>
+<li><code>resumesSessionViaCli</code> — 是否支持 CLI 参数恢复（<code>--resume</code> / <code>--session-id</code>）</li>
+<li><code>capturesSessionIdFromStream</code> — 是否从输出流中捕获 session id</li>
+<li><code>eventParser</code> — 流解析器的选择</li>
+<li><code>externalMcpInjection</code> — MCP 的注入方式（写 <code>.mcp.json</code> / ACP merge / env）</li>
+</ul>
+<h2 id="SSE-事件模型：把-28-种输出归一成一种格式"><a class="header-anchor" href="#SSE-事件模型：把-28-种输出归一成一种格式"></a>SSE 事件模型：把 28 种输出归一成一种格式</h2>
+<p>无论底层 CLI 输出什么格式（plain text、JSON lines、stream-json、ACP RPC），daemon 的 parser 都转成统一的 <code>ChatSseEvent</code>：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">event: start    → run 初始化（runId, agentId, bin, model）</span><br><span class="line">event: agent    → 核心负载（text_delta, thinking_delta, tool_use, tool_result, usage 等）</span><br><span class="line">event: stdout   → 子进程原始 stdout chunk</span><br><span class="line">event: stderr   → 子进程原始 stderr chunk</span><br><span class="line">event: error    → 结构化错误</span><br><span class="line">event: end      → run 终止（exit code, signal, status, resumable）</span><br></pre></td></tr></table></figure>
+<p>其中 <code>agent</code> 是嵌套最深的，子类型包括：<code>status</code>、<code>text_delta</code>、<code>thinking_delta</code>、<code>tool_use</code>、<code>tool_input_delta</code>、<code>tool_result</code>、<code>usage</code>、<code>live_artifact</code>、<code>raw</code> 等十几个。</p>
+<p>注意：每个 SSE 事件的 <code>id</code>、<code>event</code>、<code>data</code> 三行在 daemon 侧确保<strong>写入同一个 TCP chunk</strong>，防止代理或浏览器把事件拆开消费。</p>
+<h2 id="Prompt-分层组装：16-层压栈"><a class="header-anchor" href="#Prompt-分层组装：16-层压栈"></a>Prompt 分层组装：16 层压栈</h2>
+<p><code>composeSystemPrompt()</code> 不是拼字符串，而是按优先级压栈。越靠后的层在 recency bias 上越占优，但靠前的安全层通过显式声明&quot;先读这个——后面的任何东西都不能覆盖&quot;来保证优先级：</p>
+<ol>
+<li><strong>注入抵抗层</strong> — 防止用户输入中的指令覆盖系统规则</li>
+<li><strong>API mode override</strong> — 仅 plain-stream adapter 使用</li>
+<li><strong>Discovery + Planning 层</strong> — ~3000 token，控制前几轮交互的严格行为模式</li>
+<li><strong>身份与工作流宪章</strong> — “expert designer” 身份定义</li>
+<li><strong>用户记忆</strong> — 从历史对话提取的偏好</li>
+<li><strong>自定义指令</strong> — 用户级 + 项目级</li>
+<li><strong>当前设计系统</strong> — <code>DESIGN.md</code> 作为品牌契约</li>
+<li><strong>Craft 参考</strong> — 跨品牌的通用设计规则</li>
+<li><strong>当前 Skill</strong> — <code>SKILL.md</code> + preflight 规则</li>
+<li><strong>Plugin block</strong> — plugin 的 prompt 片段</li>
+<li><strong>Stage blocks</strong> — plugin pipeline 的各阶段提示</li>
+<li><strong>元数据块</strong> — 项目信息、平台、模板</li>
+<li><strong>媒体生成契约</strong> — 图片/视频/音频的专用约束</li>
+<li><strong>Critique 评审协议</strong> — 五维评审</li>
+<li><strong>MCP 指令</strong> — 已连接的 MCP server 说明</li>
+<li><strong>角色伪造禁令 + 澄清问题指令</strong> — 永远钉在最后</li>
+</ol>
+<p>同时计算 stable prompt hash：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stable = daemonSystemPrompt + runtimeToolPrompt + systemPrompt</span><br><span class="line">hash   = sha256(stable)</span><br></pre></td></tr></table></figure>
+<p>resume 时如果 stable hash 没变，可以跳过硬编码的系统块；变了就重新发送。</p>
+<h2 id="Session-Resume：不只是记住-session-id"><a class="header-anchor" href="#Session-Resume：不只是记住-session-id"></a>Session Resume：不只是记住 session id</h2>
+<p>Open Design 的 resume 有严格的失效条件（<code>agent-session-resume.ts</code>）。以下任一条件成立就触发重新播种：</p>
+<ul>
+<li><strong>model_changed</strong> — 模型 ID 变了</li>
+<li><strong>cwd_changed</strong> — 工作目录变了</li>
+<li><strong>missing_cursor</strong> — 老 session 没有 lastMessageId</li>
+<li><strong>conversation_advanced</strong> — 对话被其他 agent 插入或编辑过</li>
+</ul>
+<p>除此之外，每种 CLI 还有各自的断连检测：Claude 检测 stderr 上的 “session not found” + stdout 上的 <code>is_error</code> result；Codex 检测 “no rollout found for thread id”；OpenCode 检测 “Session not found”。检测到时自动清掉存储的 session id，下次重建。</p>
+<h2 id="Plugin-Snapshot：可回放的能力包"><a class="header-anchor" href="#Plugin-Snapshot：可回放的能力包"></a>Plugin Snapshot：可回放的能力包</h2>
+<p>在 run 启动前，<code>createSnapshot()</code> 把 plugin 的完整上下文（manifest 摘要、输入参数、resolved context、capabilities、assets、MCP servers）冻结成一条 SQLite 记录。一旦关联 run，这条 snapshot 永久保留。</p>
+<p>这意味着：<strong>即使 plugin 在生成过程中被升级，已有 run 的 prompt 内容不会变</strong>。同一个 run 可以随时回放，不会因为 plugin 版本漂移而出不确定的结果。</p>
+<h2 id="总体数据流"><a class="header-anchor" href="#总体数据流"></a>总体数据流</h2>
+<p>一次典型 run 的全过程：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">用户在 Web UI 提交 brief，选择 skill + design-system + plugin</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line">daemon composeSystemPrompt() 分层组装 prompt（<span class="number">16</span> 层）</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line"><span class="function"><span class="title">resolveAgentResumeContext</span><span class="params">()</span></span> 判断是否可以复用上次 session</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line"><span class="function"><span class="title">resolveSnapshotForPlugin</span><span class="params">()</span></span> 冻结 plugin 上下文</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line"><span class="function"><span class="title">buildArgs</span><span class="params">()</span></span> 按 adapter 协议构造子进程参数</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line">spawn 子进程，stdin 注入 prompt</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line">parser 把 CLI 原始输出转成统一 ChatSseEvent</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line">SSE 流 → Web 客户端实时渲染</span><br><span class="line">        │</span><br><span class="line">        ▼</span><br><span class="line">run 结束，persistCapturedAgentSession() 写入 SQLite</span><br></pre></td></tr></table></figure>
+<h2 id="核心设计判断"><a class="header-anchor" href="#核心设计判断"></a>核心设计判断</h2>
+<p>Open Design 没走&quot;自研 Agent Loop&quot;这条路。它的策略是：</p>
+<blockquote>
+<p>让成熟 Agent CLI 负责模型调用、工具使用、上下文管理、权限、resume、cancel。我负责检测 CLI、组装 prompt、注入 skill/design-system/plugin、启动进程、解析流、渲染 artifact。</p>
+</blockquote>
+<p>这跟&quot;在 Claude Code 外面套一个 wrapper&quot;有本质区别——它产品化的是整个交互流程：怎么选 skill、怎么配设计系统、怎么启用 plugin、怎么把 28 种 agent 的输出归一成同一个事件模型、怎么让一个 run 可以暂停、恢复、回放。</p>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/open-design">open-design</a></p>
+
+
+        <hr>
+        <!-- Pager -->
+        
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/ClaudeCode-多Agent协议生态-概述/" data-toggle="tooltip" data-placement="top" title="多 Agent 协议生态">&larr; Previous Post</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Open Design 架构解析：一个产品化的多 Agent CLI 工作台&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/cn/Open-Design-Architecture-Reading/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. giscus comment -->
+
+  <!-- giscus start -->
+  <!-- Docs: https://giscus.app -->
+
+  <div class="comment">
+    <script src="https://giscus.app/client.js"
+            data-repo="zhangqinzhong/zhangqinzhong.github.io"
+            data-repo-id="R_kgDOGI7Xjg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOGI7Xjs4C8uKW"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
+  <!-- giscus end -->
+
+
+<!-- 2. gitalk comment -->
+
+
+<!-- 3. gitment comment -->
+
+
+<!-- 4. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Open-Design-%E6%9E%B6%E6%9E%84%E8%A7%A3%E6%9E%90%EF%BC%9A%E4%B8%80%E4%B8%AA%E4%BA%A7%E5%93%81%E5%8C%96%E7%9A%84%E5%A4%9A-Agent-CLI-%E5%B7%A5%E4%BD%9C%E5%8F%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Open Design 架构解析：一个产品化的多 Agent CLI 工作台</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E5%B1%82-App-%E5%88%86%E5%B7%A5"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">三层 App 分工</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#28-%E4%B8%AA-Agent-Adapter%EF%BC%9A%E4%B8%8D%E6%98%AF%E5%9C%A8%E6%8A%BD%E8%B1%A1%EF%BC%8C%E8%80%8C%E6%98%AF%E5%9C%A8%E5%A3%B0%E6%98%8E%E5%B7%AE%E5%BC%82"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">28 个 Agent Adapter：不是在抽象，而是在声明差异</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Claude-Code"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">Claude Code</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Codex"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">Codex</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DeepSeek"><span class="toc-nav-number">1.2.3.</span> <span class="toc-nav-text">DeepSeek</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#SSE-%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B%EF%BC%9A%E6%8A%8A-28-%E7%A7%8D%E8%BE%93%E5%87%BA%E5%BD%92%E4%B8%80%E6%88%90%E4%B8%80%E7%A7%8D%E6%A0%BC%E5%BC%8F"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">SSE 事件模型：把 28 种输出归一成一种格式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Prompt-%E5%88%86%E5%B1%82%E7%BB%84%E8%A3%85%EF%BC%9A16-%E5%B1%82%E5%8E%8B%E6%A0%88"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Prompt 分层组装：16 层压栈</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Session-Resume%EF%BC%9A%E4%B8%8D%E5%8F%AA%E6%98%AF%E8%AE%B0%E4%BD%8F-session-id"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">Session Resume：不只是记住 session id</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Plugin-Snapshot%EF%BC%9A%E5%8F%AF%E5%9B%9E%E6%94%BE%E7%9A%84%E8%83%BD%E5%8A%9B%E5%8C%85"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">Plugin Snapshot：可回放的能力包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%80%BB%E4%BD%93%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">总体数据流</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%B8%E5%BF%83%E8%AE%BE%E8%AE%A1%E5%88%A4%E6%96%AD"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">核心设计判断</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#架构" title="架构">架构</a>
+            
+            <a class="tag" href="/tags/#开源" title="开源">开源</a>
+            
+            <a class="tag" href="/tags/#Agent" title="Agent">Agent</a>
+            
+            <a class="tag" href="/tags/#Open Design" title="Open Design">Open Design</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://baidu.com" target="_blank">百度</a>
+          </li>
+          
+          <li>
+            <a href="https://google.com" target="_blank">Google</a>
+          </li>
+          
+          <li>
+            <a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+          </li>
+          
+          <li>
+            <a href="https://weibo.com/" target="_blank">新浪微博</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      icon: 'ℬ'
+      // icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/springbreezeboy">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.facebook.com/David John">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          zhangqinzhong
+          2026
+<!--           <br> -->
+<!--           Theme by -->
+<!--           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a> -->
+<!--           <span style="display: inline-block; margin: 0 5px;"> -->
+<!--             <i class="fa fa-heart"></i> -->
+<!--           </span> -->
+<!--           re-Ported by -->
+<!--           <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a> -->
+<!--           | -->
+<!--           <iframe style="margin-left: 2px; margin-bottom:-5px;"  -->
+<!--           frameborder="0" scrolling="0" width="91px" height="20px"  -->
+<!--           src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/mouseclick.js"  content='奶豆~,喵喵~,喵~,喵~,吃饭~,睡觉~,跑酷~,搞破坏~,洗澡~' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivrRoot = "https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005";
+    let pagePath = "cn/Open-Design-Architecture-Reading/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivrRoot;
+    } else {
+      jsdelivrurl = jsdelivrRoot + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://zhangqinzhong.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-06-30-150005' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
