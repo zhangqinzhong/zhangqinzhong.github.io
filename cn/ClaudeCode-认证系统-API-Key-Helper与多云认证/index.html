@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209764208-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-209764208-1');
+    </script>
+
+  <!-- Baidu Tongji -->
+    <script async type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?49af1e7917558c9124fc1709797fc578";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!-- 谷歌站点认证 -->
+  <meta name="google-site-verification" content="Vt7J2aQm6nTcvrQzU-Wuee1c_GZ_ESgKvWr_vE_x46o" />
+  <!-- 百度站点认证 -->
+  <meta name="baidu-site-verification" content="code-WfUpk4GQY3" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="张奶豆"/>
+  <meta name="keyword" content="Java,Spring,JVM,Redis,Rabbit Mq,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://zhangqinzhong.com/cn/ClaudeCode-认证系统-API-Key-Helper与多云认证/">
+  <title>
+    
+      API Key Helper 与多云认证 - zhangqinzhong
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'zhangqinzhong-github-io/zhangqinzhong'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">张勤忠的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659//img/images/unsplash.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659//img/images/unsplash.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/img/images/unsplash.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/signature.jpg');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#安全" title="安全">安全</a>
+              
+              <a class="tag" href="/tags/#认证" title="认证">认证</a>
+              
+            </div>
+            <h1>API Key Helper 与多云认证</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by zhangqinzhong on
+              2026-06-16
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">5</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="概述"><a class="header-anchor" href="#概述"></a>概述</h2>
+<p><code>src/utils/auth.ts</code>（2002 行）实现了 CC 的<strong>完整认证栈</strong>，支持六种认证来源、三大云厂商、外部密钥提供者和企业托管认证。本文档重点覆盖普通 OAuth 文档未涉及的部分：API Key Helper、AWS/GCP 多云认证、认证优先级链。</p>
+<hr>
+<h2 id="认证优先级（从高到低）"><a class="header-anchor" href="#认证优先级（从高到低）"></a>认证优先级（从高到低）</h2>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> ANTHROPIC<span class="emphasis">_AUTH_</span>TOKEN 环境变量       ← 直接覆盖，最高优先</span><br><span class="line"><span class="bullet">2.</span> CLAUDE<span class="emphasis">_CODE_</span>OAUTH<span class="emphasis">_TOKEN 环境变量    ← OAuth Token 直传</span></span><br><span class="line"><span class="emphasis">3. CLAUDE_</span>CODE<span class="emphasis">_OAUTH_</span>TOKEN<span class="emphasis">_FILE_</span>DESCRIPTOR ← 管道安全传递</span><br><span class="line"><span class="bullet">4.</span> apiKeyHelper（settings.json 配置）  ← 外部脚本提供</span><br><span class="line"><span class="bullet">5.</span> Claude.ai OAuth（Keychain）         ← /login 登录的 Token</span><br><span class="line"><span class="bullet">6.</span> 无                                  ← 提示登录</span><br></pre></td></tr></table></figure>
+<p><strong>例外：</strong> 托管 OAuth 上下文（CCR / Claude Desktop）忽略所有本地配置，只接受 env/FD 注入的 Token，防止跨会话凭证污染。</p>
+<hr>
+<h2 id="API-Key-Helper"><a class="header-anchor" href="#API-Key-Helper"></a>API Key Helper</h2>
+<h3 id="什么是-apiKeyHelper"><a class="header-anchor" href="#什么是-apiKeyHelper"></a>什么是 apiKeyHelper</h3>
+<p>一个由用户配置的<strong>外部命令</strong>，CC 调用它来动态获取 API Key。适用场景：</p>
+<ul>
+<li>企业密钥保险库（HashiCorp Vault、AWS Secrets Manager）</li>
+<li>SSO 集成（通过脚本换取临时 API Key）</li>
+<li>避免在本地存储明文密钥</li>
+</ul>
+<h3 id="配置方式"><a class="header-anchor" href="#配置方式"></a>配置方式</h3>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ~/.claude/settings.json（全局）</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;apiKeyHelper&quot;</span>: <span class="string">&quot;vault read -field=api_key secret/anthropic&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// .claude/settings.json（项目级，需用户信任该工作区）</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;apiKeyHelper&quot;</span>: <span class="string">&quot;./scripts/get-api-key.sh&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>helper 命令的要求：</p>
+<ul>
+<li>执行后通过 stdout 输出 API Key（纯文本，自动 trim）</li>
+<li>非零 exit code 或空输出视为失败</li>
+<li>超时：10 分钟</li>
+</ul>
+<h3 id="缓存策略（SWR）"><a class="header-anchor" href="#缓存策略（SWR）"></a>缓存策略（SWR）</h3>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一次调用 → 冷启动：执行 <span class="keyword">helper</span>，等待结果，缓存</span><br><span class="line">TTL 内再次调用 → 直接返回缓存（TTL 默认 <span class="number">5</span> 分钟）</span><br><span class="line">TTL 过期后调用 → 立即返回旧值（SWR），后台异步刷新</span><br><span class="line"><span class="keyword">helper</span> 失败 → 缓存特殊哨兵值，不降级到 OAuth</span><br></pre></td></tr></table></figure>
+<p><strong>为什么用 SWR（Stale-While-Revalidate）：</strong><br>
+对话中途 Token 过期时，不能阻塞当前 API 调用等待 helper 执行。SWR 保证调用不中断，同时在后台静默刷新。</p>
+<p><strong>并发去重：</strong><br>
+多个并发请求共享同一个 Promise，不会同时启动多个 helper 进程。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自定义 TTL（毫秒）</span></span><br><span class="line"><span class="built_in">export</span> CLAUDE_CODE_API_KEY_HELPER_TTL_MS=300000  <span class="comment"># 5 分钟</span></span><br></pre></td></tr></table></figure>
+<h3 id="安全约束"><a class="header-anchor" href="#安全约束"></a>安全约束</h3>
+<ul>
+<li>如果 <code>apiKeyHelper</code> 来自<strong>项目或本地</strong> settings，需用户已信任该工作区（<code>checkHasTrustDialogAccepted()</code>）</li>
+<li>非交互式会话（CI/管道）跳过信任检查</li>
+<li>helper 失败时，CC 不会静默降级到 OAuth，而是报错（防止意外使用个人 OAuth）</li>
+</ul>
+<hr>
+<h2 id="AWS-认证"><a class="header-anchor" href="#AWS-认证"></a>AWS 认证</h2>
+<h3 id="完整流程"><a class="header-anchor" href="#完整流程"></a>完整流程</h3>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">refreshAndGetAwsCredentials</span><span class="params">()</span>           ← <span class="title">memoized</span>，1小时 TTL</span></span><br><span class="line"><span class="function">  ↓</span></span><br><span class="line"><span class="function">1. <span class="title">runAwsAuthRefresh</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   ├─ <span class="title">checkStsCallerIdentity</span><span class="params">()</span>           ← 现有凭证有效？</span></span><br><span class="line"><span class="function">   │   └─ 有效 → 跳过刷新</span></span><br><span class="line"><span class="function">   └─ 无效 → <span class="title">refreshAwsAuth</span><span class="params">()</span>           ← 执行 <span class="title">awsAuthRefresh</span> 脚本</span></span><br><span class="line"><span class="function">       └─ 超时 3 分钟，流式输出到 UI</span></span><br><span class="line"><span class="function">  ↓</span></span><br><span class="line"><span class="function">2. <span class="title">getAwsCredsFromCredentialExport</span><span class="params">()</span>    ← 执行 <span class="title">awsCredentialExport</span> 脚本</span></span><br><span class="line"><span class="function">   └─ 返回 &#123; A<span class="title">ccessKeyId</span>, S<span class="title">ecretAccessKey</span>, S<span class="title">essionToken</span> &#125;</span></span><br><span class="line"><span class="function">  ↓</span></span><br><span class="line"><span class="function">3. <span class="title">clearAwsIniCache</span><span class="params">()</span>                   ← 使 SDK 的凭证缓存失效</span></span><br></pre></td></tr></table></figure>
+<h3 id="awsAuthRefresh-配置"><a class="header-anchor" href="#awsAuthRefresh-配置"></a>awsAuthRefresh 配置</h3>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;awsAuthRefresh&quot;</span>: <span class="string">&quot;aws sso login --profile my-profile&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用于刷新 AWS 凭证的命令。CC 先检查当前凭证是否有效（<code>sts:GetCallerIdentity</code>），只有在无效时才执行刷新脚本，避免频繁触发 SSO 登录。</p>
+<h3 id="awsCredentialExport-配置"><a class="header-anchor" href="#awsCredentialExport-配置"></a>awsCredentialExport 配置</h3>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;awsCredentialExport&quot;</span>: <span class="string">&quot;aws sts assume-role --role-arn arn:aws:iam::123:role/MyRole --role-session-name cc&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出必须是 AWS STS 格式的 JSON：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;Credentials&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;AccessKeyId&quot;</span>: <span class="string">&quot;ASIA...&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;SecretAccessKey&quot;</span>: <span class="string">&quot;...&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;SessionToken&quot;</span>: <span class="string">&quot;...&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="与-Bedrock-的关系"><a class="header-anchor" href="#与-Bedrock-的关系"></a>与 Bedrock 的关系</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Bedrock 模式：CC 自动调用 refreshAndGetAwsCredentials()</span></span><br><span class="line">CLAUDE_CODE_USE_BEDROCK=1 claude</span><br></pre></td></tr></table></figure>
+<p>AWS 凭证由 <code>refreshAndGetAwsCredentials()</code> 统一管理，注入到 <code>AnthropicBedrock</code> SDK 实例。</p>
+<hr>
+<h2 id="GCP-认证"><a class="header-anchor" href="#GCP-认证"></a>GCP 认证</h2>
+<h3 id="gcpAuthRefresh-配置"><a class="header-anchor" href="#gcpAuthRefresh-配置"></a>gcpAuthRefresh 配置</h3>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;gcpAuthRefresh&quot;</span>: <span class="string">&quot;gcloud auth application-default login&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>与 AWS 的 <code>awsAuthRefresh</code> 机制相同——先检查现有凭证，无效时执行刷新脚本。</p>
+<h3 id="凭证有效性检测"><a class="header-anchor" href="#凭证有效性检测"></a>凭证有效性检测</h3>
+<p>CC 使用与 Vertex AI SDK <strong>相同的认证链</strong>（<code>google-auth-library</code> 的 Application Default Credentials）检测 GCP 凭证是否有效。</p>
+<p><strong>超时保护：</strong> 5 秒超时，防止本地无 GCP 环境时元数据服务器挂起 12 秒。</p>
+<h3 id="与-Vertex-AI-的关系"><a class="header-anchor" href="#与-Vertex-AI-的关系"></a>与 Vertex AI 的关系</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CLAUDE_CODE_USE_VERTEX=1 ANTHROPIC_VERTEX_PROJECT_ID=my-project claude</span><br></pre></td></tr></table></figure>
+<p>Vertex AI 直接使用 ADC（Application Default Credentials），<code>gcpAuthRefresh</code> 负责在凭证过期前刷新。</p>
+<hr>
+<h2 id="企业托管认证"><a class="header-anchor" href="#企业托管认证"></a>企业托管认证</h2>
+<h3 id="isManagedOAuthContext"><a class="header-anchor" href="#isManagedOAuthContext"></a>isManagedOAuthContext()</h3>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回 true 的情况：</span></span><br><span class="line">process.env.CLAUDE_CODE_REMOTE === <span class="string">&#x27;true&#x27;</span>         <span class="comment">// CCR 远程工作区</span></span><br><span class="line">process.env.CLAUDE_CODE_ENTRYPOINT === <span class="string">&#x27;claude-desktop&#x27;</span>  <span class="comment">// Claude Desktop</span></span><br></pre></td></tr></table></figure>
+<p><strong>托管上下文的特殊行为：</strong></p>
+<ul>
+<li>忽略本地 <code>settings.json</code> 中的 <code>apiKeyHelper</code></li>
+<li>忽略终端环境变量 <code>ANTHROPIC_API_KEY</code></li>
+<li>只接受通过管道（env/FD）注入的 Token</li>
+</ul>
+<p><strong>原理：</strong> 防止终端 1 里 <code>export ANTHROPIC_API_KEY=sk-xxx</code> 影响到 CCR 远程会话。</p>
+<h3 id="isAnthropicAuthEnabled-决策树"><a class="header-anchor" href="#isAnthropicAuthEnabled-决策树"></a>isAnthropicAuthEnabled() 决策树</h3>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--bare 模式 → <span class="keyword">false</span>（禁用 OAuth）</span><br><span class="line">使用 Bedrock<span class="regexp">/Vertex/</span>Foundry → <span class="keyword">false</span></span><br><span class="line">存在外部 API Key 且非托管 → <span class="keyword">false</span></span><br><span class="line">其他 → <span class="keyword">true</span>（启用 Claude.ai OAuth）</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="OTEL-头部-Helper"><a class="header-anchor" href="#OTEL-头部-Helper"></a>OTEL 头部 Helper</h2>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;otelHeadersHelper&quot;</span>: <span class="string">&quot;./scripts/get-otel-headers.sh&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出必须是 JSON 对象 <code>Record&lt;string, string&gt;</code>，注入到所有 API 请求头，用于 OpenTelemetry 追踪。29 分钟去抖（防止过度执行）。</p>
+<hr>
+<h2 id="常见配置示例"><a class="header-anchor" href="#常见配置示例"></a>常见配置示例</h2>
+<h3 id="HashiCorp-Vault"><a class="header-anchor" href="#HashiCorp-Vault"></a>HashiCorp Vault</h3>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;apiKeyHelper&quot;</span>: <span class="string">&quot;vault read -field=api_key secret/anthropic/api-key&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="AWS-Secrets-Manager"><a class="header-anchor" href="#AWS-Secrets-Manager"></a>AWS Secrets Manager</h3>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;apiKeyHelper&quot;</span>: <span class="string">&quot;aws secretsmanager get-secret-value --secret-id prod/anthropic/api-key --query SecretString --output text | jq -r .api_key&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="环境变量脚本"><a class="header-anchor" href="#环境变量脚本"></a>环境变量脚本</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># ~/.claude/get-key.sh</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$MY_VAULT_ANTHROPIC_KEY</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">&quot;apiKeyHelper&quot;</span>: <span class="string">&quot;~/.claude/get-key.sh&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="相关文档"><a class="header-anchor" href="#相关文档"></a>相关文档</h2>
+<ul>
+<li><a href="/16-%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F/01-%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6">认证机制</a> — OAuth 登录主流程</li>
+<li><a href="/16-%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F/02-OAuth2-PKCE%E6%B5%81%E7%A8%8B">OAuth2 PKCE 流程</a> — <a target="_blank" rel="noopener" href="http://Claude.ai">Claude.ai</a> OAuth 细节</li>
+<li><a href="/02-%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E/26-API%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%8E%82">API 客户端工厂</a> — 凭证如何注入 SDK</li>
+</ul>
+
+
+        <hr>
+        <!-- Pager -->
+        
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/ClaudeCode-终端渲染-Ink-虚拟滚动算法/" data-toggle="tooltip" data-placement="top" title="虚拟滚动算法 — useVirtualScroll">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/ClaudeCode-认证系统-ConsoleOAuthFlow登录界面/" data-toggle="tooltip" data-placement="top" title="ConsoleOAuthFlow — 登录界面">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=API Key Helper 与多云认证&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/cn/ClaudeCode-认证系统-API-Key-Helper与多云认证/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. giscus comment -->
+
+  <!-- giscus start -->
+  <!-- Docs: https://giscus.app -->
+
+  <div class="comment">
+    <script src="https://giscus.app/client.js"
+            data-repo="zhangqinzhong/zhangqinzhong.github.io"
+            data-repo-id="R_kgDOGI7Xjg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOGI7Xjs4C8uKW"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
+  <!-- giscus end -->
+
+
+<!-- 2. gitalk comment -->
+
+
+<!-- 3. gitment comment -->
+
+
+<!-- 4. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AE%A4%E8%AF%81%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%88%E4%BB%8E%E9%AB%98%E5%88%B0%E4%BD%8E%EF%BC%89"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">认证优先级（从高到低）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#API-Key-Helper"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">API Key Helper</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-apiKeyHelper"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">什么是 apiKeyHelper</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">配置方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5%EF%BC%88SWR%EF%BC%89"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">缓存策略（SWR）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%89%E5%85%A8%E7%BA%A6%E6%9D%9F"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">安全约束</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#AWS-%E8%AE%A4%E8%AF%81"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">AWS 认证</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">完整流程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#awsAuthRefresh-%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">awsAuthRefresh 配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#awsCredentialExport-%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">awsCredentialExport 配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8E-Bedrock-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">4.4.</span> <span class="toc-nav-text">与 Bedrock 的关系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#GCP-%E8%AE%A4%E8%AF%81"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">GCP 认证</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gcpAuthRefresh-%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">gcpAuthRefresh 配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%87%AD%E8%AF%81%E6%9C%89%E6%95%88%E6%80%A7%E6%A3%80%E6%B5%8B"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">凭证有效性检测</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8E-Vertex-AI-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">与 Vertex AI 的关系</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BC%81%E4%B8%9A%E6%89%98%E7%AE%A1%E8%AE%A4%E8%AF%81"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">企业托管认证</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#isManagedOAuthContext"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">isManagedOAuthContext()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#isAnthropicAuthEnabled-%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">isAnthropicAuthEnabled() 决策树</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#OTEL-%E5%A4%B4%E9%83%A8-Helper"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">OTEL 头部 Helper</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">常见配置示例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HashiCorp-Vault"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text">HashiCorp Vault</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#AWS-Secrets-Manager"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text">AWS Secrets Manager</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%84%9A%E6%9C%AC"><span class="toc-nav-number">8.3.</span> <span class="toc-nav-text">环境变量脚本</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%9B%B8%E5%85%B3%E6%96%87%E6%A1%A3"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">相关文档</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#安全" title="安全">安全</a>
+            
+            <a class="tag" href="/tags/#认证" title="认证">认证</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://baidu.com" target="_blank">百度</a>
+          </li>
+          
+          <li>
+            <a href="https://google.com" target="_blank">Google</a>
+          </li>
+          
+          <li>
+            <a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+          </li>
+          
+          <li>
+            <a href="https://weibo.com/" target="_blank">新浪微博</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      icon: 'ℬ'
+      // icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/springbreezeboy">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.facebook.com/David John">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          zhangqinzhong
+          2026
+<!--           <br> -->
+<!--           Theme by -->
+<!--           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a> -->
+<!--           <span style="display: inline-block; margin: 0 5px;"> -->
+<!--             <i class="fa fa-heart"></i> -->
+<!--           </span> -->
+<!--           re-Ported by -->
+<!--           <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a> -->
+<!--           | -->
+<!--           <iframe style="margin-left: 2px; margin-bottom:-5px;"  -->
+<!--           frameborder="0" scrolling="0" width="91px" height="20px"  -->
+<!--           src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/mouseclick.js"  content='奶豆~,喵喵~,喵~,喵~,吃饭~,睡觉~,跑酷~,搞破坏~,洗澡~' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivrRoot = "https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659";
+    let pagePath = "cn/ClaudeCode-认证系统-API-Key-Helper与多云认证/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivrRoot;
+    } else {
+      jsdelivrurl = jsdelivrRoot + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://zhangqinzhong.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-07-02-032659' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
