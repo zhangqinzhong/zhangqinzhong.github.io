@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
+<head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-209764208-1"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-209764208-1');
+    </script>
+
+  <!-- Baidu Tongji -->
+    <script async type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?49af1e7917558c9124fc1709797fc578";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+  <!-- Baidu Push -->
+  
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
+  
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <!-- 谷歌站点认证 -->
+  <meta name="google-site-verification" content="Vt7J2aQm6nTcvrQzU-Wuee1c_GZ_ESgKvWr_vE_x46o" />
+  <!-- 百度站点认证 -->
+  <meta name="baidu-site-verification" content="code-WfUpk4GQY3" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="张奶豆"/>
+  <meta name="keyword" content="Java,Spring,JVM,Redis,Rabbit Mq,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
+  
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/highlight.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/widget.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/signature.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/catalog.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/livemylife.css"/>
+
+    
+      <!-- wave start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/wave.css"/>
+      <!-- wave end -->
+    
+
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+
+  
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="https://zhangqinzhong.com/cn/ClaudeCode-Java-Agent开发-实战-值班AI核心实现/">
+  <title>
+    
+      实战：值班 AI — 核心实现 - zhangqinzhong
+    
+  </title>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'zhangqinzhong-github-io/zhangqinzhong'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">张勤忠的博客</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">首页</a>
+          </li>
+
+          
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              关于
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/tags/">
+              
+              标签
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              分类
+              
+              
+            </a>
+          </li>
+          
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>搜索</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <!-- CDN: jsdelivr start -->
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854//img/images/unsplash.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/img/images/unsplash.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854//img/images/unsplash.jpg');
+    }
+    header.intro-header {
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/img/images/unsplash.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/signature.jpg');
+      }
+    
+  </style>
+  <!-- CDN: jsdelivr end -->
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#Java" title="Java">Java</a>
+              
+              <a class="tag" href="/tags/#Agent开发" title="Agent开发">Agent开发</a>
+              
+            </div>
+            <h1>实战：值班 AI — 核心实现</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by zhangqinzhong on
+              2026-06-21
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">12</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.2k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
+</header>
+
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="项目结构"><a class="header-anchor" href="#项目结构"></a>项目结构</h2>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">oncall-ai/</span><br><span class="line">├── pom.xml</span><br><span class="line">└── src/main/java/com/example/oncall/</span><br><span class="line">    ├── <span class="module-access"><span class="module"><span class="identifier">OncallAiApplication</span>.</span></span>java</span><br><span class="line">    ├── alert/</span><br><span class="line">    │   ├── <span class="module-access"><span class="module"><span class="identifier">AlertWebhookController</span>.</span></span>java   # 告警接入</span><br><span class="line">    │   └── <span class="module-access"><span class="module"><span class="identifier">AlertTriageService</span>.</span></span>java       # 告警分级</span><br><span class="line">    ├── agent/</span><br><span class="line">    │   ├── <span class="module-access"><span class="module"><span class="identifier">DiagnosticAgent</span>.</span></span>java          # 诊断 Agent</span><br><span class="line">    │   └── <span class="module-access"><span class="module"><span class="identifier">OpsAgent</span>.</span></span>java                 # 运维对话 Agent</span><br><span class="line">    ├── tools/</span><br><span class="line">    │   ├── <span class="module-access"><span class="module"><span class="identifier">PrometheusTools</span>.</span></span>java          # Prometheus 查询</span><br><span class="line">    │   ├── <span class="module-access"><span class="module"><span class="identifier">ElasticsearchTools</span>.</span></span>java       # 日志查询</span><br><span class="line">    │   └── <span class="module-access"><span class="module"><span class="identifier">K8sTools</span>.</span></span>java                 # K8s 操作</span><br><span class="line">    ├── rag/</span><br><span class="line">    │   └── <span class="module-access"><span class="module"><span class="identifier">RunbookIndexer</span>.</span></span>java           # Runbook 索引</span><br><span class="line">    └── config/</span><br><span class="line">        └── <span class="module-access"><span class="module"><span class="identifier">AiConfig</span>.</span></span>java                 # Spring AI 配置</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="pom-xml-核心依赖"><a class="header-anchor" href="#pom-xml-核心依赖"></a>pom.xml 核心依赖</h2>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Spring Boot --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Spring AI - Anthropic --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.ai<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-ai-anthropic-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Spring AI - PgVector --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.ai<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-ai-pgvector-store-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Spring AI - OpenAI Embedding --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.ai<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-ai-openai-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Redis（Memory 存储）--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- LangChain4j（Runbook RAG）--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>dev.langchain4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>langchain4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="application-yml"><a class="header-anchor" href="#application-yml"></a>application.yml</h2>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">ai:</span></span><br><span class="line">    <span class="attr">anthropic:</span></span><br><span class="line">      <span class="attr">api-key:</span> <span class="string">$&#123;ANTHROPIC_API_KEY&#125;</span></span><br><span class="line">      <span class="attr">chat:</span></span><br><span class="line">        <span class="attr">options:</span></span><br><span class="line">          <span class="attr">model:</span> <span class="string">claude-opus-4-8</span></span><br><span class="line">          <span class="attr">max-tokens:</span> <span class="number">4096</span></span><br><span class="line">    <span class="attr">openai:</span></span><br><span class="line">      <span class="attr">api-key:</span> <span class="string">$&#123;OPENAI_API_KEY&#125;</span></span><br><span class="line">      <span class="attr">embedding:</span></span><br><span class="line">        <span class="attr">options:</span></span><br><span class="line">          <span class="attr">model:</span> <span class="string">text-embedding-3-small</span></span><br><span class="line">    <span class="attr">vectorstore:</span></span><br><span class="line">      <span class="attr">pgvector:</span></span><br><span class="line">        <span class="attr">dimensions:</span> <span class="number">1536</span></span><br><span class="line">        <span class="attr">distance-type:</span> <span class="string">cosine_distance</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:postgresql://localhost/oncall</span></span><br><span class="line">  <span class="attr">data:</span></span><br><span class="line">    <span class="attr">redis:</span></span><br><span class="line">      <span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line"></span><br><span class="line"><span class="attr">oncall:</span></span><br><span class="line">  <span class="attr">prometheus:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">http://prometheus:9090</span></span><br><span class="line">  <span class="attr">elasticsearch:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">http://elasticsearch:9200</span></span><br><span class="line">  <span class="attr">k8s:</span></span><br><span class="line">    <span class="attr">kubeconfig:</span> <span class="string">/etc/kubeconfig</span></span><br><span class="line">  <span class="attr">runbook:</span></span><br><span class="line">    <span class="attr">dir:</span> <span class="string">/data/runbooks</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="核心工具类"><a class="header-anchor" href="#核心工具类"></a>核心工具类</h2>
+<h3 id="PrometheusTools-java"><a class="header-anchor" href="#PrometheusTools-java"></a>PrometheusTools.java</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrometheusTools</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;oncall.prometheus.url&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String prometheusUrl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> RestTemplate restTemplate = <span class="keyword">new</span> RestTemplate();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Tool(description = &quot;查询 Prometheus 指标，支持 PromQL。返回最近数据点。&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">queryMetric</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;PromQL 查询语句，如：rate(http_requests_total[5m])&quot;)</span> String query,</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;时间范围，如：5m、15m、1h&quot;)</span> String range</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        String url = prometheusUrl + <span class="string">&quot;/api/v1/query?query=&quot;</span> + encode(query);</span><br><span class="line">        ResponseEntity&lt;String&gt; response = restTemplate.getForEntity(url, String.class);</span><br><span class="line">        <span class="keyword">return</span> formatMetrics(response.getBody());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Tool(description = &quot;查询服务的错误率和 P99 延迟&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getServiceHealth</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;服务名称&quot;)</span> String service,</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;时间范围，默认 15m&quot;)</span> String range</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        String errorRate = queryMetric(</span><br><span class="line">            String.format(<span class="string">&quot;rate(http_requests_total&#123;service=&#x27;%s&#x27;,status=~&#x27;5..&#x27;&#125;[%s])&quot;</span>, service, range),</span><br><span class="line">            range</span><br><span class="line">        );</span><br><span class="line">        String p99 = queryMetric(</span><br><span class="line">            String.format(<span class="string">&quot;histogram_quantile(0.99, rate(http_request_duration_seconds_bucket&#123;service=&#x27;%s&#x27;&#125;[%s]))&quot;</span>, service, range),</span><br><span class="line">            range</span><br><span class="line">        );</span><br><span class="line">        <span class="keyword">return</span> String.format(<span class="string">&quot;错误率：%s\nP99延迟：%s&quot;</span>, errorRate, p99);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">encode</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> UriUtils.encode(s, StandardCharsets.UTF_8);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">formatMetrics</span><span class="params">(String raw)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 简化输出，只返回关键数据</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">var</span> json = <span class="keyword">new</span> ObjectMapper().readTree(raw);</span><br><span class="line">            <span class="keyword">var</span> results = json.path(<span class="string">&quot;data&quot;</span>).path(<span class="string">&quot;result&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span> (results.isEmpty()) <span class="keyword">return</span> <span class="string">&quot;无数据&quot;</span>;</span><br><span class="line">            <span class="keyword">var</span> sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">            results.forEach(r -&gt; &#123;</span><br><span class="line">                String metric = r.path(<span class="string">&quot;metric&quot;</span>).toString();</span><br><span class="line">                String value = r.path(<span class="string">&quot;value&quot;</span>).get(<span class="number">1</span>).asText();</span><br><span class="line">                sb.append(metric).append(<span class="string">&quot;: &quot;</span>).append(value).append(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">return</span> sb.toString();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">return</span> raw;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="ElasticsearchTools-java"><a class="header-anchor" href="#ElasticsearchTools-java"></a>ElasticsearchTools.java</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ElasticsearchTools</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ElasticsearchClient esClient;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Tool(description = &quot;搜索服务的错误日志，返回最近 N 条&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getErrorLogs</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;服务名称&quot;)</span> String service,</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;时间范围（分钟），默认30&quot;)</span> <span class="keyword">int</span> minutes,</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;最大返回条数，默认20&quot;)</span> <span class="keyword">int</span> limit</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> request = SearchRequest.of(s -&gt; s</span><br><span class="line">            .index(<span class="string">&quot;logs-*&quot;</span>)</span><br><span class="line">            .query(q -&gt; q</span><br><span class="line">                .bool(b -&gt; b</span><br><span class="line">                    .must(m -&gt; m.match(match -&gt; match.field(<span class="string">&quot;service&quot;</span>).query(service)))</span><br><span class="line">                    .must(m -&gt; m.match(match -&gt; match.field(<span class="string">&quot;level&quot;</span>).query(<span class="string">&quot;ERROR&quot;</span>)))</span><br><span class="line">                    .filter(f -&gt; f.range(r -&gt; r</span><br><span class="line">                        .date(d -&gt; d.field(<span class="string">&quot;@timestamp&quot;</span>).gte(<span class="string">&quot;now-&quot;</span> + minutes + <span class="string">&quot;m&quot;</span>))))</span><br><span class="line">                )</span><br><span class="line">            )</span><br><span class="line">            .size(limit)</span><br><span class="line">            .sort(sort -&gt; sort.field(f -&gt; f.field(<span class="string">&quot;@timestamp&quot;</span>).order(SortOrder.Desc)))</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> response = esClient.search(request, Map.class);</span><br><span class="line">        <span class="keyword">return</span> response.hits().hits().stream()</span><br><span class="line">            .map(hit -&gt; hit.source())</span><br><span class="line">            .map(log -&gt; String.format(<span class="string">&quot;[%s] %s: %s&quot;</span>,</span><br><span class="line">                log.get(<span class="string">&quot;@timestamp&quot;</span>),</span><br><span class="line">                log.get(<span class="string">&quot;logger&quot;</span>),</span><br><span class="line">                log.get(<span class="string">&quot;message&quot;</span>)</span><br><span class="line">            ))</span><br><span class="line">            .collect(Collectors.joining(<span class="string">&quot;\n&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Tool(description = &quot;统计指定时间段内各错误类型的数量&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getErrorStats</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;服务名称&quot;)</span> String service,</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;时间范围（分钟）&quot;)</span> <span class="keyword">int</span> minutes</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ... 聚合查询实现</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>; <span class="comment">// 实现省略</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="K8sTools-java"><a class="header-anchor" href="#K8sTools-java"></a>K8sTools.java</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">K8sTools</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ApiClient k8sClient;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> CoreV1Api coreApi;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AppsV1Api appsApi;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Tool(description = &quot;查询 K8s Pod 状态，包括运行中/异常 Pod 列表&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPodStatus</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;命名空间&quot;)</span> String namespace,</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;应用标签，如：app=api-gateway&quot;)</span> String labelSelector</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            V1PodList pods = coreApi.listNamespacedPod(namespace, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>,</span><br><span class="line">                <span class="keyword">null</span>, labelSelector, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> pods.getItems().stream()</span><br><span class="line">                .map(pod -&gt; &#123;</span><br><span class="line">                    String name = pod.getMetadata().getName();</span><br><span class="line">                    String phase = pod.getStatus().getPhase();</span><br><span class="line">                    String reason = pod.getStatus().getReason();</span><br><span class="line">                    <span class="keyword">return</span> String.format(<span class="string">&quot;Pod: %s, 状态: %s%s&quot;</span>,</span><br><span class="line">                        name, phase,</span><br><span class="line">                        reason != <span class="keyword">null</span> ? <span class="string">&quot; (&quot;</span> + reason + <span class="string">&quot;)&quot;</span> : <span class="string">&quot;&quot;</span>);</span><br><span class="line">                &#125;)</span><br><span class="line">                .collect(Collectors.joining(<span class="string">&quot;\n&quot;</span>));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;查询 K8s 状态失败: &quot;</span> + e.getMessage();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Tool(description = &quot;重启 K8s Deployment（仅在确认有异常后使用）&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">restartDeployment</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;命名空间&quot;)</span> String namespace,</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@ToolParam(description = &quot;Deployment 名称&quot;)</span> String name</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 触发 rollout restart（更新 annotation）</span></span><br><span class="line">            V1Deployment deployment = appsApi.readNamespacedDeployment(name, namespace, <span class="keyword">null</span>);</span><br><span class="line">            Map&lt;String, String&gt; annotations = deployment.getSpec().getTemplate()</span><br><span class="line">                .getMetadata().getAnnotations();</span><br><span class="line">            <span class="keyword">if</span> (annotations == <span class="keyword">null</span>) annotations = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">            annotations.put(<span class="string">&quot;kubectl.kubernetes.io/restartedAt&quot;</span>,</span><br><span class="line">                ZonedDateTime.now().toString());</span><br><span class="line">            deployment.getSpec().getTemplate().getMetadata().setAnnotations(annotations);</span><br><span class="line">            appsApi.replaceNamespacedDeployment(name, namespace, deployment, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);</span><br><span class="line">            <span class="keyword">return</span> String.format(<span class="string">&quot;✅ Deployment %s/%s 重启指令已下发&quot;</span>, namespace, name);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;重启失败: &quot;</span> + e.getMessage();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="告警接入与分级"><a class="header-anchor" href="#告警接入与分级"></a>告警接入与分级</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/webhook&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AlertWebhookController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> AlertTriageService triageService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping(&quot;/alertmanager&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseEntity&lt;String&gt; <span class="title">receiveAlert</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        <span class="meta">@RequestBody</span> AlertmanagerPayload payload</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        payload.getAlerts().forEach(alert -&gt; &#123;</span><br><span class="line">            triageService.triage(alert);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> ResponseEntity.ok(<span class="string">&quot;received&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AlertTriageService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ChatClient haiku;  <span class="comment">// 快速分类用 Haiku</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> DiagnosticAgent diagnosticAgent;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> NotificationService notification;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Async</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">triage</span><span class="params">(Alert alert)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 1. 快速分类（Claude Haiku，&lt;1秒）</span></span><br><span class="line">        String severity = classifyAlert(alert);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2. 根据严重程度处理</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="string">&quot;P0&quot;</span>.equals(severity) || <span class="string">&quot;P1&quot;</span>.equals(severity)) &#123;</span><br><span class="line">            <span class="comment">// 深度诊断（Claude Opus）</span></span><br><span class="line">            String diagnosis = diagnosticAgent.diagnose(alert);</span><br><span class="line">            notification.sendUrgent(alert, diagnosis);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 快速响应（Claude Haiku + RAG）</span></span><br><span class="line">            String quickAdvice = getQuickAdvice(alert);</span><br><span class="line">            notification.send(alert, quickAdvice);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> String <span class="title">classifyAlert</span><span class="params">(Alert alert)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> haiku.prompt()</span><br><span class="line">            .system(<span class="string">&quot;你是告警分级专家。返回严重程度：P0/P1/P2/P3&quot;</span>)</span><br><span class="line">            .user(String.format(</span><br><span class="line">                <span class="string">&quot;告警名称：%s\n告警描述：%s\n当前值：%s&quot;</span>,</span><br><span class="line">                alert.getName(), alert.getDescription(), alert.getValue()</span><br><span class="line">            ))</span><br><span class="line">            .call()</span><br><span class="line">            .content()</span><br><span class="line">            .trim();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="DiagnosticAgent-—-核心诊断-Agent"><a class="header-anchor" href="#DiagnosticAgent-—-核心诊断-Agent"></a>DiagnosticAgent — 核心诊断 Agent</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DiagnosticAgent</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ChatClient opusClient;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ContentRetriever runbookRetriever;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DiagnosticAgent</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        ChatClient.Builder builder,</span></span></span><br><span class="line"><span class="function"><span class="params">        VectorStore vectorStore,</span></span></span><br><span class="line"><span class="function"><span class="params">        PrometheusTools prometheusTools,</span></span></span><br><span class="line"><span class="function"><span class="params">        ElasticsearchTools esTools,</span></span></span><br><span class="line"><span class="function"><span class="params">        K8sTools k8sTools</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.runbookRetriever = EmbeddingStoreContentRetriever.builder()</span><br><span class="line">            .embeddingStore(vectorStore)</span><br><span class="line">            .maxResults(<span class="number">3</span>)</span><br><span class="line">            .minScore(<span class="number">0.7f</span>)</span><br><span class="line">            .build();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.opusClient = builder</span><br><span class="line">            .defaultSystem(<span class="string">&quot;&quot;</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">                你是资深 SRE 工程师，负责线上故障诊断。</span></span><br><span class="line"><span class="string">                诊断流程：</span></span><br><span class="line"><span class="string">                1. 根据告警信息确定受影响服务</span></span><br><span class="line"><span class="string">                2. 查询指标，确认异常范围</span></span><br><span class="line"><span class="string">                3. 查询相关日志，找到具体错误</span></span><br><span class="line"><span class="string">                4. 检查 K8s 状态（如果是容器服务）</span></span><br><span class="line"><span class="string">                5. 参考知识库中的 Runbook</span></span><br><span class="line"><span class="string">                6. 给出：根因分析 + 处置步骤 + 预防措施</span></span><br><span class="line"><span class="string">                </span></span><br><span class="line"><span class="string">                注意：重启等危险操作只能&quot;</span>建议<span class="string">&quot;，不能自动执行。</span></span><br><span class="line"><span class="string">                &quot;</span><span class="string">&quot;&quot;</span>)</span><br><span class="line">            .defaultTools(prometheusTools, esTools, k8sTools)</span><br><span class="line">            .defaultAdvisors(</span><br><span class="line">                <span class="keyword">new</span> QuestionAnswerAdvisor(vectorStore,</span><br><span class="line">                    SearchRequest.defaults().withTopK(<span class="number">3</span>))</span><br><span class="line">            )</span><br><span class="line">            .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">diagnose</span><span class="params">(Alert alert)</span> </span>&#123;</span><br><span class="line">        String prompt = String.format(<span class="string">&quot;&quot;</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">            线上告警需要紧急处理：</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            告警名称：%s</span></span><br><span class="line"><span class="string">            告警时间：%s</span></span><br><span class="line"><span class="string">            受影响服务：%s</span></span><br><span class="line"><span class="string">            告警指标：%s = %s（阈值：%s）</span></span><br><span class="line"><span class="string">            告警描述：%s</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            请立即开始诊断，给出根因分析和处置建议。</span></span><br><span class="line"><span class="string">            &quot;</span><span class="string">&quot;&quot;</span>,</span><br><span class="line">            alert.getName(),</span><br><span class="line">            alert.getStartTime(),</span><br><span class="line">            alert.getLabels().get(<span class="string">&quot;service&quot;</span>),</span><br><span class="line">            alert.getLabels().get(<span class="string">&quot;alertname&quot;</span>),</span><br><span class="line">            alert.getValue(),</span><br><span class="line">            alert.getThreshold(),</span><br><span class="line">            alert.getDescription()</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> opusClient.prompt()</span><br><span class="line">            .user(prompt)</span><br><span class="line">            .call()</span><br><span class="line">            .content();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="多轮对话（Web-聊天接口）"><a class="header-anchor" href="#多轮对话（Web-聊天接口）"></a>多轮对话（Web 聊天接口）</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/api/chat&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebChatController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> OpsAgent opsAgent;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseEntity&lt;ChatResponse&gt; <span class="title">chat</span><span class="params">(<span class="meta">@RequestBody</span> ChatRequest request)</span> </span>&#123;</span><br><span class="line">        String answer = opsAgent.chat(</span><br><span class="line">            request.getSessionId(),</span><br><span class="line">            request.getMessage()</span><br><span class="line">        );</span><br><span class="line">        <span class="keyword">return</span> ResponseEntity.ok(<span class="keyword">new</span> ChatResponse(answer));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OpsAgent</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ChatClient chatClient;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">OpsAgent</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        ChatClient.Builder builder,</span></span></span><br><span class="line"><span class="function"><span class="params">        VectorStore vectorStore,</span></span></span><br><span class="line"><span class="function"><span class="params">        ChatMemory chatMemory,</span></span></span><br><span class="line"><span class="function"><span class="params">        PrometheusTools prometheusTools,</span></span></span><br><span class="line"><span class="function"><span class="params">        ElasticsearchTools esTools,</span></span></span><br><span class="line"><span class="function"><span class="params">        K8sTools k8sTools</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.chatClient = builder</span><br><span class="line">            .defaultSystem(<span class="string">&quot;&quot;</span><span class="string">&quot;</span></span><br><span class="line"><span class="string">                你是企业值班 AI 助手，帮助工程师处理线上问题。</span></span><br><span class="line"><span class="string">                能力：查询指标/日志/K8s状态、匹配 Runbook、给出处置建议。</span></span><br><span class="line"><span class="string">                限制：重启/扩容等操作只能建议，不会自动执行，需工程师确认。</span></span><br><span class="line"><span class="string">                &quot;</span><span class="string">&quot;&quot;</span>)</span><br><span class="line">            .defaultTools(prometheusTools, esTools, k8sTools)</span><br><span class="line">            .defaultAdvisors(</span><br><span class="line">                <span class="keyword">new</span> MessageChatMemoryAdvisor(chatMemory),</span><br><span class="line">                <span class="keyword">new</span> QuestionAnswerAdvisor(vectorStore,</span><br><span class="line">                    SearchRequest.defaults().withTopK(<span class="number">3</span>))</span><br><span class="line">            )</span><br><span class="line">            .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">chat</span><span class="params">(String sessionId, String message)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> chatClient.prompt()</span><br><span class="line">            .user(message)</span><br><span class="line">            .advisors(a -&gt; a.param(</span><br><span class="line">                MessageChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY,</span><br><span class="line">                sessionId</span><br><span class="line">            ))</span><br><span class="line">            .call()</span><br><span class="line">            .content();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Runbook-索引"><a class="header-anchor" href="#Runbook-索引"></a>Runbook 索引</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RunbookIndexer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> VectorStore vectorStore;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;oncall.runbook.dir&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String runbookDir;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@EventListener(ApplicationReadyEvent.class)</span></span><br><span class="line">    <span class="meta">@Async</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">indexOnStartup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        indexDirectory(Path.of(runbookDir));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">indexDirectory</span><span class="params">(Path dir)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> (Stream&lt;Path&gt; files = Files.walk(dir)) &#123;</span><br><span class="line">            files.filter(p -&gt; p.toString().endsWith(<span class="string">&quot;.md&quot;</span>))</span><br><span class="line">                .forEach(<span class="keyword">this</span>::indexFile);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            log.error(<span class="string">&quot;索引 Runbook 失败&quot;</span>, e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">indexFile</span><span class="params">(Path file)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            String content = Files.readString(file);</span><br><span class="line">            String fileName = file.getFileName().toString();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 按标题分块</span></span><br><span class="line">            String[] sections = content.split(<span class="string">&quot;\n## &quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (String section : sections) &#123;</span><br><span class="line">                <span class="keyword">if</span> (section.isBlank()) <span class="keyword">continue</span>;</span><br><span class="line">                Document doc = <span class="keyword">new</span> Document(</span><br><span class="line">                    section,</span><br><span class="line">                    Map.of(</span><br><span class="line">                        <span class="string">&quot;source&quot;</span>, fileName,</span><br><span class="line">                        <span class="string">&quot;type&quot;</span>, <span class="string">&quot;runbook&quot;</span>,</span><br><span class="line">                        <span class="string">&quot;indexedAt&quot;</span>, Instant.now().toString()</span><br><span class="line">                    )</span><br><span class="line">                );</span><br><span class="line">                vectorStore.add(List.of(doc));</span><br><span class="line">            &#125;</span><br><span class="line">            log.info(<span class="string">&quot;已索引 Runbook: &#123;&#125;&quot;</span>, fileName);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            log.error(<span class="string">&quot;索引文件失败: &#123;&#125;&quot;</span>, file, e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Spring-Boot-完整配置"><a class="header-anchor" href="#Spring-Boot-完整配置"></a>Spring Boot 完整配置</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AiConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ChatMemory <span class="title">chatMemory</span><span class="params">(RedisTemplate&lt;String, String&gt; redis)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> MessageWindowChatMemory(</span><br><span class="line">            <span class="keyword">new</span> RedisChatMemoryRepository(redis),</span><br><span class="line">            <span class="number">30</span></span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> ChatClient.<span class="function">Builder <span class="title">opusChatBuilder</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        AnthropicChatModel anthropicModel</span></span></span><br><span class="line"><span class="function"><span class="params">    )</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ChatClient.builder(anthropicModel);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@Qualifier(&quot;haiku&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ChatClient <span class="title">haikuChatClient</span><span class="params">(ChatClient.Builder builder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> builder</span><br><span class="line">            .defaultOptions(AnthropicChatOptions.builder()</span><br><span class="line">                .model(<span class="string">&quot;claude-haiku-4-5-20251001&quot;</span>)</span><br><span class="line">                .maxTokens(<span class="number">512</span>)</span><br><span class="line">                .build())</span><br><span class="line">            .build();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/cn/ClaudeCode-Java-Agent开发-实战-值班AI架构设计/" data-toggle="tooltip" data-placement="top" title="实战：值班 AI — 架构设计">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/cn/ClaudeCode-Java-Agent开发-工具调用-Tool-Use/" data-toggle="tooltip" data-placement="top" title="工具调用 — Tool Use">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=实战：值班 AI — 核心实现&body=Hi,I found this website and thought you might like it https://zhangqinzhong.com/cn/ClaudeCode-Java-Agent开发-实战-值班AI核心实现/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. giscus comment -->
+
+  <!-- giscus start -->
+  <!-- Docs: https://giscus.app -->
+
+  <div class="comment">
+    <script src="https://giscus.app/client.js"
+            data-repo="zhangqinzhong/zhangqinzhong.github.io"
+            data-repo-id="R_kgDOGI7Xjg"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOGI7Xjs4C8uKW"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
+  <!-- giscus end -->
+
+
+<!-- 2. gitalk comment -->
+
+
+<!-- 3. gitment comment -->
+
+
+<!-- 4. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">项目结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#pom-xml-%E6%A0%B8%E5%BF%83%E4%BE%9D%E8%B5%96"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">pom.xml 核心依赖</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#application-yml"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">application.yml</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A0%B8%E5%BF%83%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">核心工具类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#PrometheusTools-java"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">PrometheusTools.java</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ElasticsearchTools-java"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">ElasticsearchTools.java</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#K8sTools-java"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">K8sTools.java</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%91%8A%E8%AD%A6%E6%8E%A5%E5%85%A5%E4%B8%8E%E5%88%86%E7%BA%A7"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">告警接入与分级</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DiagnosticAgent-%E2%80%94-%E6%A0%B8%E5%BF%83%E8%AF%8A%E6%96%AD-Agent"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">DiagnosticAgent — 核心诊断 Agent</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%A4%9A%E8%BD%AE%E5%AF%B9%E8%AF%9D%EF%BC%88Web-%E8%81%8A%E5%A4%A9%E6%8E%A5%E5%8F%A3%EF%BC%89"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">多轮对话（Web 聊天接口）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Runbook-%E7%B4%A2%E5%BC%95"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Runbook 索引</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Spring-Boot-%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">Spring Boot 完整配置</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#Java" title="Java">Java</a>
+            
+            <a class="tag" href="/tags/#Agent开发" title="Agent开发">Agent开发</a>
+            
+          </div>
+        </section>
+        
+
+        <!-- Friends Blog -->
+        
+        <hr>
+        <h5>链友</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://baidu.com" target="_blank">百度</a>
+          </li>
+          
+          <li>
+            <a href="https://google.com" target="_blank">Google</a>
+          </li>
+          
+          <li>
+            <a href="https://www.bilibili.com/" target="_blank">bilibili</a>
+          </li>
+          
+          <li>
+            <a href="https://weibo.com/" target="_blank">新浪微博</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      icon: 'ℬ'
+      // icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/springbreezeboy">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.facebook.com/David John">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/zhangqinzhong">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa  fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          zhangqinzhong
+          2026
+<!--           <br> -->
+<!--           Theme by -->
+<!--           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a> -->
+<!--           <span style="display: inline-block; margin: 0 5px;"> -->
+<!--             <i class="fa fa-heart"></i> -->
+<!--           </span> -->
+<!--           re-Ported by -->
+<!--           <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a> -->
+<!--           | -->
+<!--           <iframe style="margin-left: 2px; margin-bottom:-5px;"  -->
+<!--           frameborder="0" scrolling="0" width="91px" height="20px"  -->
+<!--           src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe> -->
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/bootstrap.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/hux-blog.min.js"></script>
+
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/catalog.js"></script>
+
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+    <!-- Mouseclick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/mouseclick.js"  content='奶豆~,喵喵~,喵~,喵~,吃饭~,睡觉~,跑酷~,搞破坏~,洗澡~' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99,#FF0033' ></script>
+    <!-- Mouseclick -->
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+  <!-- CDN: jsdelivr start -->
+  <script async="async" type="text/javascript">
+    let imgsUrl = document.getElementsByTagName("img");
+    let imgUrl = Array.from(imgsUrl);
+
+    let jsdelivrRoot = "https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854";
+    let pagePath = "cn/ClaudeCode-Java-Agent开发-实战-值班AI核心实现/";
+    let jsdelivrurl;
+    if (pagePath.indexOf("index.html") != -1) {
+      jsdelivrurl = jsdelivrRoot;
+    } else {
+      jsdelivrurl = jsdelivrRoot + "/" + pagePath;
+    }
+    imgUrl.forEach(item => {
+      let oldUrl = item.getAttribute("src");
+      let newUrl = oldUrl.replace(oldUrl, jsdelivrurl + oldUrl).replace("..", "");
+      item.setAttribute("src", newUrl);
+    });
+  </script>
+  <!-- CDN: jsdelivr end -->
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("https://zhangqinzhong.com/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+              imgUrl = 'https://cdn.jsdelivr.net/gh/zhangqinzhong/zhangqinzhong.github.io@v2026-08-12-160854' + imgUrl;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
